@@ -1,37 +1,16 @@
-{ config, pkgs, username, ... }:
-
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
   config,
   pkgs,
   username,
-  term,
-  home-manager,
   ...
 }: {
-  home.username = username;
-  home.homeDirectory = "/home/" + username;
+  home.username = "nantokanare";
+  home.homeDirectory = "/home/nantokanare";
 
   imports = [
     ./modules/software/cli/cli.nix
     ./modules/software/terminal/alacritty.nix
-=======
-  home.username = "nantokanare";
-  home.homeDirectory = "/home/nantokanare";
-
-  imports = [	  
-	  ./modules/software/cli/cli.nix
->>>>>>> parent of 1553828 (term)
-=======
-  home.username = "nantokanare";
-  home.homeDirectory = "/home/nantokanare";
-
-  imports = [	  
-	  ./modules/software/cli/cli.nix
->>>>>>> parent of 1553828 (term)
   ];
-
   home.packages = with pkgs; [
     bat
     bottom
