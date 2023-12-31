@@ -2,6 +2,7 @@
 
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   config,
   pkgs,
   username,
@@ -15,6 +16,13 @@
   imports = [
     ./modules/software/cli/cli.nix
     ./modules/software/terminal/alacritty.nix
+=======
+  home.username = "nantokanare";
+  home.homeDirectory = "/home/nantokanare";
+
+  imports = [	  
+	  ./modules/software/cli/cli.nix
+>>>>>>> parent of 1553828 (term)
 =======
   home.username = "nantokanare";
   home.homeDirectory = "/home/nantokanare";
