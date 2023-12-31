@@ -130,6 +130,7 @@
     pfetch
     neofetch
 
+	alacritty
     pamixer
     pavucontrol
 
