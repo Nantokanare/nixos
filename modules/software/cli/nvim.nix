@@ -36,10 +36,15 @@
       vim-obsession
       luasnip
       lualine-lsp-progress
+      {
+        plugin = zephyr-nvim;
+        type = "lua";
+        config = ''
+          require("zephyr").setup{}
+          vim.cmd[[colorscheme zephyr]]
+        '';
+      }
 	{
-	plugin = zephyr-nvim;
-	config = ''
-	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", {bg ="none"})
 	vim.api.nvim_set_hl(0, "NormalFloat", {bg ="none"})
@@ -73,7 +78,7 @@
         type = "lua";
         config = ''
            require'nvim-treesitter.configs'.setup {
-          sync_install = false,
+          sync_install = true,
 
           highlight = {
           enable = true,
@@ -187,14 +192,6 @@
           vim.keymap.set("n", "<space>f9", function() ui.nav_file(9) end)
           vim.keymap.set("n", "<space>f0", function() ui.nav_file(10) end)
 
-        '';
-      }
-      {
-        plugin = dracula-nvim;
-        type = "lua";
-        config = ''
-          require("dracula").setup{}
-          vim.cmd[[colorscheme dracula]]
         '';
       }
       {
