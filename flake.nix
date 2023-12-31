@@ -47,6 +47,11 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.${username} = import ./home.nix;
+  home = {
+    username = "${username}";
+    homeDirectory = "/home/${username}";
+    stateVersion = "23.11";
+  };
             };
           }
         ];
