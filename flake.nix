@@ -37,7 +37,7 @@
 in {
 
     nixosConfigurations = {
-			R9 = lib.nixosSystem {
+			${hostname} = lib.nixosSystem {
       inherit system;
       modules = [
 	    ./conf.nix 
@@ -45,6 +45,7 @@ in {
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+			home-manager.users.${username} = import ./home.nix
           }
 		];
       specialArgs = {
