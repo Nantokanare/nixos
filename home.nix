@@ -6,7 +6,7 @@
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
 
-  import = [	  
+  imports = [	  
 	  ./modules/software/cli/cli.nix
   ];
   # Collection of useful CLI apps
