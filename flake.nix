@@ -39,6 +39,7 @@
     nixosConfigurations = {
       ${hostname} = lib.nixosSystem {
         inherit system;
+        inherit term;
         modules = [
           ./conf.nix
           home-manager.nixosModules.home-manager
@@ -62,7 +63,6 @@
           inherit profile;
           inherit shell;
           inherit systemtype;
-          # inherit term;
           inherit theme;
           inherit timezone;
           inherit username;
