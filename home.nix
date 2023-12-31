@@ -1,11 +1,16 @@
-{ config, pkgs, username, ... }:
-
 {
+  config,
+  pkgs,
+  username,
+  term,
+  ...
+}: {
   home.username = "nantokanare";
   home.homeDirectory = "/home/nantokanare";
 
-  imports = [	  
-	  ./modules/software/cli/cli.nix
+  imports = [
+    ./modules/software/cli/cli.nix
+    ./modules/software/terminal/${term}.nix
   ];
 
   home.packages = with pkgs; [
