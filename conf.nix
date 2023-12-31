@@ -8,8 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hwconf.nix
-	  # ./modules/software/cli/cli.nix
-      home-manager.nixosModules.default
+	  ./modules/software/cli/cli.nix
     ];
 
   # Bootloader.
