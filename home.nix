@@ -4,9 +4,6 @@
   username,
   ...
 }: {
-  home.username = "nantokanare";
-  home.homeDirectory = "/home/nantokanare";
-
   imports = [
     ./modules/software/cli/cli.nix
     ./modules/software/terminal/alacritty.nix
@@ -39,8 +36,4 @@
     unzip
     w3m
   ];
-
-  home.stateVersion = "23.11";
-
-  programs.home-manager.enable = true;
 }

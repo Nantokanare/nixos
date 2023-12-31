@@ -41,11 +41,20 @@
         inherit system;
         modules = [
           ./conf.nix
-          home-manager.nixosModules.home-manager
+          inputs.home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.${username} = import ./home.nix;
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.${username} = {
+                home = {
+                  username = username;
+                  homeDirectory = "/home/${username}";
+                  stateVersion = "23.11";
+                };
+              };
+            };
+            programs.home-manager.enable = true;
           }
         ];
         specialArgs = {
