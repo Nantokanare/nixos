@@ -6,12 +6,12 @@
   pkgs,
   username,
   hostname,
+  home-manager,
   ...
 }: {
   imports = [
     # Include the results of the hardware scan.
     ./hwconf.nix
-    ./home.nix
   ];
 
   # Bootloader.
