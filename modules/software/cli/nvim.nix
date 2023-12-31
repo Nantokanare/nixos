@@ -44,13 +44,7 @@
           vim.cmd[[colorscheme zephyr]]
         '';
       }
-	{
 
-	vim.api.nvim_set_hl(0, "Normal", {bg ="none"})
-	vim.api.nvim_set_hl(0, "NormalFloat", {bg ="none"})
-
-	'';
-	}
       {
         plugin = lualine-nvim;
         type = "lua";
@@ -179,7 +173,7 @@
           local ui = require("harpoon.ui")
 
           vim.keymap.set("n", "<space>a", mark.add_file)
-          vim.keymap.set("n", "<space>hh", ui.toggle_quick_menu)
+          vim.keymap.set("n", "<space>h", ui.toggle_quick_menu)
 
           vim.keymap.set("n", "<space>f1", function() ui.nav_file(1) end)
           vim.keymap.set("n", "<space>f2", function() ui.nav_file(2) end)
