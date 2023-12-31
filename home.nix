@@ -6,6 +6,37 @@
   home.username = ${username};
   home.homeDirectory = "/home/${username}";
 
+  import = [	  
+	  ./modules/software/cli/cli.nix
+  ];
+  # Collection of useful CLI apps
+  home.packages = with pkgs; [
+    # Command Line
+    disfetch
+    neofetch
+    lolcat
+    cowsay
+    onefetch
+    cava
+    gnugrep
+    gnused
+    killall
+    libnotify
+    bat
+    eza
+    fd
+    bottom
+    ripgrep
+    rsync
+    htop
+    hwinfo
+    unzip
+    octave
+    w3m
+    fzf
+    pandoc
+    pciutils
+  ];
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards

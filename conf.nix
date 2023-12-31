@@ -2,13 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, home-manager, ... }:
+{ config, pkgs, home-manager, username, hostname, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hwconf.nix
-	  ./modules/software/cli/cli.nix
     ];
 
   # Bootloader.
@@ -17,7 +16,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  networking.hostName = "R9"; # Define your hostname.
+  networking.hostName = "${hostname}"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -82,14 +81,14 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.nantokanare = {
+  users.users.${username} = {
     isNormalUser = true;
-    description = "nantokanare";
+    description = "${username}";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     ];
   };
-  home-manager.users.nantokanare = { pkgs, ... }: {
+  home-manager.users.${username} = { pkgs, ... }: {
 		  home.packages = with pkgs; [
 
               alacritty
@@ -103,7 +102,7 @@
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "nantokanare";
+  services.xserver.displayManager.autoLogin.user = "${username}";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -165,6 +164,5 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-    home.stateVersion = "23.11";
 
 }

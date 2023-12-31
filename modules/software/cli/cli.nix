@@ -9,7 +9,6 @@
     ./nvim.nix
     ./tmux.nix
     ./starship.nix
-     home-manager.nixosModules.default
   ];
 
   # Collection of useful CLI apps
