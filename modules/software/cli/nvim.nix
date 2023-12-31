@@ -37,13 +37,20 @@
       luasnip
       lualine-lsp-progress
       {
-        plugin = rose-pine;
+        plugin = zephyr-nvim;
         type = "lua";
         config = ''
-          require("rose-pine").setup{}
-          vim.cmd[[colorscheme rose-pine]]
+          require("zephyr").setup{}
+          vim.cmd[[colorscheme zephyr]]
         '';
       }
+	{
+
+	vim.api.nvim_set_hl(0, "Normal", {bg ="none"})
+	vim.api.nvim_set_hl(0, "NormalFloat", {bg ="none"})
+
+	'';
+	}
       {
         plugin = lualine-nvim;
         type = "lua";
