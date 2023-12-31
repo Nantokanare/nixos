@@ -2,7 +2,7 @@
 
 {
   home.username = "nantokanare";
-  home.homeDirectory = "/home/${username}";
+  home.homeDirectory = "/home/nantokanare";
 
   imports = [	  
 	  ./modules/software/cli/cli.nix

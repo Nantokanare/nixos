@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, home-manager, username, hostname, ... }:
+{ config, pkgs, username, hostname, ... }:
 
 {
   imports =
@@ -88,17 +88,17 @@
     packages = with pkgs; [
     ];
   };
-  home-manager.users.${username} = { pkgs, ... }: {
-		  home.packages = with pkgs; [
-
-              alacritty
-              fish
-              firefox
-              git
-              ranger
-
-		  ];
-  }; 
+#  home-manager.users.${username} = { pkgs, ... }: {
+#		  home.packages = with pkgs; [
+#
+#              alacritty
+#              fish
+#              firefox
+#              git
+#              ranger
+#
+#		  ];
+#  }; 
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
@@ -113,6 +113,7 @@
   neovim
   tmux
   wget
+  git
   home-manager
   alsa-utils
 

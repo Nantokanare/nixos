@@ -37,8 +37,7 @@
       luasnip
       lualine-lsp-progress
 	{
-	plugin = zypher;
-	color = "zephyr";
+	plugin = zephyr-nvim;
 	config = ''
 	vim.cmd.colorscheme(color)
 
