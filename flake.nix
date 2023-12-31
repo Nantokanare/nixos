@@ -40,20 +40,22 @@
       ${hostname} = lib.nixosSystem {
         inherit system;
         modules = [
-          ./conf.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.${username} = import ./home.nix;
+              users.${username} = { 
   home = {
     username = "${username}";
     homeDirectory = "/home/${username}";
     stateVersion = "23.11";
   };
+  programs.home-manager.enable = true;
             };
+	    };
           }
+         ./conf.nix
         ];
         specialArgs = {
           inherit browser;

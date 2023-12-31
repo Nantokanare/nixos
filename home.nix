@@ -2,13 +2,9 @@
   config,
   pkgs,
   username,
+  home-manager,
   ...
 }: {
-  home = {
-    username = "${username}";
-    homeDirectory = "/home/${username}";
-    stateVersion = "23.11";
-  };
   programs.home-manager.enable = true;
   imports = [
     ./modules/software/cli/cli.nix

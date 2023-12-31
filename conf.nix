@@ -11,6 +11,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hwconf.nix
+	./home.nix
   ];
 
   # Bootloader.
