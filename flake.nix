@@ -46,15 +46,8 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.${username} = {
-                home = {
-                  username = username;
-                  homeDirectory = "/home/${username}";
-                  stateVersion = "23.11";
-                };
-              };
+              users.${username} = import ./home/nix;
             };
-            programs.home-manager.enable = true;
           }
         ];
         specialArgs = {
