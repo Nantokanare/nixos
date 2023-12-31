@@ -1,12 +1,12 @@
 {
   description = "Flake from scratch";
 
-  outputs = {
+  outputs = inputs @ {
     self,
     nixpkgs,
     home-manager,
     ...
-  } @ inputs: let
+  }: let
     # ---- SYSTEM SETTINGS ---- #
     system = "x86_64-linux"; # system arch
     systemtype = "desk";
@@ -41,12 +41,12 @@
         inherit system;
         modules = [
           ./conf.nix
-          inputs.home-manager.nixosModules.home-manager
+          home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.${username} = import ./home/nix;
+              users.${username} = import ./home.nix;
             };
           }
         ];
