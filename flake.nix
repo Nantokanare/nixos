@@ -39,14 +39,13 @@
     nixosConfigurations = {
       ${hostname} = lib.nixosSystem {
         inherit system;
-        inherit term;
         modules = [
           ./conf.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${username} = import ./home.nix;
+            # home-manager.users.${username} = import ./home.nix;
           }
         ];
         specialArgs = {
@@ -63,6 +62,7 @@
           inherit profile;
           inherit shell;
           inherit systemtype;
+          inherit term;
           inherit theme;
           inherit timezone;
           inherit username;
@@ -73,7 +73,7 @@
     };
 
     inputs = {
-      nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
+      nixpkgs.url = "nixpkgs/nixos-unstable";
       home-manager = {
         url = "github:nix-community/home-manager/master";
         inputs.nixpkgs.follows = "nixpkgs";

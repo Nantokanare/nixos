@@ -3,43 +3,44 @@
   pkgs,
   username,
   term,
+  home-manager,
   ...
 }: {
-  home.username = "nantokanare";
-  home.homeDirectory = "/home/nantokanare";
+  home.username = username;
+  home.homeDirectory = "/home/" + username;
 
   imports = [
     ./modules/software/cli/cli.nix
-    ./modules/software/terminal/${term}.nix
+    ./modules/software/terminal/alacritty.nix
   ];
 
   home.packages = with pkgs; [
-    ranger
-    git
-    disfetch
-    neofetch
-    lolcat
-    cowsay
-    onefetch
-    cava
-    gnugrep
-    gnused
-    killall
-    libnotify
     bat
+    bottom
+    cava
+    cowsay
+    disfetch
     eza
     fd
-    bottom
-    ripgrep
-    rsync
+    fzf
+    git
+    gnugrep
+    gnused
     htop
     hwinfo
-    unzip
+    killall
+    libnotify
+    lolcat
+    neofetch
     octave
-    w3m
-    fzf
+    onefetch
     pandoc
     pciutils
+    ranger
+    ripgrep
+    rsync
+    unzip
+    w3m
   ];
 
   home.stateVersion = "23.11";
