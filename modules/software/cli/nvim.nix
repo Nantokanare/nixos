@@ -40,7 +40,7 @@
         plugin = zephyr-nvim;
         type = "lua";
         config = ''
-          require("zephyr").setup{}
+          require("zephyr")
           vim.cmd[[colorscheme zephyr]]
         '';
       }
