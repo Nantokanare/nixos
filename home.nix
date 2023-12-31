@@ -14,7 +14,6 @@
   ];
 
   home.packages = with pkgs; [
-    alacritty
     ranger
     git
     disfetch

@@ -1,10 +1,12 @@
 {
   description = "Flake from scratch";
 
-
-
-  outputs = { self, nixpkgs, home-manager, ... }@ inputs: let
-
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
     # ---- SYSTEM SETTINGS ---- #
     system = "x86_64-linux"; # system arch
     systemtype = "desk";
@@ -33,22 +35,20 @@
     pkgs = nixpkgs.legacyPackages.${system};
 
     lib = nixpkgs.lib;
-
-in {
-
+  in {
     nixosConfigurations = {
-			${hostname} = lib.nixosSystem {
-      inherit system;
-      modules = [
-	    ./conf.nix 
-		home-manager.nixosModules.home-manager
+      ${hostname} = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./conf.nix
+          home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-			home-manager.users.${username} = import ./home.nix;
+            home-manager.users.${username} = import ./home.nix;
           }
-		];
-      specialArgs = {
+        ];
+        specialArgs = {
           inherit browser;
           inherit dotfilesDir;
           inherit editor;
@@ -62,22 +62,22 @@ in {
           inherit profile;
           inherit shell;
           inherit systemtype;
-          inherit term;
+          # inherit term;
           inherit theme;
           inherit timezone;
           inherit username;
           inherit wm;
           inherit wmtype;
-			  };
-  };
-  };
-
-  inputs = {
-		nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
-        home-manager = {
-          url = "github:nix-community/home-manager/master";
-          inputs.nixpkgs.follows = "nixpkgs";
+        };
       };
-  };
+    };
+
+    inputs = {
+      nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable;
+      home-manager = {
+        url = "github:nix-community/home-manager/master";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
+    };
   };
 }
