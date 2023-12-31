@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hwconf.nix
-	  ./modules/software/cli/cli.nix
+	  # ./modules/software/cli/cli.nix
       home-manager.nixosModules.default
     ];
 
@@ -88,14 +88,19 @@
     description = "nantokanare";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-	alacritty
-	fish
-      firefox
-  git
-  ranger
-    #  thunderbird
     ];
   };
+  home-manager.users.nantokanare = { pkgs, ... }: {
+		  home.packages = with pkgs; [
+
+              alacritty
+              fish
+              firefox
+              git
+              ranger
+
+		  ];
+  }; 
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
