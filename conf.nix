@@ -14,7 +14,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hwconf.nix
-    ./modules/security/security.nix
+    ./system/security/security.nix
   ];
 
   # Bootloader.
@@ -50,6 +50,31 @@
     LC_TELEPHONE = extralocale;
     LC_TIME = extralocale;
   };
+  # Enable EnvFS
+  services.envfs.enable = true;
+
+  # Fix USB sticks not mounting or being listed:
+  services.devmon.enable = true;
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
+
+  # Hardware
+  hardware.bluetooth.enable = true;
+
+  # Enable networking
+
+  # Enable SysRQ
+  boot.kernel.sysctl."kernel.sysrq" = 1;
+
+  # XDG Desktop Portal stuff
+  xdg.portal = {
+    enable = true;
+  };
+
+  # Printing support
+  services.printing = {
+    enable = true;
+  };
 
   hardware.opengl.enable = true;
   # Enable the X11 windowing system.
@@ -76,9 +101,6 @@
     layout = "us";
     xkbVariant = "";
   };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable sound with pipewire.
   sound.enable = true;

@@ -10,9 +10,9 @@
     stateVersion = "23.11";
   };
   imports = [
-    ./modules/security/keepass.nix
-    ./modules/software/cli/cli.nix
-    ./modules/software/terminal/alacritty.nix
+    ./home/security/keepass.nix
+    ./home/software/cli/cli.nix
+    ./home/software/terminal/alacritty.nix
   ];
   fonts.fontconfig.enable = true;
 
