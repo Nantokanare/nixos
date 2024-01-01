@@ -17,6 +17,7 @@
     ./hwconf.nix
     ./system/security/security.nix
     ./system/hardware/rgb.nix
+    ./system/hardware/amd.nix
     # ./system/software/shell/shell.nix
   ];
 
@@ -24,9 +25,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.kernelModules = ["amdgpu"];
-
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  # boot.kernelPackages = pkgs.linuxPackages_zen;
 
   # boot.plymouth.enable = true;
 
@@ -150,7 +149,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "${username}";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "corectrl"];
     packages = with pkgs; [
     ];
   };
