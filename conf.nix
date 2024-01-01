@@ -33,7 +33,7 @@
   # boot.plymouth.enable = true;
 
   # Enable SysRQ
-  # boot.kernel.sysctl."kernel.sysrq" = 1;
+  boot.kernel.sysctl."kernel.sysrq" = 1;
 
   hardware.i2c.enable = true;
 
