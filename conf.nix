@@ -28,14 +28,10 @@
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
-  boot.kernelModules = ["i2c-dev" "ic2-piix4"];
-
   # boot.plymouth.enable = true;
 
   # Enable SysRQ
   boot.kernel.sysctl."kernel.sysrq" = 1;
-
-  hardware.i2c.enable = true;
 
   hardware.opengl.enable = true;
 
