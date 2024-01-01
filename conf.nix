@@ -69,6 +69,10 @@
   # XDG Desktop Portal stuff
   xdg.portal = {
     enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal
+      pkgs.xdg-desktop-portal-gtk
+    ];
   };
 
   # Printing support
