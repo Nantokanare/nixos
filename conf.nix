@@ -21,6 +21,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.plymouth.enable = true;
+
+  # Enable SysRQ
+  boot.kernel.sysctl."kernel.sysrq" = 1;
+
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   networking.hostName = "${hostname}"; # Define your hostname.
@@ -63,16 +68,9 @@
 
   # Enable networking
 
-  # Enable SysRQ
-  boot.kernel.sysctl."kernel.sysrq" = 1;
-
   # XDG Desktop Portal stuff
   xdg.portal = {
     enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal
-      pkgs.xdg-desktop-portal-gtk
-    ];
   };
 
   # Printing support
@@ -177,6 +175,8 @@
     fzf
 
     #    (writeScriptBin "sudo" ''exec doas "$@"'')
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
 
     pfetch
     neofetch
