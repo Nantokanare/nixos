@@ -62,6 +62,7 @@
                   i3nator
                   i3-ratiosplit
 				  pulseaudioFull
+				  nitrogen
 
 
             ];
@@ -134,6 +135,7 @@
 	brave
 	firefox
 	ranger
+	fish
 
     starship
     nerdfonts
