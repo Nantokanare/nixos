@@ -61,7 +61,8 @@
                   i3-resurrect
                   i3nator
                   i3-ratiosplit
-				  pactl
+				  pulseaudioFull
+
 
             ];
   };
