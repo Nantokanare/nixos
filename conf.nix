@@ -26,7 +26,7 @@
 
   boot.initrd.kernelModules = ["amdgpu"];
 
-  # boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   boot.kernelModules = ["i2c-dev" "ic2-piix4"];
 
@@ -46,7 +46,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   networking.hostName = "${hostname}"; # Define your hostname.
-  networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
+  # networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
