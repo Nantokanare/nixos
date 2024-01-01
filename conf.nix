@@ -15,7 +15,7 @@
     # Include the results of the hardware scan.
     ./hwconf.nix
     ./system/security/security.nix
-    .system/hardware/rgb.nix
+    ./system/hardware/rgb.nix
   ];
 
   # Bootloader.

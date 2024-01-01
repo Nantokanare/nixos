@@ -55,6 +55,7 @@
           inherit font;
           inherit fontPkg;
           inherit wm;
+          inherit shell;
           inherit wmtype;
           inherit browser;
           inherit editor;
