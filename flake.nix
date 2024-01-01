@@ -51,12 +51,11 @@
           inherit email;
           inherit timezone;
           inherit dotfilesDir;
-          inherit defaultRoamDir;
           inherit theme;
           inherit font;
           inherit fontPkg;
           inherit wm;
-          inherit wmType;
+          inherit wmtype;
           inherit browser;
           inherit editor;
           inherit term;
@@ -67,6 +66,7 @@
     nixosConfigurations = {
       ${hostname} = lib.nixosSystem {
         inherit system;
+	modules = [
          ./conf.nix
         ];
         specialArgs = {

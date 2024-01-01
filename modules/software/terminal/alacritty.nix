@@ -2,9 +2,12 @@
   config,
   pkgs,
   lib,
-  home-manager,
   ...
 }: {
+  home.packages = with pkgs; [
+    alacritty
+
+  ];
   programs.alacritty = {
 		  enable = true;
           settings = {

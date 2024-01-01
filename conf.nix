@@ -13,7 +13,6 @@
   imports = [
     # Include the results of the hardware scan.
     ./hwconf.nix
-	./modules/software/terminal/${term}.nix
   ];
 
   # Bootloader.
