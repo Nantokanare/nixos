@@ -40,7 +40,7 @@
   ${username} = home-manager.lib.homeManagerConfiguration {
   inherit pkgs;
         modules = [
-	./home-manager/home.nix
+	./home.nix
  ];
       extraSpecialArgs = {
           # pass config variables from above
