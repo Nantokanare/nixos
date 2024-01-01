@@ -18,7 +18,7 @@
     ./system/security/security.nix
     ./system/hardware/rgb.nix
     ./system/hardware/amd.nix
-    # ./system/software/shell/shell.nix
+    ./system/software/shell/shell.nix
   ];
 
   # Bootloader.
