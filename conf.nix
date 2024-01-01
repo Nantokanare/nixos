@@ -54,15 +54,15 @@
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.windowManager.i3 = {
 		  enable = true;
-extraPackages = with pkgs; [
-  dmenu
-  i3status-rust
-  i3lock
-  i3-resurrect
-  i3nator
-  i3-ratiosplit
+          extraPackages = with pkgs; [
+                  dmenu
+                  i3status-rust
+                  i3lock
+                  i3-resurrect
+                  i3nator
+                  i3-ratiosplit
 
-]
+            ];
   };
   # Configure keymap in X11
   services.xserver = {
