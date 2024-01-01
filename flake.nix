@@ -66,6 +66,7 @@
       useUserPackages = true;
  };
  };
+ };
     nixosConfigurations = {
       ${hostname} = lib.nixosSystem {
         inherit system;
