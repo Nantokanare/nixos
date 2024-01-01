@@ -6,11 +6,14 @@
   pkgs,
   username,
   hostname,
+  term,
+
   ...
 }: {
   imports = [
     # Include the results of the hardware scan.
     ./hwconf.nix
+	./modules/software/terminal/${term}.nix
   ];
 
   # Bootloader.
@@ -98,6 +101,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${username} = {
+				  pactl
     isNormalUser = true;
     description = "${username}";
     extraGroups = ["networkmanager" "wheel"];

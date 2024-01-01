@@ -5,8 +5,10 @@
   home-manager,
   ...
 }: {
-  programs.alacritty.enable = true;
-  programs.alacritty.settings = {
+  programs.alacritty = {
+		  enable = true;
+          settings = {
     window.opacity = lib.mkForce 0.65;
+  };
   };
 }
