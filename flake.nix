@@ -36,25 +36,37 @@
 
     lib = nixpkgs.lib;
   in {
+  homeConfiguration = {
+  ${username} = home-manager.lib.homeManagerConfiguration {
+  inherit pkgs;
+        modules = [
+	./home.nix
+ ];
+      extraSpecialArgs = {
+          # pass config variables from above
+          inherit username;
+          inherit name;
+          inherit hostname;
+          inherit profile;
+          inherit email;
+          inherit timezone;
+          inherit dotfilesDir;
+          inherit defaultRoamDir;
+          inherit theme;
+          inherit font;
+          inherit fontPkg;
+          inherit wm;
+          inherit wmType;
+          inherit browser;
+          inherit editor;
+          inherit term;
+
+ };
+ };
+ };
     nixosConfigurations = {
       ${hostname} = lib.nixosSystem {
         inherit system;
-        modules = [
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.${username} = { 
-  home = {
-    username = "${username}";
-    homeDirectory = "/home/${username}";
-    stateVersion = "23.11";
-  };
-  programs.home-manager.enable = true;
-            };
-	    };
-          }
          ./conf.nix
         ];
         specialArgs = {
