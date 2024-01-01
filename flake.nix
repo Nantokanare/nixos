@@ -36,7 +36,7 @@
 
     lib = nixpkgs.lib;
   in {
-  homeConfiguration = {
+  homeConfigurations = {
   ${username} = home-manager.lib.homeManagerConfiguration {
   inherit pkgs;
         modules = [

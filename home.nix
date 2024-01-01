@@ -2,7 +2,6 @@
   config,
   pkgs,
   username,
-  home-manager,
   ...
 }: {
             home-manager = {
