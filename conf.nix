@@ -6,6 +6,8 @@
   pkgs,
   username,
   hostname,
+  locale,
+  extralocale,
   term,
   ...
 }: {
@@ -34,18 +36,18 @@
   time.timeZone = "Europe/Amsterdam";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = locale;
 
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = "nl_NL.UTF-8";
-    LC_IDENTIFICATION = "nl_NL.UTF-8";
-    LC_MEASUREMENT = "nl_NL.UTF-8";
-    LC_MONETARY = "nl_NL.UTF-8";
-    LC_NAME = "nl_NL.UTF-8";
-    LC_NUMERIC = "nl_NL.UTF-8";
-    LC_PAPER = "nl_NL.UTF-8";
-    LC_TELEPHONE = "nl_NL.UTF-8";
-    LC_TIME = "nl_NL.UTF-8";
+    LC_ADDRESS = extralocale;
+    LC_IDENTIFICATION = extralocale;
+    LC_MEASUREMENT = extralocale;
+    LC_MONETARY = extralocale;
+    LC_NAME = extralocale;
+    LC_NUMERIC = extralocale;
+    LC_PAPER = extralocale;
+    LC_TELEPHONE = extralocale;
+    LC_TIME = extralocale;
   };
 
   # Enable the X11 windowing system.
