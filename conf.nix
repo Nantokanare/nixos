@@ -11,7 +11,6 @@
   imports = [
     # Include the results of the hardware scan.
     ./hwconf.nix
-	./home.nix
   ];
 
   # Bootloader.
@@ -53,8 +52,18 @@
 
   # Enable the Cinnamon Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.windowManager.i3.enable = true;
+  services.xserver.windowManager.i3 = {
+		  enable = true;
+extraPackages = with pkgs; [
+  dmenu
+  i3status-rust
+  i3lock
+  i3-resurrect
+  i3nator
+  i3-ratiosplit
 
+]
+  };
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
@@ -118,8 +127,11 @@
     tmux
     wget
     git
-    home-manager
     alsa-utils
+	alacritty
+	brave
+	firefox
+	ranger
 
     starship
     nerdfonts
