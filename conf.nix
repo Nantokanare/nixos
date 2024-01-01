@@ -16,6 +16,7 @@
     ./hwconf.nix
     ./system/security/security.nix
     ./system/hardware/rgb.nix
+    ./system/shell/shell.nix
   ];
 
   # Bootloader.
