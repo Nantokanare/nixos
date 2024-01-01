@@ -26,7 +26,7 @@
 
   boot.initrd.kernelModules = ["amdgpu"];
 
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  # boot.kernelPackages = pkgs.linuxPackages_zen;
 
   boot.kernelModules = ["i2c-dev" "ic2-piix4"];
 
