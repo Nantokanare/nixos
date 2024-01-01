@@ -28,8 +28,8 @@
     browser = "firefox"; # Default browser; must select one from ./user/app/browser/
     editor = "nvim"; # Default editor;
     term = "alacritty"; # Default terminal command;
-    font = "Intel One Mono"; # Selected font
-    fontPkg = pkgs.intel-one-mono; # Font package
+    font = "MonofurNerdFont"; # Selected font
+    fontPkg = pkgs.nerdfonts; # Font package
 
     # -----
     pkgs = nixpkgs.legacyPackages.${system};

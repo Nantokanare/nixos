@@ -6,6 +6,7 @@
   pkgs,
   username,
   hostname,
+  timezone,
   locale,
   extralocale,
   term,
@@ -25,7 +26,7 @@
 
   boot.initrd.kernelModules = ["amdgpu"];
 
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen.zenpower;
 
   boot.kernelModules = ["i2c-dev" "ic2-piix4"];
 
@@ -55,7 +56,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Amsterdam";
+  time.timeZone = timezone;
 
   # Select internationalisation properties.
   i18n.defaultLocale = locale;
