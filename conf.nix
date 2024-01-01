@@ -21,7 +21,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.plymouth.enable = true;
+  # boot.plymouth.enable = true;
 
   # Enable SysRQ
   boot.kernel.sysctl."kernel.sysrq" = 1;
@@ -69,9 +69,13 @@
   # Enable networking
 
   # XDG Desktop Portal stuff
-  xdg.portal = {
-    enable = true;
-  };
+  #  xdg.portal = {
+  #    enable = true;
+  #    extraPortals = with pkgs; [
+  #      xdg-desktop-portal
+  #      xdg-desktop-portal-gtk
+  #    ];
+  #  };
 
   # Printing support
   services.printing = {
@@ -175,8 +179,6 @@
     fzf
 
     #    (writeScriptBin "sudo" ''exec doas "$@"'')
-    xdg-desktop-portal
-    xdg-desktop-portal-gtk
 
     pfetch
     neofetch
