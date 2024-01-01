@@ -7,7 +7,6 @@
   username,
   hostname,
   term,
-
   ...
 }: {
   imports = [
@@ -55,19 +54,18 @@
   # Enable the Cinnamon Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.windowManager.i3 = {
-		  enable = true;
-          extraPackages = with pkgs; [
-                  dmenu
-                  i3status-rust
-                  i3lock
-                  i3-resurrect
-                  i3nator
-                  i3-ratiosplit
-				  pulseaudioFull
-				  nitrogen
-
-
-            ];
+    enable = true;
+    extraPackages = with pkgs; [
+      dmenu
+      i3status-rust
+      i3lock
+      i3-resurrect
+      i3nator
+      i3-ratiosplit
+      pulseaudioFull
+      nitrogen
+      picom
+    ];
   };
   # Configure keymap in X11
   services.xserver = {
@@ -133,11 +131,11 @@
     wget
     git
     alsa-utils
-	alacritty
-	brave
-	firefox
-	ranger
-	fish
+    alacritty
+    brave
+    firefox
+    ranger
+    fish
 
     starship
     nerdfonts

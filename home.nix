@@ -6,12 +6,10 @@
           homeDirectory = "/home/${username}";
           stateVersion = "23.11";
   };
-	    };
   imports = [
     ./modules/software/cli/cli.nix
     ./modules/software/terminal/alacritty.nix
   ];
-            };
 
 
   programs.home-manager.enable = true;
