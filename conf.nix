@@ -15,8 +15,8 @@
     # Include the results of the hardware scan.
     ./hwconf.nix
     ./system/security/security.nix
-    ./system/hardware/rgb.nix
-    ./system/software/shell/shell.nix
+    # ./system/hardware/rgb.nix
+    # ./system/software/shell/shell.nix
   ];
 
   # Bootloader.
@@ -38,8 +38,10 @@
 
   hardware.opengl.enable = true;
 
-  services.picom.vSync = true;
-
+  services.picom = {
+    enable = true;
+    vSync = true;
+  };
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   networking.hostName = "${hostname}"; # Define your hostname.
