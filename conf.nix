@@ -15,16 +15,29 @@
     # Include the results of the hardware scan.
     ./hwconf.nix
     ./system/security/security.nix
+    .system/hardware/rgb.nix
   ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.initrd.kernelModules = ["amdgpu"];
+
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+
+  boot.kernelModules = ["i2c-dev" "ic2-piix4"];
+
   # boot.plymouth.enable = true;
 
   # Enable SysRQ
   boot.kernel.sysctl."kernel.sysrq" = 1;
+
+  hardware.i2c.enable = true;
+
+  hardware.opengl.enable = true;
+
+  services.picom.vSync = true;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
@@ -65,7 +78,8 @@
 
   # Hardware
   hardware.bluetooth.enable = true;
-
+  # Enable acpid
+  services.acpid.enable = true;
   # Enable networking
 
   # XDG Desktop Portal stuff
@@ -82,7 +96,6 @@
     enable = true;
   };
 
-  hardware.opengl.enable = true;
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -124,7 +137,12 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+  sound.mediaKeys.enable = true;
 
+  # KDEConnet
+  programs.kdeconnect = {
+    enable = true;
+  };
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -149,46 +167,49 @@
   #  };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "${username}";
-
+  services.xserver.displayManager.autoLogin = {
+    enable = true;
+    user = "${username}";
+  };
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim
-    tmux
-    wget
-    git
-    alsa-utils
     alacritty
+    alsa-utils
+    blueman
     brave
-    firefox
-    ranger
-    fish
-
-    starship
-    nerdfonts
-    tldr
-    htop
     btop
-
-    vifm
+    firefox
+    fish
     fzf
-
-    #    (writeScriptBin "sudo" ''exec doas "$@"'')
-
-    pfetch
+    git
+    home-manager
+    htop
+    keepassxc
+    libyubikey
+    mpv
     neofetch
-
+    neovim
+    nerdfonts
     pamixer
     pavucontrol
-
-    blueman
-
+    pfetch
+    qbittorrent
+    ranger
+    starship
+    syncthing
+    tldr
+    tmux
+    vifm
+    vlc
+    wget
     wshowkeys
+    yubico-pam
+    yubico-piv-tool
+    yubioath-flutter
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
