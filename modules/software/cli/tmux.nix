@@ -14,11 +14,9 @@
       sensible
       resurrect
       yank
-      sysstat
       tmux-fzf
       better-mouse-mode
       vim-tmux-focus-events
-      weather
       urlview
       tilish
     ];

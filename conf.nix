@@ -14,6 +14,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hwconf.nix
+    ./modules/security/security.nix
   ];
 
   # Bootloader.

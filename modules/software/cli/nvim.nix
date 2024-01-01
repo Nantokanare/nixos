@@ -39,8 +39,6 @@
         plugin = neo-tree-nvim;
         type = "lua";
         config = ''
-          require("rose-pine")
-          vim.cmd[[colorscheme rose-pine]]
           local function ColorMyPencil(color)
               color = color or "rose-pine"
               vim.cmd.colorscheme(color)
