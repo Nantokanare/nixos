@@ -13,7 +13,6 @@
     blueman
     brave
     btop
-    firefox
     fish
     fzf
     git

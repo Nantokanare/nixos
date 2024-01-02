@@ -1,5 +1,5 @@
 {term, ...}: {
-  import = [
+  imports = [
     ./software/cli.nix
     ./software/browser.nix
     ./software/dev.nix
@@ -7,6 +7,6 @@
     ./software/git.nix
     ./software/shell.nix
     ./software/terminal/${term}.nix
-    ./software/wm.nix
+    # ./software/wm.nix
   ];
 }

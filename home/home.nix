@@ -26,6 +26,7 @@
     cowsay
     disfetch
     eza
+    lazygit
     fd
     fzf
     git

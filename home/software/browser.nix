@@ -1,5 +1,5 @@
 {browser, ...}: {
-  import = [
+  imports = [
     ./browser/${browser}.nix
   ];
 }
