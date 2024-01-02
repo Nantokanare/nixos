@@ -40,7 +40,7 @@
       ${username} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          ./home.nix
+          ./home/home.nix
         ];
         extraSpecialArgs = {
           # pass config variables from above
@@ -67,7 +67,7 @@
       ${hostname} = lib.nixosSystem {
         inherit system;
         modules = [
-          ./conf.nix
+          ./system/conf.nix
         ];
         specialArgs = {
           inherit browser;
