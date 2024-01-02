@@ -5,7 +5,7 @@
 }: {
   programs.fish = {
     enable = true;
-    shellAliases = ./sh.nix;
+    shellAliases = ./shellAliases.nix;
     shellInit = ''
             if status is-interactive
                        and not set -q TMUX
