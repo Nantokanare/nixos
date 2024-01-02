@@ -22,6 +22,7 @@
   # environment.
   home.packages = with pkgs; [
     bat
+    blueman
     bottom
     cava
     cowsay

@@ -1,9 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
-  home.packages = with pkgs; [
-    blueman
-  ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   services = {
     blueman-applet.enable = true;
   };
