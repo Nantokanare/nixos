@@ -3,6 +3,9 @@
   shell,
   ...
 }: {
+  imports = [
+    ./cli.nix
+  ];
   programs.${shell} = {
     enable = true;
     shellAliases = {
