@@ -48,6 +48,129 @@
           use_geoclue = false; # [FF102+] [LINUX]
         };
       };
+      browser = {
+        aboutConfig.showWarning = false;
+        startup.page = 0;
+        startup.homepage = "about:blank";
+        newtabpage.enabled = false;
+        newtabpage.activity-stream.default.sites = "";
+        discovery.enabled = false;
+      };
+
+      extensions = {
+        htmlaboutaddons.recommendations.enabled = false;
+      };
+
+      datareporting = {
+        policy.dataSubmissionEnabled = false;
+        healthreport.uploadEnabled = false;
+      };
+
+      toolkit = {
+        telemetry.unified = false;
+        telemetry.server = "data:,";
+        telemetry.archive.enabled = false;
+        coverage.endpoint.base = "";
+        winRegisterApplicationRestart = false;
+      };
+
+      browser.ping-centre = {
+        telemetry = false;
+      };
+
+      browser.newtabpage.activity-stream.feeds = {
+        telemetry = false;
+      };
+
+      browser.newtabpage.activity-stream = {
+        telemetry = false;
+      };
+
+      app = {
+        shield.optoutstudies.enabled = false;
+        normandy.enabled = false;
+        normandy.api_url = "";
+      };
+
+      breakpad = {
+        reportURL = "";
+      };
+
+      captivedetect = {
+        canonicalURL = "";
+      };
+
+      network = {
+        connectivity-service.enabled = false;
+        safebrowsing.downloads.remote.enabled = false;
+        prefetch-next = false;
+        dns.disablePrefetch = true;
+        predictor.enabled = false;
+        http.speculative-parallel-limit = 0;
+        proxy.socks_remote_dns = true;
+      };
+
+      browser.urlbar = {
+        speculativeConnect.enabled = false;
+        suggest.enabled = false;
+        suggest.searches = false;
+        trending.featureGate = false;
+      };
+
+      browser.formfill = {
+        enable = false;
+      };
+
+      signon = {
+        autofillForms = false;
+        formlessCapture.enabled = false;
+      };
+
+      network.auth = {
+        subresource-http-auth-allow = 1;
+      };
+
+      browser.cache.disk = {
+        enable = false;
+      };
+
+      media = {
+        memory_cache_max_size = 65536;
+      };
+
+      browser.sessionstore = {
+        privacy_level = 2;
+      };
+
+      browser.shell = {
+        shortcutFavicons = false;
+      };
+
+      security.ssl = {
+        require_safe_negotiation = true;
+        enable_0rtt_data = false;
+        treat_unsafe_negotiation_as_broken = true;
+      };
+
+      security.OCSP = {
+        require = true;
+      };
+
+      security.cert_pinning = {
+        enforcement_level = 2;
+      };
+
+      security.remote_settings = {
+        crlite_filters.enabled = true;
+      };
+
+      security.pki = {
+        crlite_mode = 2;
+      };
+
+      browser.xul = {
+        error_pages.expert_bad_cert = true;
+      };
     };
   };
 }
