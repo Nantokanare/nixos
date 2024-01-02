@@ -11,9 +11,8 @@
     stateVersion = "23.11";
   };
   imports = [
-    ./security/keepass.nix
-    ./software/cli/cli.nix
-    ./software/terminal/${term}.nix
+    ./security.nix
+    ./software.nix
   ];
   fonts.fontconfig.enable = true;
 

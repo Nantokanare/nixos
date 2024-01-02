@@ -116,83 +116,11 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  #  home-manager.users.${username} = { pkgs, ... }: {
-  #		  home.packages = with pkgs; [
-  #
-  #              alacritty
-  #              fish
-  #              firefox
-  #              git
-  #              ranger
-  #
-  #		  ];
-  #  };
-
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin = {
     enable = true;
     user = "${username}";
   };
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    alacritty
-    alsa-utils
-    blueman
-    brave
-    btop
-    firefox
-    fish
-    fzf
-    git
-    home-manager
-    htop
-    keepassxc
-    libyubikey
-    mpv
-    neofetch
-    neovim
-    nerdfonts
-    pamixer
-    pavucontrol
-    pfetch
-    qbittorrent
-    ranger
-    starship
-    syncthing
-    tldr
-    tmux
-    vifm
-    vlc
-    wget
-    wshowkeys
-    yubico-pam
-    yubico-piv-tool
-    yubioath-flutter
-  ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

@@ -4,9 +4,7 @@
   ...
 }: {
   imports = [
-    ./bash.nix
-    ./fish.nix
-    #    ./zsh.nix
+    ./shell/${shell}.nix
   ];
 
   users.defaultUserShell = pkgs.${shell};
