@@ -21,9 +21,6 @@
       tilish
     ];
     extraConfig = "
-      # for vim
-  set -g @resurrect-strategy-vim 'session'
-  # for neovim
   set -g @resurrect-strategy-nvim 'session'
 ";
   };
