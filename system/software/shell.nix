@@ -5,7 +5,7 @@
 }: {
   imports = [
     ./shell/${shell}.nix
-    #    ./zsh.nix
+    ./cli.nix
   ];
 
   users.defaultUserShell = pkgs.${shell};

@@ -15,6 +15,21 @@
     neofetch = "disfetch";
     fetch = "disfetch";
     gfetch = "onefetch";
+    n = "nix";
+    nd = "nix develop -c $SHELL";
+    ns = "nix shell";
+    nsn = "nix shell nixpkgs#";
+    nb = "nix build";
+    nbn = "nix build nixpkgs#";
+    nf = "nix flake";
+
+    nr = "nixos-rebuild --flake .";
+    nrs = "nixos-rebuild --flake . switch";
+    snr = "sudo nixos-rebuild --flake .";
+    snrs = "sudo nixos-rebuild --flake . switch";
+    hm = "home-manager --flake .";
+    hms = "home-manager --flake . switch";
+
     #    nixos-rebuild = "systemd-run --no-ask-password --uid=0 --system --scope -p MemoryLimit=16000M -p CPUQuota=60% nixos-rebuild";
     #    home-manager = "systemd-run --no-ask-password --uid=1000 --user --scope -p MemoryLimit=16000M -p CPUQuota=60% home-manager";
   };

@@ -13,7 +13,6 @@
     blueman
     brave
     btop
-    fish
     fzf
     git
     home-manager

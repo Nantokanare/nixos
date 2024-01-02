@@ -16,6 +16,8 @@
     locale = "en_US.UTF-8"; # select locale
     extralocale = "nl_NL.UTF-8";
 
+    import = [./system/software/shell/sh.nix];
+
     # ----- USER SETTINGS ----- #
     username = "nantokanare";
     name = "Nantokanare"; # name/identifier
@@ -25,7 +27,7 @@
     theme = "xcode-dusk"; # selcted theme from my themes directory (./themes/)
     wm = "sway"; # desktop environment; must select one in both ./user/wm/ and ./system/wm/
     wmtype = "wayland"; # x11 or wayland
-    browser = "firefox"; # Default browser; must select one from ./user/app/browser/
+    browser = "librewolf"; # Default browser; must select one from ./user/app/browser/
     editor = "nvim"; # Default editor;
     term = "alacritty"; # Default terminal command;
     font = "MonofurNerdFont"; # Selected font
@@ -75,6 +77,7 @@
           inherit editor;
           inherit email;
           inherit extralocale;
+          inherit myAliases;
           inherit font;
           inherit fontPkg;
           inherit hostname;

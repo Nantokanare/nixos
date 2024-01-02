@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  boot.kernelModules = ["i2c-dev" "ic2-piix4"];
   hardware.i2c = {
     enable = true;
     group = "users";

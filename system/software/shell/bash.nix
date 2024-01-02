@@ -1,6 +1,11 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  myAliases,
+  ...
+}: {
   programs.bash = {
     enableCompletion = true;
+    shellAliases = myAliases;
     #    promptInit = ''
     #      # Provide a nice prompt if the terminal supports it.
     #      if [ "$TERM" != "dumb" ] || [ -n "$INSIDE_EMACS" ]; then

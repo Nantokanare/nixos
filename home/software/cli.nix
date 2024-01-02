@@ -9,7 +9,6 @@
     # ./sh.nix
     ./cli/nvim.nix
     ./cli/tmux.nix
-    ./cli/starship.nix
   ];
 
   # Collection of useful CLI apps
