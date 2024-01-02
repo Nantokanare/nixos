@@ -7,6 +7,6 @@
   ...
 }: {
   imports = [
-    ./gaming/steam.nix
+    # ./gaming/steam.nix
   ];
 }
