@@ -7,7 +7,7 @@
   ...
 }: {
   imports = [
-    ./doas.nix
-    ./yubico.nix
+    ./security/doas.nix
+    ./security/yubico.nix
   ];
 }

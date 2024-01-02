@@ -2,6 +2,7 @@
   config,
   pkgs,
   username,
+  term,
   ...
 }: {
   home = {
@@ -12,7 +13,7 @@
   imports = [
     ./home/security/keepass.nix
     ./home/software/cli/cli.nix
-    ./home/software/terminal/alacritty.nix
+    ./home/software/terminal/${term}.nix
   ];
   fonts.fontconfig.enable = true;
 

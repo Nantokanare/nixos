@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    ./sh.nix
+    # ./sh.nix
     ./nvim.nix
     ./tmux.nix
     ./starship.nix

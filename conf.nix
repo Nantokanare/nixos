@@ -15,10 +15,11 @@
   imports = [
     # Include the results of the hardware scan.
     ./hwconf.nix
-    ./system/security/security.nix
-    ./system/hardware/hw.nix
-    ./system/network/net.nix
-    ./system/software/shell/shell.nix
+    ./system/hw.nix
+    ./system/net.nix
+    ./system/security.nix
+    ./system/software.nix
+    ./system/user.nix
   ];
 
   # Bootloader.
@@ -115,14 +116,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.${username} = {
-    isNormalUser = true;
-    description = "${username}";
-    extraGroups = ["networkmanager" "wheel" "corectrl"];
-    packages = with pkgs; [
-    ];
-  };
   #  home-manager.users.${username} = { pkgs, ... }: {
   #		  home.packages = with pkgs; [
   #

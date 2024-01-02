@@ -4,8 +4,7 @@
   ...
 }: {
   imports = [
-    ./bash.nix
-    ./fish.nix
+    ./shell/${shell}.nix
     #    ./zsh.nix
   ];
 
