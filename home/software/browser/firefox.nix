@@ -36,5 +36,18 @@
         }
       ];
     };
+    policies = {
+      BlockAboutConfig = true;
+      DefaultDownloadDirectory = "\${home}/Downloads";
+
+      geo = {
+        provider = {
+          ms-windows-location = false;
+          use_corelocation = false; # [MAC]
+          use_gpsd = false; # [LINUX] [HIDDEN PREF]
+          use_geoclue = false; # [FF102+] [LINUX]
+        };
+      };
+    };
   };
 }
