@@ -5,5 +5,6 @@
     ./game.nix
     ./rgb.nix
     ./sound.nix
+    ./vr.nix
   ];
 }
