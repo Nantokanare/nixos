@@ -16,8 +16,6 @@
     locale = "en_US.UTF-8"; # select locale
     extralocale = "nl_NL.UTF-8";
 
-    import = [./system/software/shell/sh.nix];
-
     # ----- USER SETTINGS ----- #
     username = "nantokanare";
     name = "Nantokanare"; # name/identifier
@@ -77,7 +75,6 @@
           inherit editor;
           inherit email;
           inherit extralocale;
-          inherit myAliases;
           inherit font;
           inherit fontPkg;
           inherit hostname;

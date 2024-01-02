@@ -1,12 +1,11 @@
 {
   pkgs,
-  myAliases,
   home-manager,
   ...
 }: {
   programs.fish = {
     enable = true;
-    shellAliases = myAliases;
+    shellAliases = ./sh.nix;
     shellInit = ''
             if status is-interactive
                        and not set -q TMUX
