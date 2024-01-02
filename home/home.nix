@@ -11,7 +11,6 @@
     stateVersion = "23.11";
   };
   imports = [
-    ./security.nix
     ./software.nix
   ];
   fonts.fontconfig.enable = true;
