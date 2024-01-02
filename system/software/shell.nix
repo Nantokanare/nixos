@@ -2,53 +2,46 @@
   pkgs,
   shell,
   ...
-}:
-{
-  programs.${shell} =
-    {
-      enable = true;
-      shellAliases = {
-        cdd = "cd ..";
-        ls = "eza --icons -l -T -L=2";
-        cat = "bat";
-        htop = "btm";
-        fd = "fd -Lu";
-        gt = "git add * && git commit -m \"fast commit\"";
-        w3m = "w3m -no-cookie -v";
-        neofetch = "disfetch";
-        fetch = "disfetch";
-        gfetch = "onefetch";
-        n = "nix";
-        nd = "nix develop -c $SHELL";
-        ns = "nix shell";
-        nsn = "nix shell nixpkgs#";
-        nb = "nix build";
-        nbn = "nix build nixpkgs#";
-        nf = "nix flake";
+}: {
+  programs.${shell} = {
+    enable = true;
+    shellAliases = {
+      cdd = "cd ..";
+      ls = "eza --icons -l -T -L=2";
+      cat = "bat";
+      htop = "btm";
+      fd = "fd -Lu";
+      gt = "git add * && git commit -m \"fast commit\"";
+      w3m = "w3m -no-cookie -v";
+      neofetch = "disfetch";
+      fetch = "disfetch";
+      gfetch = "onefetch";
+      n = "nix";
+      nd = "nix develop -c $SHELL";
+      ns = "nix shell";
+      nsn = "nix shell nixpkgs#";
+      nb = "nix build";
+      nbn = "nix build nixpkgs#";
+      nf = "nix flake";
 
-        nr = "nixos-rebuild --flake .";
-        nrs = "nixos-rebuild --flake . switch";
-        snr = "sudo nixos-rebuild --flake .";
-        snrs = "sudo nixos-rebuild --flake . switch";
-        hm = "home-manager --flake .";
-        hms = "home-manager --flake . switch";
-      };
-      shellInit = ''
-              if status is-interactive
-                         and not set -q TMUX
-                         exec tmux
-        starship init fish | source
-
-        end
-
-      '';
-
-      users.defaultUserShell = pkgs.${shell};
-    }
-    {
+      nr = "nixos-rebuild --flake .";
+      nrs = "nixos-rebuild --flake . switch";
+      snr = "sudo nixos-rebuild --flake .";
+      snrs = "sudo nixos-rebuild --flake . switch";
+      hm = "home-manager --flake .";
+      hms = "home-manager --flake . switch";
     };
-}
-{
+    shellInit = ''
+            if status is-interactive
+                       and not set -q TMUX
+                       exec tmux
+      starship init fish | source
+
+      end
+
+    '';
+  };
+  users.defaultUserShell = pkgs.${shell};
   #  enableCompletion = true;
   #    promptInit = ''
   #      # Provide a nice prompt if the terminal supports it.

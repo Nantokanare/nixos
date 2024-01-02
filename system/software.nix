@@ -26,6 +26,7 @@
     pamixer
     pavucontrol
     pfetch
+    plymouth
     qbittorrent
     ranger
     starship
