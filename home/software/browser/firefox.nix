@@ -48,17 +48,16 @@
           use_geoclue = false; # [FF102+] [LINUX]
         };
       };
-      browser = {
-        aboutConfig.showWarning = false;
-        startup.page = 0;
-        startup.homepage = "about:blank";
-        newtabpage.enabled = false;
-        newtabpage.activity-stream.default.sites = "";
-        discovery.enabled = false;
-      };
 
       extensions = {
         htmlaboutaddons.recommendations.enabled = false;
+        postDownloadThirdPartyPrompt = false;
+        getAddons = {
+          showPane = false; # [HIDDEN PREF]
+        };
+        blocklist = {
+          enabled = true; # [DEFAULT: true]
+        };
       };
 
       datareporting = {
@@ -67,110 +66,399 @@
       };
 
       toolkit = {
-        telemetry.unified = false;
-        telemetry.server = "data:,";
-        telemetry.archive.enabled = false;
-        coverage.endpoint.base = "";
-        winRegisterApplicationRestart = false;
+        telemetry = {
+          enabled = false;
+          unified = false;
+          server = "null";
+          archive.enabled = false;
+          endpoint.base = "";
+          winRegisterApplicationRestart = false;
+          archive = {
+          };
+        };
+        newProfilePing = {
+          enabled = false; # [FF55+]
+        };
+        shutdownPingSender = {
+          enabled = false; # [FF55+]
+        };
+        updatePing = {
+          enabled = false; # [FF56+]
+        };
+        bhrPing = {
+          enabled = false; # [FF57+] Background Hang Reporter
+        };
+        firstShutdownPing = {
+          enabled = false; # [FF57+]
+        };
+        coverage = {
+          opt-out = true; # [HIDDEN PREF]
+        };
+      };
+      privacy = {
+        userContext = {
+          enabled = true;
+          ui = {
+            enabled = true;
+          };
+          userContext = {
+            enabled = true;
+            ui = {
+              enabled = true;
+            };
+          };
+
+          browser = {
+            link = {
+              open_newwindow = 3; # [DEFAULT: 3]
+            };
+            aboutConfig.showWarning = false;
+            startup.page = 0;
+            startup.homepage = "about:blank";
+            newtabpage.enabled = false;
+            newtabpage.activity-stream.default.sites = "";
+            discovery.enabled = false;
+            ping-centre = {
+              telemetry = false;
+            };
+            urlbar = {
+              speculativeConnect.enabled = false;
+              trending.featureGate = false;
+              showSearchTerms.enabled = false;
+              suggest = {
+                enabled = false;
+                searches = false;
+                quicksuggest = {
+                  nonsponsored = false; # [FF95+]
+                  sponsored = false; # [FF92+]
+                };
+              };
+            };
+            xul = {
+              error_pages.expert_bad_cert = true;
+            };
+            sessionstore = {
+              privacy_level = 2;
+            };
+            shell = {
+              shortcutFavicons = false;
+            };
+            helperApps = {
+              deleteTempFileOnExit = true;
+            };
+
+            newtabpage = {
+              activity-stream = {
+                telemetry = false;
+                showSponsored = false; # [FF58+] Pocket > Sponsored Stories
+                showSponsoredTopSites = false; # [FF83+] Sponsored shortcuts
+                feeds.telemetry = false;
+              };
+            };
+
+            app = {
+              shield.optoutstudies.enabled = false;
+              normandy.enabled = false;
+              normandy.api_url = "";
+            };
+
+            breakpad = {
+              reportURL = "";
+            };
+
+            captivedetect = {
+              canonicalURL = "";
+            };
+
+            network = {
+              connectivity-service.enabled = false;
+              safebrowsing.downloads.remote.enabled = false;
+              prefetch-next = false;
+              dns.disablePrefetch = true;
+              predictor.enabled = false;
+              http.speculative-parallel-limit = 0;
+              proxy.socks_remote_dns = true;
+              auth = {
+                subresource-http-auth-allow = 1;
+              };
+              http = {
+                referer = {
+                  spoofSource = false; # [DEFAULT: false]
+                  XOriginTrimmingPolicy = 2;
+                };
+              };
+
+              captive-portal-service = {
+                enabled = false; # [FF52+]
+              };
+
+              file = {
+                disable_unc_paths = true; # [HIDDEN PREF]
+              };
+
+              gio = {
+                supported-protocols = ""; # [HIDDEN PREF] [DEFAULT: "" FF118+]
+              };
+
+              dns = {
+                skipTRR-when-parental-control-enabled = false;
+              };
+            };
+          };
+
+          signon = {
+            autofillForms = false;
+            formlessCapture.enabled = false;
+          };
+
+          formfill.enable = false;
+          cache.disk.enable = false;
+        };
+
+        media = {
+          memory_cache_max_size = 65536;
+          peerconnection = {
+            ice = {
+              proxy_only_if_behind_proxy = true;
+              default_address_only = true;
+            };
+          };
+        };
+
+        security.ssl = {
+          require_safe_negotiation = true;
+          enable_0rtt_data = false;
+          treat_unsafe_negotiation_as_broken = true;
+          OCSP = {
+            require = true;
+          };
+
+          cert_pinning = {
+            enforcement_level = 2;
+          };
+
+          remote_settings = {
+            crlite_filters.enabled = true;
+          };
+
+          pki = {
+            crlite_mode = 2;
+          };
+          family_safety = {
+            mode = 0;
+          };
+          OCSP = {
+            enabled = 1; # [DEFAULT: 1]
+          };
+        };
+
+        sanitize = {
+          sanitizeOnShutdown = true;
+          timeSpan = 0;
+        };
+
+        cpd = {
+          cookies = false;
+        };
       };
 
-      browser.ping-centre = {
-        telemetry = false;
+      dom = {
+        disable_window_move_resize = true;
       };
 
-      browser.newtabpage.activity-stream.feeds = {
-        telemetry = false;
+      uitour = {
+        enabled = false;
       };
 
-      browser.newtabpage.activity-stream = {
-        telemetry = false;
+      permissions = {
+        manager = {
+          defaultsUrl = "";
+        };
       };
 
-      app = {
-        shield.optoutstudies.enabled = false;
-        normandy.enabled = false;
-        normandy.api_url = "";
+      webchannel = {
+        allowObject = {
+          urlWhitelist = "";
+        };
       };
 
-      breakpad = {
-        reportURL = "";
+      IDN_show_punycode = true;
+
+      download = {
+        useDownloadDir = false;
+        alwaysOpenPanel = false;
+        manager = {
+          addToRecentDocs = false;
+          always_ask_before_handling_new_types = true;
+        };
       };
 
-      captivedetect = {
-        canonicalURL = "";
+      link = {
+        open_newwindow = {
+          restriction = 0;
+        };
       };
 
-      network = {
-        connectivity-service.enabled = false;
-        safebrowsing.downloads.remote.enabled = false;
-        prefetch-next = false;
-        dns.disablePrefetch = true;
-        predictor.enabled = false;
-        http.speculative-parallel-limit = 0;
-        proxy.socks_remote_dns = true;
+      newtabpage = {
+        activity-stream = {
+          asrouter = {
+            userprefs = {
+              cfr = {
+                addons = false;
+                features = false;
+              };
+            };
+          };
+        };
       };
 
-      browser.urlbar = {
-        speculativeConnect.enabled = false;
-        suggest.enabled = false;
-        suggest.searches = false;
-        trending.featureGate = false;
-      };
-
-      browser.formfill = {
-        enable = false;
-      };
-
-      signon = {
-        autofillForms = false;
-        formlessCapture.enabled = false;
-      };
-
-      network.auth = {
-        subresource-http-auth-allow = 1;
-      };
-
-      browser.cache.disk = {
-        enable = false;
-      };
-
-      media = {
-        memory_cache_max_size = 65536;
-      };
-
-      browser.sessionstore = {
-        privacy_level = 2;
-      };
-
-      browser.shell = {
-        shortcutFavicons = false;
-      };
-
-      security.ssl = {
-        require_safe_negotiation = true;
-        enable_0rtt_data = false;
-        treat_unsafe_negotiation_as_broken = true;
-      };
-
-      security.OCSP = {
-        require = true;
-      };
-
-      security.cert_pinning = {
-        enforcement_level = 2;
-      };
-
-      security.remote_settings = {
-        crlite_filters.enabled = true;
-      };
-
-      security.pki = {
-        crlite_mode = 2;
-      };
-
-      browser.xul = {
-        error_pages.expert_bad_cert = true;
+      messaging-system = {
+        whatsNewPanel = {
+          enabled = false;
+        };
       };
     };
+
+    dns = {
+      skipTRR-when-parental-control-enabled = false;
+    };
+  };
+
+  helperApps = {
+    deleteTempFileOnExit = true;
+  };
+
+  shopping = {
+    experience2023 = {
+      enabled = false; # [DEFAULT: false]
+    };
+  };
+
+  tabs = {
+    crashReporting = {
+      sendReport = false; # [FF44+]
+    };
+  };
+
+  crashReports = {
+    unsubmittedCheck = {
+      autoSubmit2 = false; # [DEFAULT: false]
+    };
+  };
+
+  captive-portal-service = {
+    enabled = false; # [FF52+]
+  };
+
+  predictor = {
+    enable-prefetch = false; # [FF48+] [DEFAULT: false]
+  };
+
+  mdn = {
+    featureGate = false; # [FF117+] [HIDDEN PREF]
+  };
+
+  pocket = {
+    featureGate = false; # [FF116+] [DEFAULT: false]
+  };
+
+  weather = {
+    featureGate = false; # [FF108+] [DEFAULT: false]
+  };
+
+  search = {
+    separatePrivateDefault = true; # [FF70+]
+  };
+
+  separatePrivateDefault = {
+    ui = {
+      enabled = true; # [FF71+]
+    };
+  };
+
+  privatebrowsing = {
+    forceMediaMemoryCache = true; # [FF75+]
+  };
+
+  contentblocking = {
+    category = "strict"; # [HIDDEN PREF]
+  };
+
+  startup = {
+    homepage_override = {
+      mstone = "ignore"; # [HIDDEN PREF]
+    };
+  };
+
+  htmlaboutaddons = {
+    recommendations = {
+      enabled = false;
+    };
+  };
+
+  webcompat = {
+    enable_shims = true; # [HIDDEN PREF] [DEFAULT: true]
+    reporter = {
+      enabled = false; # [DEFAULT: false]
+    };
+  };
+
+  quarantinedDomains = {
+    enabled = true; # [DEFAULT: true]
+  };
+
+  firstparty = {
+    isolate = false; # [DEFAULT: false]
+  };
+
+  resistFingerprinting = {
+    letterboxing = true; # [HIDDEN PREF]
+  };
+
+  clearOnShutdown = {
+    cache = true; # [DEFAULT: true]
+    downloads = true; # [DEFAULT: true]
+    formdata = true; # [DEFAULT: true]
+    history = true; # [DEFAULT: true]
+    sessions = true; # [DEFAULT: true]
+    cookies = true; # Cookies
+    offlineApps = true; # Site Data
+  };
+
+  cpd = {
+    cache = true; # [DEFAULT: true]
+    formdata = true; # [DEFAULT: true]
+    history = true; # [DEFAULT: true]
+    sessions = true; # [DEFAULT: true]
+    offlineApps = false; # [DEFAULT: false]
+  };
+
+  coverage = {
+    opt-out = true; # [FF64+] [HIDDEN PREF]
+  };
+
+  winRegisterApplicationRestart = false;
+
+  dialog_enable_delay = 1000; # [DEFAULT: 1000]
+
+  tls = {
+    version = {
+      enable-deprecated = false; # [DEFAULT: false]
+    };
+  };
+
+  widget = {
+    non-native-theme = {
+      enabled = true; # [DEFAULT: true]
+    };
+  };
+
+  pdfjs = {
+    disabled = false; # [DEFAULT: false]
+    enableScripting = false; # [FF86+]
+  };
+
+  display = {
+    use_system_colors = false; # [DEFAULT: false NON-WINDOWS]
   };
 }
