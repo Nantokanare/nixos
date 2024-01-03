@@ -8,6 +8,7 @@
 }: {
   imports = [
     ./software.nix
+    ./stylix.nix
   ];
   home = {
     username = "${username}";
