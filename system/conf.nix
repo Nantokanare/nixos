@@ -18,7 +18,7 @@
     ./nix.nix
     ./security.nix
     ./software.nix
-    ./stylix.nix
+    # ./stylix.nix
     ./user.nix
   ];
 
