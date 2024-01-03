@@ -12,6 +12,7 @@
     blueman
     brave
     btop
+    cron
     fzf
     git
     home-manager
