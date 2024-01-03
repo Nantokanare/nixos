@@ -27,7 +27,7 @@
     wm = "sway"; # desktop environment; must select one in both ./user/wm/ and ./system/wm/
     wmtype = "wayland"; # x11 or wayland
     browser = "brave"; # Default browser; must select one from ./user/app/browser/
-    editor = "nvim"; # Default editor;
+    editor = "neovim"; # Default editor;
     term = "kitty"; # Default terminal command;
     font = "MonofurNerdFont"; # Selected font
     fontPkg = pkgs.nerdfonts; # Font package
