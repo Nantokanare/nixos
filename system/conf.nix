@@ -1,12 +1,13 @@
 {
   config,
-  pkgs,
-  username,
-  hostname,
-  timezone,
-  locale,
   extralocale,
+  hostname,
+  locale,
+  pkgs,
+  stylix,
   term,
+  timezone,
+  username,
   ...
 }: {
   imports = [
@@ -14,10 +15,10 @@
     ./hw.nix
     ./loc.nix
     ./net.nix
-    ./security.nix
-    ./stylix.nix
     ./nix.nix
+    ./security.nix
     ./software.nix
+    ./stylix.nix
     ./user.nix
   ];
 
