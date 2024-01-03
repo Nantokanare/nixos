@@ -62,6 +62,7 @@
           inherit browser;
           inherit editor;
           inherit term;
+          inherit (inputs) stylix;
         };
       };
     };
@@ -92,6 +93,7 @@
           inherit username;
           inherit wm;
           inherit wmtype;
+          inherit (inputs) stylix;
         };
       };
     };

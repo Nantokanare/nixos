@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+  imports = [stylix.nixosModules.stylix];
   stylix = {
     polarity = "dark";
     image = pkgs.fetchurl {
