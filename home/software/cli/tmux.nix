@@ -9,7 +9,7 @@
     enable = true;
     escapeTime = 40;
     plugins = with pkgs.tmuxPlugins; [
-      power-theme
+      # power-theme
       vim-tmux-navigator
       sensible
       resurrect
@@ -21,9 +21,6 @@
       tilish
     ];
     extraConfig = "
-      # for vim
-  set -g @resurrect-strategy-vim 'session'
-  # for neovim
   set -g @resurrect-strategy-nvim 'session'
 ";
   };
