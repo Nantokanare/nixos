@@ -5,7 +5,7 @@
     self,
     nixpkgs,
     home-manager,
-    stylix,
+    # stylix,
     ...
   }: let
     # ---- SYSTEM SETTINGS ---- #
@@ -26,7 +26,7 @@
     theme = "xcode-dusk"; # selcted theme from my themes directory (./themes/)
     wm = "sway"; # desktop environment; must select one in both ./user/wm/ and ./system/wm/
     wmtype = "wayland"; # x11 or wayland
-    browser = "librewolf"; # Default browser; must select one from ./user/app/browser/
+    browser = "brave"; # Default browser; must select one from ./user/app/browser/
     editor = "nvim"; # Default editor;
     term = "kitty"; # Default terminal command;
     font = "MonofurNerdFont"; # Selected font
@@ -69,7 +69,7 @@
         inherit system;
         modules = [
           ./system/conf.nix
-          inputs.stylix.nixosModules.stylix
+          # inputs.stylix.nixosModules.stylix
         ];
         specialArgs = {
           inherit browser;
@@ -92,7 +92,7 @@
           inherit username;
           inherit wm;
           inherit wmtype;
-          inherit (inputs) stylix;
+          # inherit (inputs) stylix;
         };
       };
     };
