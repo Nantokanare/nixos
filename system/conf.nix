@@ -4,7 +4,7 @@
   hostname,
   locale,
   pkgs,
-  stylix,
+  # stylix,
   term,
   timezone,
   username,
