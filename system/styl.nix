@@ -1,5 +1,6 @@
 {
   stylix,
+  inputs,
   pkgs,
   ...
 }: {

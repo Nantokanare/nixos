@@ -72,6 +72,7 @@
         modules = [
           ./system/conf.nix
           stylix.nixosModules.stylix
+          base16.nixosModule
         ];
         specialArgs = {
           inherit browser;
@@ -81,6 +82,7 @@
           inherit extralocale;
           inherit font;
           inherit fontPkg;
+          inherit inputs;
           inherit hostname;
           inherit locale;
           inherit name;
@@ -101,6 +103,7 @@
     inputs = {
       nixpkgs.url = "nixpkgs/nixos-unstable";
       stylix.url = "github:danth/stylix";
+      base16.url = "github:SenchoPens/base16.nix";
 
       home-manager = {
         url = "github:nix-community/home-manager/master";
