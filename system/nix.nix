@@ -4,7 +4,7 @@
 
     nixPath = [
       "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
-      #     "nixos-config=$HOME/dotfiles/system/configuration.nix"
+      "nixos-config=$HOME/nix/flakesFromScratch/R9/system/conf.nix"
       "/nix/var/nix/profiles/per-user/root/channels"
     ];
 
@@ -14,6 +14,5 @@
       experimental-features = nix-command flakes
     '';
   };
-  # I'm sorry Stallman-taichou
   nixpkgs.config.allowUnfree = true;
 }
