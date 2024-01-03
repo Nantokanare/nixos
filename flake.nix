@@ -42,7 +42,6 @@
         inherit pkgs;
         modules = [
           ./home/home.nix
-          stylix.homeManagerModules.stylix
         ];
         extraSpecialArgs = {
           # pass config variables from above
@@ -62,7 +61,6 @@
           inherit browser;
           inherit editor;
           inherit term;
-          inherit stylix;
         };
       };
     };
@@ -71,6 +69,7 @@
         inherit system;
         modules = [
           ./system/conf.nix
+          stylix.nixosModules.stylix
         ];
         specialArgs = {
           inherit browser;
