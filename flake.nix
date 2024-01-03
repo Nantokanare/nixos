@@ -69,7 +69,7 @@
         inherit system;
         modules = [
           ./system/conf.nix
-          inputs.stylix.nixosModules.stylix
+          stylix.nixosModules.stylix
         ];
         specialArgs = {
           inherit browser;
