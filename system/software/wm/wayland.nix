@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  username,
   pkgs,
   ...
 }: {
@@ -23,9 +24,15 @@
     layout = "us";
     xkbVariant = "";
     xkbOptions = "caps:escape";
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
+    displayManager = {
+      gdm = {
+        enable = true;
+        wayland = true;
+        autoLogin = {
+          enable = true;
+          user = "${username}";
+        };
+      };
     };
   };
 }

@@ -29,6 +29,9 @@
   programs.kdeconnect = {
     enable = true;
   };
+  libinput = {
+    touchpad.disableWhileTyping = true;
+  };
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 }

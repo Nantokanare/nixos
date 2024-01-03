@@ -21,7 +21,7 @@
       gfetch = "onefetch";
       n = "nix";
       nd = "nix develop -c $SHELL";
-      ns = "nix shell";
+      ns = "nix shell -p";
       nsn = "nix shell nixpkgs#";
       nb = "nix build";
       nbn = "nix build nixpkgs#";

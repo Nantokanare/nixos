@@ -4,6 +4,6 @@
   ...
 }: {
   imports = [
-    ./${wmtype}/${wm}/${wm}.nix
+    ./wm/${wmtype}/${wm}.nix
   ];
 }
