@@ -5,6 +5,7 @@
     self,
     nixpkgs,
     home-manager,
+    stylix,
     ...
   }: let
     # ---- SYSTEM SETTINGS ---- #
@@ -68,7 +69,7 @@
         inherit system;
         modules = [
           ./system/conf.nix
-          # stylix.nixosModules.stylix
+          stylix.nixosModules.stylix
         ];
         specialArgs = {
           inherit browser;
