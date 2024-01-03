@@ -5,6 +5,7 @@
     self,
     nixpkgs,
     home-manager,
+    stylix,
     ...
   }: let
     # ---- SYSTEM SETTINGS ---- #
@@ -41,6 +42,7 @@
         inherit pkgs;
         modules = [
           ./home/home.nix
+          stylix.homeManagerModules.stylix
         ];
         extraSpecialArgs = {
           # pass config variables from above
@@ -60,6 +62,7 @@
           inherit browser;
           inherit editor;
           inherit term;
+          inherit (inputs) stylix;
         };
       };
     };
@@ -68,6 +71,7 @@
         inherit system;
         modules = [
           ./system/conf.nix
+          stylix.nixosModules.stylix
         ];
         specialArgs = {
           inherit browser;
@@ -89,12 +93,15 @@
           inherit username;
           inherit wm;
           inherit wmtype;
+          inherit (inputs) stylix;
         };
       };
     };
 
     inputs = {
       nixpkgs.url = "nixpkgs/nixos-unstable";
+      stylix.url = "github:danth/stylix";
+
       home-manager = {
         url = "github:nix-community/home-manager/master";
         inputs.nixpkgs.follows = "nixpkgs";

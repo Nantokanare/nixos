@@ -13,8 +13,6 @@
     sway = {
       enable = true;
       extraPackages = with pkgs; [
-        waypaper
-        wpaperd
         base16-schemes
         basez
         dmenu
@@ -29,7 +27,11 @@
         rofi
         swaybg
         swayfx
+        swayr
+        swayrbar
         waybar
+        waypaper
+        wpaperd
       ];
     };
     xwayland = {

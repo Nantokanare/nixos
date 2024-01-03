@@ -15,6 +15,7 @@
     ./loc.nix
     ./net.nix
     ./security.nix
+    ./styl.nix
     ./software.nix
     ./user.nix
   ];
