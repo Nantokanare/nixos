@@ -13,12 +13,14 @@
     sway = {
       enable = true;
       extraPackages = with pkgs; [
+        waypaper
+        wpaperd
         base16-schemes
         basez
         dmenu
+        feh
         i3-ratiosplit
         i3-resurrect
-        feh
         i3lock
         i3nator
         nitrogen
