@@ -24,13 +24,13 @@
     xkbVariant = "";
     xkbOptions = "caps:escape";
     displayManager = {
+      autoLogin = {
+        enable = true;
+        user = "${username}";
+      };
       gdm = {
         enable = true;
         wayland = true;
-        autoLogin = {
-          enable = true;
-          user = "${username}";
-        };
       };
     };
   };
