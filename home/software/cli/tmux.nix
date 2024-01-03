@@ -12,16 +12,18 @@
       # power-theme
       vim-tmux-navigator
       sensible
-      resurrect
       yank
       tmux-fzf
       better-mouse-mode
       vim-tmux-focus-events
       urlview
       tilish
-    ];
-    extraConfig = "
+      {
+        plugin = resurrect;
+        extraConfig = "
   set -g @resurrect-strategy-nvim 'session'
 ";
+      }
+    ];
   };
 }

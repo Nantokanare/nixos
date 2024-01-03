@@ -38,7 +38,7 @@
     };
     targets = {
       gnome.enable = true;
-      grub.useImage = true;
+      # grub.useImage = true;
       nixvim.transparent_bg.main = true;
       nixvim.transparent_bg.sign_column = true;
     };
