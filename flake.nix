@@ -92,7 +92,7 @@
           inherit username;
           inherit wm;
           inherit wmtype;
-          inherit stylix;
+          inherit (inputs) stylix;
         };
       };
     };
