@@ -21,7 +21,6 @@
         feh
         i3lock
         i3nator
-        sirula
         nitrogen
         picom
         pulseaudioFull
