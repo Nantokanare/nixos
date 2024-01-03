@@ -9,5 +9,6 @@
     ./hardware/rgb.nix
     ./hardware/sound.nix
     ./hardware/vr.nix
+    ./hardware/zsa.nix
   ];
 }
