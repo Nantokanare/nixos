@@ -10,13 +10,14 @@
   ];
 
   programs = {
-    swayfx = {
+    sway = {
       enable = true;
       extraPackages = with pkgs; [
         basez
         base16-schemes
         dmenu
         rofi
+        swayfx
         swaybg
         i3lock
         waybar
