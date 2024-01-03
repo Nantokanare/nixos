@@ -1,5 +1,7 @@
 {
   stylix,
+  config,
+  lib,
   inputs,
   pkgs,
   ...

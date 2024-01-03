@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./software/shell.nix
-    ./nix.nix
   ];
 
   # List packages installed in system profile. To search, run:
