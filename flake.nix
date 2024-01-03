@@ -95,16 +95,15 @@
         };
       };
     };
+  };
+  inputs = {
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+    stylix.url = "github:danth/stylix";
+    base16.url = "github:SenchoPens/base16.nix";
 
-    inputs = {
-      nixpkgs.url = "nixpkgs/nixos-unstable";
-      stylix.url = "github:danth/stylix";
-      base16.url = "github:SenchoPens/base16.nix";
-
-      home-manager = {
-        url = "github:nix-community/home-manager/master";
-        #inputs.nixpkgs.follows = "nixpkgs";
-      };
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 }
