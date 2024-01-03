@@ -13,20 +13,22 @@
     sway = {
       enable = true;
       extraPackages = with pkgs; [
-        basez
         base16-schemes
+        basez
         dmenu
-        rofi
-        swayfx
-        swaybg
-        i3lock
-        waybar
-        i3-resurrect
-        i3nator
         i3-ratiosplit
-        pulseaudioFull
+        i3-resurrect
+        feh
+        i3lock
+        i3nator
+        sirula
         nitrogen
         picom
+        pulseaudioFull
+        rofi
+        swaybg
+        swayfx
+        waybar
       ];
     };
     xwayland = {
