@@ -19,7 +19,7 @@
 
     plymouth = {
       enable = true;
-      theme = "bgrt";
+      #theme = "bgrt";
     };
     extraModulePackages = [];
   };
