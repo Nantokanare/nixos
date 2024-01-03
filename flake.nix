@@ -27,7 +27,7 @@
     wmtype = "wayland"; # x11 or wayland
     browser = "librewolf"; # Default browser; must select one from ./user/app/browser/
     editor = "nvim"; # Default editor;
-    term = "alacritty"; # Default terminal command;
+    term = "kitty"; # Default terminal command;
     font = "MonofurNerdFont"; # Selected font
     fontPkg = pkgs.nerdfonts; # Font package
 
