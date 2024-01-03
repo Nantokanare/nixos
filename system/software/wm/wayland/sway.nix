@@ -10,14 +10,16 @@
   ];
 
   programs = {
-    sway = {
+    swayfx = {
       enable = true;
       extraPackages = with pkgs; [
         basez
         base16-schemes
         dmenu
-        i3status-rust
+        rofi
+        swaybg
         i3lock
+        waybar
         i3-resurrect
         i3nator
         i3-ratiosplit
