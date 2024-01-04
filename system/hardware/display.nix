@@ -1,10 +1,11 @@
 {
   pkgs,
   username,
+  wm,
   ...
 }: {
   imports = [
-    ./../software/wm.nix
+    ./../software/wm/${wm}.nix
   ];
   hardware.opengl.enable = true;
 
