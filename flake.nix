@@ -74,7 +74,7 @@
         ];
         specialArgs = {
           inherit browser;
-          inherit dotfilesDir;
+          # inherit dotfilesDir;
           inherit editor;
           inherit email;
           inherit extralocale;
