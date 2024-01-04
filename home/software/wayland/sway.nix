@@ -14,8 +14,6 @@
 
   wayland.windowManager.sway = {
     enable = true;
-    extraOptions = [
-    ];
     systemd.enable = true;
   };
 
@@ -431,6 +429,8 @@
               }
       '';
   };
+
+  home.file.".config/sway/config".source = ./../../dotfiles/sway/config;
   home.file.".config/gtklock/style.css".text =
     ''
       window {
