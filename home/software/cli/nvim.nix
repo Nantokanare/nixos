@@ -38,37 +38,37 @@
       {
         plugin = neo-tree-nvim;
         type = "lua";
-        config = ''
-          local function ColorMyPencil(color)
-              color = color or "rose-pine"
-              vim.cmd.colorscheme(color)
-
-              vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
-              vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
-
-          end
-
-          ColorMyPencil()
-        '';
+        #        config = ''
+        #          local function ColorMyPencil(color)
+        #              color = color or "rose-pine"
+        #              vim.cmd.colorscheme(color)
+        #
+        #              vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
+        #              vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
+        #
+        #          end
+        #
+        #          ColorMyPencil()
+        #        '';
       }
-      {
-        plugin = rose-pine;
-        type = "lua";
-        config = ''
-          require("rose-pine")
-          vim.cmd[[colorscheme rose-pine]]
-          local function ColorMyPencil(color)
-              color = color or "rose-pine"
-              vim.cmd.colorscheme(color)
-
-              vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
-              vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
-
-          end
-
-          ColorMyPencil()
-        '';
-      }
+      #      {
+      #        plugin = rose-pine;
+      #        type = "lua";
+      #        config = ''
+      #          require("rose-pine")
+      #          vim.cmd[[colorscheme rose-pine]]
+      #          local function ColorMyPencil(color)
+      #              color = color or "rose-pine"
+      #              vim.cmd.colorscheme(color)
+      #
+      #              vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
+      #              vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
+      #
+      #          end
+      #
+      #          ColorMyPencil()
+      #        '';
+      #      }
 
       {
         plugin = lualine-nvim;
