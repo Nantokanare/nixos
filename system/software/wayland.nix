@@ -6,9 +6,9 @@
   ...
 }: {
   imports = [
-    ./dbus.nix
-    ./security/gnome-keyrings.nix
-    ./fonts.nix
+    ./../dbus.nix
+    ./../security/gnome-keyrings.nix
+    ./../fonts.nix
   ];
 
   environment.systemPackages = with pkgs; [
