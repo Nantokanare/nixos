@@ -12,24 +12,24 @@
     system = "x86_64-linux"; # system arch
     systemtype = "desk";
     hostname = "R9";
-    profile = "personal"; # select a profile defined from my profiles directory
+    # profile = "personal"; # select a profile defined from my profiles directory
     timezone = "Europe/Amsterdam"; # select timezone
     locale = "en_US.UTF-8"; # select locale
     extralocale = "nl_NL.UTF-8";
 
     # ----- USER SETTINGS ----- #
     username = "nantokanare";
-    name = "Nantokanare"; # name/identifier
-    email = "nix@nantokanare.nl"; # email (used for certain configurations)
+    name = "Nantokanare";
+    email = "nix@nantokanare.nl";
     shell = "fish";
-    dotfilesDir = "~/.dotfiles"; # absolute path of the local repo
-    theme = "xcode-dusk"; # selcted theme from my themes directory (./themes/)
-    wm = "sway"; # desktop environment; must select one in both ./user/wm/ and ./system/wm/
+    # dotfilesDir = "~/.dotfile"; # absolute path of the local repo
+    # theme = "xcode-dusk"; # selcted theme from my themes directory (./themes/)
+    wm = "sway"; # desktop environment; must select one in both ./home/wm/ and ./system/wm/
     wmtype = "wayland"; # x11 or wayland
-    browser = "brave"; # Default browser; must select one from ./user/app/browser/
+    browser = "brave"; # Default browser; must select one from
     editor = "nvim"; # Default editor;
     term = "kitty"; # Default terminal command;
-    font = "MonofurNerdFont"; # Selected font
+    font = "Monofur"; # Selected font
     fontPkg = pkgs.nerdfonts; # Font package
 
     # -----
@@ -45,7 +45,6 @@
           stylix.homeManagerModules.stylix
         ];
         extraSpecialArgs = {
-          # pass config variables from above
           inherit username;
           inherit name;
           inherit hostname;
