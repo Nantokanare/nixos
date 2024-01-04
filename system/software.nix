@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./software/shl.nix
-    ./software/wm/${wmtype}/${wm}.nix
+    ./software/${wmtype}/${wm}.nix
   ];
 
   # List packages installed in system profile. To search, run:
