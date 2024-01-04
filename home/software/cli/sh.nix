@@ -34,12 +34,10 @@
     #    home-manager = "systemd-run --no-ask-password --uid=1000 --user --scope -p MemoryLimit=16000M -p CPUQuota=60% home-manager";
   };
 in {
-  programs.fish = {
+  programs.zsh = {
     enable = true;
     shellAliases = myAliases;
-    interactiveShellInit = ''
-      starship init fish | source
-    '';
+    interactiveShellInit = ''eval $(starship init zsh)'';
   };
 
   programs.bash = {

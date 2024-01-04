@@ -37,12 +37,12 @@
             set -g @continuum-save-interval '30' # minutes
           '';
         }
-        #        {
-        #          plugin = resurrect;
-        #          extraConfig = "
-        #  set -g @resurrect-strategy-nvim 'session'
-        #";
-        #        }
+        {
+          plugin = resurrect;
+          extraConfig = "
+          set -g @resurrect-strategy-nvim 'session'
+        ";
+        }
       ];
     };
     fzf.tmux.enableShellIntegration = true;

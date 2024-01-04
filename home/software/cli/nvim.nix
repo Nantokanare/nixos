@@ -10,6 +10,8 @@
     defaultEditor = true;
     vimAlias = true;
     viAlias = true;
+    withNodeJs = true;
+    withPython3 = true;
     extraConfig = ''
 
 

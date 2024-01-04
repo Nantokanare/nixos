@@ -11,4 +11,5 @@
     imath
     pystring
   ];
+  programs.pylint.enable = true;
 }
