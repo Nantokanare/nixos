@@ -15,6 +15,7 @@
     enable = true;
     systemd.enable = true;
     config = {
+      terminal = "kitty";
       modifier = "Mod4";
       floating.modifier = "Mod4";
       gaps = {
