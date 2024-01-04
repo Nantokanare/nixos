@@ -27,11 +27,11 @@
       nf = "nix flake";
 
       nr = "nixos-rebuild --flake .";
-      nrs = "nixos-rebuild --flake . switch";
+      nrs = "nixos-rebuild --flake switch .";
       snr = "sudo nixos-rebuild --flake .";
-      snrs = "sudo nixos-rebuild --flake . switch";
+      snrs = "sudo nixos-rebuild --flake switch .";
       hm = "home-manager --flake .";
-      hms = "home-manager --flake . switch";
+      hms = "home-manager --flake switch .";
     };
   };
   users.defaultUserShell = pkgs.${shell};
