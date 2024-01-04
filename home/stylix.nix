@@ -53,33 +53,33 @@
         if (wmtype == "x11")
         then true
         else false;
-      programs.feh.enable = true;
-      home.file.".fehbg-stylix".text =
-        ''
-          #!/bin/sh
-          feh --no-fehbg --bg-fill ''
-        + config.stylix.image
-        + ''          ;
-        '';
-      home.file.".fehbg-stylix".executable = true;
-      home.file.".swaybg-stylix".text =
-        ''
-          #!/bin/sh
-          swaybg -m fill -i ''
-        + config.stylix.image
-        + ''          ;
-        '';
-      home.file.".swaybg-stylix".executable = true;
-      # TODO add stylix colors to swaylock cmd
-      home.file.".swayidle-stylix".text = ''
-        #!/bin/sh
-        swaylock_cmd='swaylock --indicator-radius 200 --screenshots --effect-blur 10x10'
-        swayidle -w timeout 300 "$swaylock_cmd --fade-in 0.5 --grace 5" \
-                    timeout 600 'hyprctl dispatch dpms off' \
-                    resume 'hyprctl dispatch dpms on' \
-                    before-sleep "$swaylock_cmd"
-      '';
-      home.file.".swayidle-stylix".executable = true;
     };
   };
+  programs.feh.enable = true;
+  home.file.".fehbg-stylix".text =
+    ''
+      #!/bin/sh
+      feh --no-fehbg --bg-fill ''
+    + config.stylix.image
+    + ''      ;
+    '';
+  home.file.".fehbg-stylix".executable = true;
+  home.file.".swaybg-stylix".text =
+    ''
+      #!/bin/sh
+      swaybg -m fill -i ''
+    + config.stylix.image
+    + ''      ;
+    '';
+  home.file.".swaybg-stylix".executable = true;
+  # TODO add stylix colors to swaylock cmd
+  home.file.".swayidle-stylix".text = ''
+    #!/bin/sh
+    swaylock_cmd='swaylock --indicator-radius 200 --screenshots --effect-blur 10x10'
+    swayidle -w timeout 300 "$swaylock_cmd --fade-in 0.5 --grace 5" \
+                timeout 600 'hyprctl dispatch dpms off' \
+                resume 'hyprctl dispatch dpms on' \
+                before-sleep "$swaylock_cmd"
+  '';
+  home.file.".swayidle-stylix".executable = true;
 }

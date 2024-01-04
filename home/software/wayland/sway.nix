@@ -14,9 +14,6 @@
 
   wayland.windowManager.sway = {
     enable = true;
-    plugins = [
-      #  (pkgs.callPackage ./hyprbars.nix { inherit hyprland-plugins; } )
-    ];
     settings = {};
     extraConfig = ''
 
