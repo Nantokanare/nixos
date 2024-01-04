@@ -3,6 +3,7 @@
   lib,
   home-manager,
   font,
+  stylix,
   timezone,
   pkgs,
   ...
