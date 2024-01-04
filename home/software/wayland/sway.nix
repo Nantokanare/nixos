@@ -16,9 +16,9 @@
     enable = true;
     extraOptions = [
     ];
-    xwayland = {enable = true;};
     systemd.enable = true;
   };
+  programs.xwayland.enable = true;
 
   home.packages = with pkgs; [
     alacritty
