@@ -14,7 +14,7 @@
       keyMode = "vi";
       mouse = true;
       resizeAmount = 10;
-      sensibleOnTop = true;
+      sensibleOnTop = false;
       shell = "\${pkgs.fish}/bin/fish";
       shortcut = "t";
       terminal = "kitty";
