@@ -9,7 +9,7 @@
   stylix = {
     autoEnable = true;
     polarity = "dark";
-    image = ./../themes/walls/2.jpg;
+    image = ./../themes/walls/2.png;
     opacity = {
       terminal = 0.7;
       desktop = 0.8;
