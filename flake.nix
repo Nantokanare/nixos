@@ -45,23 +45,23 @@
           stylix.homeManagerModules.stylix
         ];
         extraSpecialArgs = {
-          inherit username;
-          inherit name;
-          inherit hostname;
-          # inherit profile;
-          inherit email;
-          inherit timezone;
           # inherit dotfilesDir;
+          # inherit profile;
           # inherit theme;
-          inherit font;
-          inherit fontPkg;
-          inherit wm;
-          inherit shell;
-          inherit wmtype;
+          inherit (inputs) stylix;
           inherit browser;
           inherit editor;
+          inherit email;
+          inherit font;
+          inherit fontPkg;
+          inherit hostname;
+          inherit name;
+          inherit shell;
           inherit term;
-          inherit (inputs) stylix;
+          inherit timezone;
+          inherit username;
+          inherit wm;
+          inherit wmtype;
         };
       };
     };
@@ -73,27 +73,27 @@
           stylix.nixosModules.stylix
         ];
         specialArgs = {
-          inherit browser;
           # inherit dotfilesDir;
+          # inherit profile;
+          # inherit theme;
+          inherit (inputs) stylix;
+          inherit browser;
           inherit editor;
           inherit email;
           inherit extralocale;
           inherit font;
           inherit fontPkg;
-          inherit inputs;
           inherit hostname;
+          inherit inputs;
           inherit locale;
           inherit name;
-          # inherit profile;
           inherit shell;
           inherit systemtype;
           inherit term;
-          # inherit theme;
           inherit timezone;
           inherit username;
           inherit wm;
           inherit wmtype;
-          inherit (inputs) stylix;
         };
       };
     };

@@ -34,15 +34,15 @@
       hm = "home-manager --flake .";
       hms = "home-manager --flake . switch";
     };
-    shellInit = ''
-            if status is-interactive
-                       and not set -q TMUX
-                       exec tmux
-      starship init fish | source
-
-      end
-
-    '';
+    #    shellInit = ''
+    #            if status is-interactive
+    #                       and not set -q TMUX
+    #                       exec tmux
+    #      starship init fish | source
+    #
+    #      end
+    #
+    #    '';
   };
   users.defaultUserShell = pkgs.${shell};
 }

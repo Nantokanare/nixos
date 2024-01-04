@@ -6,6 +6,6 @@
     ./software/game.nix
     ./software/git.nix
     ./software/terminal/${term}.nix
-    # ./software/wm.nix
+    ./software/wm.nix
   ];
 }
