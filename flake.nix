@@ -48,11 +48,11 @@
           inherit username;
           inherit name;
           inherit hostname;
-          inherit profile;
+          # inherit profile;
           inherit email;
           inherit timezone;
-          inherit dotfilesDir;
-          inherit theme;
+          # inherit dotfilesDir;
+          # inherit theme;
           inherit font;
           inherit fontPkg;
           inherit wm;
@@ -84,11 +84,11 @@
           inherit hostname;
           inherit locale;
           inherit name;
-          inherit profile;
+          # inherit profile;
           inherit shell;
           inherit systemtype;
           inherit term;
-          inherit theme;
+          # inherit theme;
           inherit timezone;
           inherit username;
           inherit wm;
