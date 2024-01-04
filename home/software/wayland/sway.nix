@@ -14,13 +14,8 @@
 
   wayland.windowManager.sway = {
     enable = true;
-    settings = {};
-    extraConfig = ''
-
-
-
-
-    '';
+    extraOptions = [
+    ];
     xwayland = {enable = true;};
     systemd.enable = true;
   };
