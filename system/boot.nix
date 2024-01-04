@@ -6,7 +6,7 @@
   boot = {
     kernel.sysctl."kernel.sysrq" = 1;
     kernelPackages = pkgs.linuxPackages_zen;
-    boot.extraModulePackages = with config.boot.kernelPackages; [
+    extraModulePackages = with config.boot.kernelPackages; [
       zenpower
     ];
     loader = {
@@ -24,6 +24,5 @@
       enable = true;
       #theme = "bgrt";
     };
-    extraModulePackages = [];
   };
 }
