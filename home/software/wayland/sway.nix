@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  home-manager,
   font,
   timezone,
   pkgs,
