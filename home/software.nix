@@ -11,6 +11,6 @@
     ./software/game.nix
     ./software/git.nix
     ./software/terminal/${term}.nix
-    ./${wmtype}/${wm}.nix
+    ./software/${wmtype}/${wm}.nix
   ];
 }
