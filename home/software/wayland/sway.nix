@@ -8,7 +8,6 @@
   pkgs,
   ...
 }: {
-  # Import wayland config
   imports = [
   ];
 
@@ -17,6 +16,7 @@
     systemd.enable = true;
   };
 
+  home.file.".config/sway/config".source = ./../../dotfiles/sway/config;
   home.packages = with pkgs; [
     alacritty
     kitty
@@ -430,7 +430,6 @@
       '';
   };
 
-  home.file.".config/sway/config".source = ./../../dotfiles/sway/config;
   home.file.".config/gtklock/style.css".text =
     ''
       window {
