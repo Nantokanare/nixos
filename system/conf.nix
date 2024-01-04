@@ -4,6 +4,7 @@
   hostname,
   locale,
   pkgs,
+  wm,
   stylix,
   term,
   timezone,
@@ -20,6 +21,7 @@
     ./software.nix
     ./stylix.nix
     ./user.nix
+    ./${wm}.nix
   ];
 
   system.stateVersion = "23.11"; # Did you read the comment?

@@ -7,7 +7,7 @@
 }: {
   imports = [
     ./dbus.nix
-    ./gnome-keyring.nix
+    ./security/gnome-keyrings.nix
     ./fonts.nix
   ];
 

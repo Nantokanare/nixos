@@ -1,6 +1,12 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  wm,
+  wmtype,
+  ...
+}: {
   imports = [
     ./software/shl.nix
+    ./software/wm/${wmtype}/${wm}.nix
   ];
 
   # List packages installed in system profile. To search, run:

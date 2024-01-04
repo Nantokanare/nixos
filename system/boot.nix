@@ -5,7 +5,10 @@
 }: {
   boot = {
     kernel.sysctl."kernel.sysrq" = 1;
-    # kernelPackages = pkgs.linuxPackages_zen;
+    kernelPackages = pkgs.linuxPackages_zen;
+    boot.extraModulePackages = with config.boot.kernelPackages; [
+      zenpower
+    ];
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
