@@ -14,9 +14,9 @@
   wayland.windowManager.sway = {
     enable = true;
     systemd.enable = true;
+    config.floating.modifier = "Mod4";
   };
 
-  # home.file.".config/sway/config".source = ./../../dotfiles/sway/config;
   home.packages = with pkgs; [
     alacritty
     kitty
