@@ -17,7 +17,6 @@
     home-manager
     htop
     keepassxc
-    libyubikey
     mpv
     neofetch
     neovim
@@ -36,8 +35,5 @@
     vlc
     wget
     wshowkeys
-    yubico-pam
-    yubico-piv-tool
-    yubioath-flutter
   ];
 }

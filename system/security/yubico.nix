@@ -14,4 +14,16 @@
     control = "sufficient";
     mode = "challenge-response";
   };
+  environment.systemPackages = with pkgs; [
+    libyubikey
+    yubico-pam
+    yubico-piv-tool
+    yubihsm-connector
+    yubihsm-shell
+    yubikey-manager
+    yubikey-personalization
+    yubikey-touch-detector
+    yubioath-flutter
+    yubikey-agent
+  ];
 }
