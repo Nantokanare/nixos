@@ -19,7 +19,7 @@
       floating.modifier = "Mod4";
       gaps = {
         smartBorders = "on";
-        outer = "4";
+        outer = 4;
       };
     };
   };
