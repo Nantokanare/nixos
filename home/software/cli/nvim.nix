@@ -71,7 +71,7 @@
       #      }
 
       #   {
-      #     plugin = lualine-nvim;
+      lualine-nvim
       #     type = "lua";
       #     config = ''
       #       local function metals_status()
