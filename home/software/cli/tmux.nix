@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  shell,
   home-manager,
   lib,
   ...
@@ -15,7 +16,7 @@
       mouse = true;
       resizeAmount = 10;
       sensibleOnTop = false;
-      shell = "\${pkgs.fish}/bin/fish";
+      shell = "${pkgs.${shell}}/bin/${shell}";
       shortcut = "t";
       terminal = "kitty";
 
