@@ -14,9 +14,15 @@
   wayland.windowManager.sway = {
     enable = true;
     systemd.enable = true;
-    config.floating.modifier = "Mod4";
+    config = {
+      modifier = "Mod4";
+      floating.modifier = "Mod4";
+      gaps = {
+        smartBorders = "on";
+        outer = "4";
+      };
+    };
   };
-
   home.packages = with pkgs; [
     alacritty
     kitty
