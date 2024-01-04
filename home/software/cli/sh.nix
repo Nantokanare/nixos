@@ -37,7 +37,7 @@ in {
   programs.zsh = {
     enable = true;
     shellAliases = myAliases;
-    interactiveShellInit = ''eval $(starship init zsh)'';
+    initExtra = ''eval $(starship init zsh)'';
   };
 
   programs.bash = {
