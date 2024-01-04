@@ -2,10 +2,11 @@
   pkgs,
   username,
   wm,
+  wmtype,
   ...
 }: {
   imports = [
-    ./../software/wm/${wm}.nix
+    ./../software/${wmtype}/${wm}.nix
   ];
   hardware.opengl.enable = true;
 
