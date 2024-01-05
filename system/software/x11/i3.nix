@@ -3,7 +3,7 @@
     ./../x11.nix
   ];
 
-  service.xserver.windowManager.i3 = {
+  services.xserver.windowManager.i3 = {
     enable = true;
     extraPackages = with pkgs; [
       basez
