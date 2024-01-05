@@ -84,8 +84,8 @@
     #!/bin/sh
     swaylock_cmd='swaylock --indicator-radius 200 --screenshots --effect-blur 10x10'
     swayidle -w timeout 300 "$swaylock_cmd --fade-in 0.5 --grace 5" \
-                timeout 600 'hyprctl dispatch dpms off' \
-                resume 'hyprctl dispatch dpms on' \
+    #            timeout 600 'hyprctl dispatch dpms off' \
+    #            resume 'hyprctl dispatch dpms on' \
                 before-sleep "$swaylock_cmd"
   '';
   home.file.".swayidle-stylix".executable = true;

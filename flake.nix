@@ -24,8 +24,8 @@
     shell = "zsh";
     # dotfilesDir = "~/.dotfile"; # absolute path of the local repo
     # theme = "xcode-dusk"; # selcted theme from my themes directory (./themes/)
-    wm = "sway"; # desktop environment; must select one in both ./home/wm/ and ./system/wm/
-    wmtype = "wayland"; # x11 or wayland
+    wm = "i3"; # desktop environment; must select one in both ./home/wm/ and ./system/wm/
+    wmtype = "x11"; # x11 or wayland
     browser = "brave"; # Default browser; must select one from
     editor = "nvim"; # Default editor;
     term = "kitty"; # Default terminal command;

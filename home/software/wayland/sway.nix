@@ -43,12 +43,12 @@
           "exec" = ''echo "" '';
           "interval" = "once";
         };
-        "custom/sway" = {
-          "format" = "   {}";
-          "exec" = ''cat ~/.hyprprofile'';
-          "interval" = 3;
-          "on-click" = "hyprprofile-dmenu";
-        };
+        #   "custom/sway" = {
+        #     "format" = "   {}";
+        #     "exec" = ''cat ~/.hyprprofile'';
+        #     "interval" = 3;
+        #     "on-click" = "hyprprofile-dmenu";
+        #   };
         "sway/workspaces" = {
           "format" = "{icon}";
           "format-icons" = {
@@ -68,12 +68,12 @@
             "scratch_geary" = "_";
             "scratch_pavucontrol" = "_󰍰";
           };
-          "on-click" = "activate";
-          "on-scroll-up" = "hyprctl dispatch workspace e+1";
-          "on-scroll-down" = "hyprctl dispatch workspace e-1";
+          #  "on-click" = "activate";
+          #  "on-scroll-up" = "hyprctl dispatch workspace e+1";
+          #  "on-scroll-down" = "hyprctl dispatch workspace e-1";
           #"all-outputs" = true;
           #"active-only" = true;
-          "ignore-workspaces" = ["scratch" "-"];
+          # "ignore-workspaces" = ["scratch" "-"];
           #"show-special" = false;
           #"persistent-workspaces" = {
           #    # this block doesn't seem to work for whatever reason
@@ -139,7 +139,7 @@
           "car" = "";
           "default" = ["" "" ""];
         };
-        "on-click" = "pypr toggle pavucontrol && hyprctl dispatch bringactivetotop";
+        # "on-click" = "pypr toggle pavucontrol && hyprctl dispatch bringactivetotop";
       };
     };
   };
@@ -397,8 +397,8 @@
     grim
     gsettings-desktop-schemas
     gtklock
-    hyprland-protocols
-    hyprpicker
+    # hyprland-protocols
+    # hyprpicker
     keepmenu
     killall
     kitty
@@ -420,7 +420,7 @@
     wtype
     xdg-desktop-portal
     xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
+    # xdg-desktop-portal-hyprland
     xdg-utils
   ];
 }
