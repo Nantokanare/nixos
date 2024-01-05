@@ -5,10 +5,6 @@
   ...
 }: {
   imports = [
-    ./pipewire.nix
-    ./dbus.nix
-    ./gnome-keyring.nix
-    ./fonts.nix
   ];
 
   # Enable automatic login for the user.
