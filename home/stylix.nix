@@ -40,19 +40,18 @@
     };
     targets = {
       gnome.enable = true;
-      lightdm.enable = true;
       # grub.useImage = true;
       nixvim.transparent_bg.main = true;
       nixvim.transparent_bg.sign_column = true;
       alacritty.enable = true;
       kitty.enable = true;
       gtk.enable = true;
-      plymouth = {
-        enable = true;
-        blackBackground = true;
-        #      logo =
-        #      logoAnimated =
-      };
+      #  plymouth = {
+      #    enable = true;
+      #    blackBackground = true;
+      #    #      logo =
+      #    #      logoAnimated =
+      #  };
       rofi.enable =
         if (wmtype == "x11")
         then true
