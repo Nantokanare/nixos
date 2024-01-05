@@ -1,0 +1,3 @@
+{...}: {
+  hardware.fancontrol.enable = true;
+}

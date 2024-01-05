@@ -15,4 +15,5 @@
     vSync = true;
     inactiveOpacity = 0.6;
   };
+  programs.light.enable = true;
 }

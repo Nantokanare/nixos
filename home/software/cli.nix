@@ -6,10 +6,11 @@
   ...
 }: {
   imports = [
-    ./cli/sh.nix
     ./cli/nvim.nix
-    ./cli/tmux.nix
+    ./cli/sh.nix
     ./cli/starship.nix
+    ./cli/tldr.nix
+    ./cli/tmux.nix
   ];
 
   # Collection of useful CLI apps

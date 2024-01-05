@@ -13,13 +13,14 @@
     image = ./../themes/walls/2.png;
     opacity = {
       terminal = 0.7;
+      applications = 0.9;
       desktop = 0.8;
       popups = 0.9;
     };
     fonts = {
       serif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Serif";
+        package = pkgs.jost;
+        name = "Jost";
       };
 
       sansSerif = {
@@ -39,12 +40,19 @@
     };
     targets = {
       gnome.enable = true;
+      lightdm.enable = true;
       # grub.useImage = true;
       nixvim.transparent_bg.main = true;
       nixvim.transparent_bg.sign_column = true;
       alacritty.enable = true;
       kitty.enable = true;
       gtk.enable = true;
+      plymouth = {
+        enable = true;
+        blackBackground = true;
+        #      logo =
+        #      logoAnimated =
+      };
       rofi.enable =
         if (wmtype == "x11")
         then true

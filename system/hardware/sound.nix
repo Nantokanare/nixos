@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -15,4 +15,7 @@
     # no need to redefine it in your config for now)
   };
   sound.mediaKeys.enable = true;
+  environment.systemPackages = [
+    pkgs.helvum
+  ];
 }
