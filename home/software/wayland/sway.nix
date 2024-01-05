@@ -21,54 +21,10 @@
       gaps = {
         smartBorders = "on";
         outer = 4;
+        inner = 2;
       };
     };
   };
-  home.packages = with pkgs; [
-    alacritty
-    kitty
-    feh
-    killall
-    polkit_gnome
-    libva-utils
-    gsettings-desktop-schemas
-    wlr-randr
-    wtype
-    wl-clipboard
-    hyprland-protocols
-    hyprpicker
-    swayidle
-    gtklock
-    #swaylock
-    #(pkgs.swaylock-effects.overrideAttrs (oldAttrs: {
-    #  version = "1.6.4-1";
-    #  src = fetchFromGitHub {
-    #    owner = "mortie";
-    #    repo = "swaylock-effects";
-    #    rev = "20ecc6a0a5b61bb1a66cfb513bc357f74d040868";
-    #    sha256 = "sha256-nYA8W7iabaepiIsxDrCkG/WIFNrVdubk/AtFhIvYJB8=";
-    #  };
-    #}))
-    swaybg
-    fnott
-    #hyprpaper
-    #wofi
-    fuzzel
-    keepmenu
-    pinentry-gnome
-    wev
-    grim
-    slurp
-    libsForQt5.qt5.qtwayland
-    qt6.qtwayland
-    xdg-utils
-    xdg-desktop-portal
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
-    wlsunset
-    pavucontrol
-    pamixer
-  ];
   programs.waybar = {
     enable = true;
     settings = {
@@ -430,8 +386,41 @@
     '';
   programs.swaylock = {
     enable = true;
-    settings = {
-      color = "#" + config.lib.stylix.colors.base00;
-    };
   };
+  home.packages = with pkgs; [
+    #hyprpaper
+    #wofi
+    alacritty
+    feh
+    fnott
+    fuzzel
+    grim
+    gsettings-desktop-schemas
+    gtklock
+    hyprland-protocols
+    hyprpicker
+    keepmenu
+    killall
+    kitty
+    libsForQt5.qt5.qtwayland
+    libva-utils
+    pamixer
+    pavucontrol
+    pinentry-gnome
+    polkit_gnome
+    qt6.qtwayland
+    slurp
+    swaybg
+    waybar
+    swayidle
+    wev
+    wl-clipboard
+    wlr-randr
+    wlsunset
+    wtype
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
+    xdg-utils
+  ];
 }

@@ -17,10 +17,10 @@
         basez
         dmenu
         feh
-        i3-ratiosplit
-        i3-resurrect
-        i3lock
-        i3nator
+        # i3-ratiosplit
+        # i3-resurrect
+        # i3lock
+        # i3nator
         nitrogen
         picom
         pulseaudioFull
