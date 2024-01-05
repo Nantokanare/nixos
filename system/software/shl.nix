@@ -26,11 +26,7 @@
       nbn = "nix build nixpkgs#";
       nf = "nix flake";
 
-      nr = "nixos-rebuild --flake .";
-      nrs = "nixos-rebuild --flake . switch";
-      snr = "sudo nixos-rebuild --flake .";
-      snrs = "sudo nixos-rebuild --flake . switch";
-      hm = "home-manager --flake .";
+      nrs = "sudo nixos-rebuild --flake . switch";
       hms = "home-manager --flake . switch";
     };
   };
