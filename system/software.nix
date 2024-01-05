@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    ./software/shl.nix
+    ./software/cli.nix
     ./software/${wmtype}/${wm}.nix
   ];
 
