@@ -2,6 +2,7 @@
   config,
   pkgs,
   shell,
+  term,
   home-manager,
   lib,
   ...
@@ -18,7 +19,7 @@
       sensibleOnTop = false;
       shell = "${pkgs.${shell}}/bin/${shell}";
       shortcut = "t";
-      terminal = "kitty";
+      terminal = term;
 
       plugins = with pkgs.tmuxPlugins; [
         # power-theme

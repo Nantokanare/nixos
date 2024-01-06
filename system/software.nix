@@ -18,6 +18,7 @@
     brave
     btop
     cron
+    feh
     fzf
     git
     home-manager
@@ -33,15 +34,16 @@
     plymouth
     qbittorrent
     ranger
-    yazi
     starship
     syncthing
     tldr
     tmux
+    ueberzug
     vifm
     vlc
     wget
     wshowkeys
+    yazi
   ];
   programs.nix-ld.enable = true;
 }
