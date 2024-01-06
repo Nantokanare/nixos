@@ -6,6 +6,7 @@
     nixpkgs,
     home-manager,
     stylix,
+    firefox-addons,
     ...
   }: let
     # ---- SYSTEM SETTINGS ---- #
@@ -43,6 +44,7 @@
         modules = [
           ./home/home.nix
           stylix.homeManagerModules.stylix
+          firefox-addons.homeManagerModules.firefox-addons
         ];
         extraSpecialArgs = {
           # inherit dotfilesDir;
@@ -106,6 +108,10 @@
     home-manager = {
       url = "github:nix-community/home-manager/master";
       #inputs.nixpkgs.follows = "nixpkgs";
+    };
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 }
