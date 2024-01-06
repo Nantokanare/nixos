@@ -25,8 +25,11 @@
     # Printing support
   };
   # KDEConnet
-  programs.kdeconnect = {
-    enable = true;
+  programs = {
+    usbtop.enable = true;
+    kdeconnect = {
+      enable = true;
+    };
   };
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;

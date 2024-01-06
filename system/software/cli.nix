@@ -1,10 +1,14 @@
 {
   pkgs,
+  lib,
+  config,
   shell,
   ...
 }: {
   imports = [
   ];
+  #  if (shell == "bash" || "zsh" || "fish")
+  #	  then [
   programs.${shell} = {
     enable = true;
     shellAliases = {
@@ -29,6 +33,20 @@
       nrs = "sudo nixos-rebuild --flake . switch";
       hms = "home-manager --flake . switch";
     };
+  };
+  #  ];
+  #  else [
+  #  environment.systemPackages = with pkgs; [
+  #    nushellFull
+  #    nushellPlugins.gstat
+  #    nushellPlugins.formats
+  #    nushellPlugins.regex
+  #    nushellPlugins.net
+  #  ];];
+  programs = {
+    neovim.defaultEditor = true;
+    thefuck.enable = true;
+    nano.enable = false;
   };
   users.defaultUserShell = pkgs.${shell};
 }

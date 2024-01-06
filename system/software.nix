@@ -33,6 +33,7 @@
     plymouth
     qbittorrent
     ranger
+    yazi
     starship
     syncthing
     tldr
@@ -42,4 +43,5 @@
     wget
     wshowkeys
   ];
+  programs.nix-ld.enable = true;
 }

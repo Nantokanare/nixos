@@ -21,6 +21,7 @@ in {
       ++ ifTheyExist [
         "minecraft"
         "network"
+        "adbusers"
         "wireshark"
         "i2c"
         "mysql"

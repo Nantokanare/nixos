@@ -8,11 +8,13 @@
   services.udev.packages = [pkgs.yubikey-personalization];
 
   services.yubikey-agent.enable = true;
-
-  security.pam.yubico = {
-    enable = true;
-    control = "sufficient";
-    mode = "challenge-response";
+  security.pam = {
+    u2f.enable = true;
+    yubico = {
+      enable = true;
+      control = "sufficient";
+      mode = "challenge-response";
+    };
   };
   environment.systemPackages = with pkgs; [
     libyubikey
