@@ -4,6 +4,7 @@
   outputs = inputs @ {
     self,
     nixpkgs,
+    nur,
     home-manager,
     stylix,
     firefox-addons,
@@ -73,6 +74,7 @@
         modules = [
           ./system/conf.nix
           stylix.nixosModules.stylix
+          nur.nixosModules.nur
         ];
         specialArgs = {
           # inherit dotfilesDir;
@@ -109,6 +111,7 @@
       url = "github:nix-community/home-manager/master";
       #inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur.url = "github:nix-community/NUR";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
