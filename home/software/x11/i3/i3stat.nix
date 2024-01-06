@@ -1,7 +1,7 @@
 {...}: {
   programs.i3status-rust = {
     enable = true;
-    bar = {
+    bars = {
       top = {
         blocks = [
           {
