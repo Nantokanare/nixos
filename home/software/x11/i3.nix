@@ -39,7 +39,7 @@
         {command = "${browser}";}
         {command = "${term}";}
       ];
-      modifier = "Mod1";
+      modifier = "Mod4";
       #  defaultWorkspace = "workspace number 6";
       #  keybindings = {
       #    let
