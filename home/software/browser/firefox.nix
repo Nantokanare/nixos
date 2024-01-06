@@ -5,6 +5,7 @@
 }: {
   home.file.".mozilla/firefox/default/user.js".source = builtins.fetchTarball {
     url = github:arkenfox/user.js;
+    sha256 = "4a510a4b4ceda8a177831a77309f2faccf7e18d5";
   };
 
   home.file.".mozilla/firefox/default/user.js".text = ''
