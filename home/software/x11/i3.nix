@@ -3,12 +3,10 @@
   lib,
   browser,
   config,
-  wm,
   wmtype,
   ...
 }: {
   imports = [
-    ./${wm}/i3statusR.nix
   ];
 
   xsession.windowManager.i3 = {
@@ -23,8 +21,8 @@
           }
         ];
       };
-      #    bars = {
-      #    };
+      bars = {
+      };
       startup = [
         # {
         #   command = "systemctl --user restart polybar";
