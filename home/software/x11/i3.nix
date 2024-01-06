@@ -63,11 +63,7 @@
       };
       floating = {
         border = 2;
-        titlebar = ''
-          false
-
-
-        '';
+        titlebar = false;
         criteria = [
           {
             title = "Steam - Update News";
