@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  firefox-addons,
   lib,
   config,
   ...
@@ -41,6 +42,10 @@
       default = {
         id = 0;
         name = "default";
+        datareporting = {
+          policy.dataSubmissionEnabled = false;
+          healthreport.uploadEnabled = false;
+        };
         search = {
           force = true;
           default = "DuckDuckGo";
@@ -140,11 +145,6 @@
         blocklist = {
           enabled = true; # [DEFAULT: true]
         };
-      };
-
-      datareporting = {
-        policy.dataSubmissionEnabled = false;
-        healthreport.uploadEnabled = false;
       };
 
       toolkit = {

@@ -45,7 +45,6 @@
         modules = [
           ./home/home.nix
           stylix.homeManagerModules.stylix
-          firefox-addons.homeManagerModules.firefox-addons
         ];
         extraSpecialArgs = {
           # inherit dotfilesDir;
