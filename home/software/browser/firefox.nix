@@ -7,70 +7,119 @@
 }: {
   programs.firefox = {
     enable = true;
-    profiles.default = {
-      search = {
-        default = "DuckDuckGo";
-        engines = {
-          "Nix Packages" = {
-            urls = [
-              {
-                template = "https://search.nixos.org/packages";
-                params = [
-                  {
-                    name = "type";
-                    value = "packages";
-                  }
-                  {
-                    name = "query";
-                    value = "{searchTerms}";
-                  }
-                ];
-              }
-            ];
-
-            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-            definedAliases = ["@np"];
-          };
-
-          "NixOS Wiki" = {
-            urls = [{template = "https://nixos.wiki/index.php?search={searchTerms}";}];
-            iconUpdateURL = "https://nixos.wiki/favicon.png";
-            updateInterval = 24 * 60 * 60 * 1000; # every day
-            definedAliases = ["@nw"];
-          };
+    package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
+      extraPolicies = {
+        CaptivePortal = false;
+        DisableFirefoxStudies = true;
+        DisablePocket = true;
+        DisableTelemetry = true;
+        DisableFirefoxAccounts = false;
+        NoDefaultBookmarks = true;
+        OfferToSaveLogins = false;
+        OfferToSaveLoginsDefault = false;
+        PasswordManagerEnabled = false;
+        FirefoxHome = {
+          Search = true;
+          Pocket = false;
+          Snippets = false;
+          TopSites = false;
+          Highlights = false;
+        };
+        UserMessaging = {
+          ExtensionRecommendations = false;
+          SkipOnboarding = true;
         };
       };
-      bookmarks = [
-        {
-          name = "wikipedia";
-          tags = ["wiki"];
-          keyword = "wiki";
-          url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
-        }
-        {
-          name = "kernel.org";
-          url = "https://www.kernel.org";
-        }
-        {
-          name = "Nix sites";
-          toolbar = true;
-          bookmarks = [
-            {
-              name = "homepage";
-              url = "https://nixos.org/";
-            }
-            {
-              name = "wiki";
-              tags = ["wiki" "nix"];
-              url = "https://nixos.wiki/";
-            }
-          ];
-        }
-      ];
     };
-    policies = {
-      BlockAboutConfig = true;
-      DefaultDownloadDirectory = "\${home}/Downloads";
+    extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      ublock-origin
+      bitwarden
+      floccus
+      disconnect
+    ];
+    profiles = {
+      default = {
+        id = 0;
+        name = "default";
+        search = {
+          force = true;
+          default = "DuckDuckGo";
+          engines = {
+            "Nix Packages" = {
+              urls = [
+                {
+                  template = "https://search.nixos.org/packages";
+                  params = [
+                    {
+                      name = "type";
+                      value = "packages";
+                    }
+                    {
+                      name = "query";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
+              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+              definedAliases = ["@np"];
+            };
+            "NixOS Wiki" = {
+              urls = [{template = "https://nixos.wiki/index.php?search={searchTerms}";}];
+              iconUpdateURL = "https://nixos.wiki/favicon.png";
+              updateInterval = 24 * 60 * 60 * 1000;
+              definedAliases = ["@nw"];
+            };
+            "Wikipedia (en)".metaData.alias = "@wiki";
+            "Google".metaData.hidden = true;
+            "Amazon.com".metaData.hidden = true;
+            "Bing".metaData.hidden = true;
+            "eBay".metaData.hidden = true;
+          };
+        };
+        settings = {
+          "general.smoothScroll" = true;
+        };
+        bookmarks = [
+          {
+            name = "wikipedia";
+            tags = ["wiki"];
+            keyword = "wiki";
+            url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
+          }
+          {
+            name = "kernel.org";
+            url = "https://www.kernel.org";
+          }
+          {
+            name = "Nix sites";
+            toolbar = true;
+            bookmarks = [
+              {
+                name = "homepage";
+                url = "https://nixos.org/";
+              }
+              {
+                name = "wiki";
+                tags = ["wiki" "nix"];
+                url = "https://nixos.wiki/";
+              }
+            ];
+          }
+        ];
+        extraConfig = ''
+          user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+          user_pref("full-screen-api.ignore-widgets", true);
+          user_pref("media.ffmpeg.vaapi.enabled", true);
+          user_pref("media.rdd-vpx.enabled", true);
+        '';
+        userChrome = ''
+          # a css
+        '';
+        userContent = ''
+          # Here too
+        '';
+      };
 
       geo = {
         provider = {

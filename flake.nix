@@ -26,7 +26,7 @@
     # theme = "xcode-dusk"; # selcted theme from my themes directory (./themes/)
     wm = "i3"; # desktop environment; must select one in both ./home/wm/ and ./system/wm/
     wmtype = "x11"; # x11 or wayland
-    browser = "brave"; # Default browser; must select one from
+    browser = "fisefox"; # Default browser; must select one from
     editor = "nvim"; # Default editor;
     term = "kitty"; # Default terminal command;
     font = "Monofur"; # Selected font
