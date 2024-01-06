@@ -3,7 +3,7 @@
     enable = true;
     bindings = [
       {
-        keys = [113];
+        keys = [122];
         events = ["key"];
         command = "''${pkgs.alsa-utils}/bin/amixer -q set Master toggle";
       }
