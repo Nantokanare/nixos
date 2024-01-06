@@ -8,7 +8,7 @@
   ...
 }: {
   imports = [
-    ./${wm}/i3statusR.nix
+    ./${wm}/i3stat.nix
   ];
 
   xsession.windowManager.i3 = {
