@@ -1,12 +1,13 @@
 {
   config,
   lib,
+  wmtype,
   pkgs,
   ...
 }: {
   # Import wayland config
   imports = [
-    ../wayland.nix
+    ../${wmtype}.nix
   ];
 
   programs = {

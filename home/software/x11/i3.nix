@@ -41,15 +41,19 @@
       ];
       modifier = "Mod4";
       #  defaultWorkspace = "workspace number 6";
-      #  keybindings = {
-      #    let
-      #      modifier = config.xsession.windowManager.i3.config.modifier;
-      #    in lib.mkOptionDefault {
-      #      "${modifier}+Return" = "exec i3-sensible-terminal";
-      #      "${modifier}+Shift+q" = "kill";
-      #      "${modifier}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
-      #    }
-      #  };
+      keybindings = {
+        "XF86AudioRaiseVolume" = "exec volumectl -u up";
+        "XF86AudioLowerVolume" = "exec volumectl -u down";
+        "XF86AudioMute" = "exec volumectl toggle-mute";
+        "XF86AudioMicMute" = "exec volumectl -m toggle-mute";
+        #         let
+        #           modifier = config.xsession.windowManager.i3.config.modifier;
+        #         in lib.mkOptionDefault {
+        #           "${modifier}+Return" = "exec i3-sensible-terminal";
+        #           "${modifier}+Shift+q" = "kill";
+        #           "${modifier}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
+        #         }
+      };
 
       gaps = {
         top = 4;

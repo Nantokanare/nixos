@@ -1,6 +1,10 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  wmtype,
+  ...
+}: {
   imports = [
-    ./../x11.nix
+    ./../${wmtype}.nix
   ];
 
   services.xserver.windowManager.i3 = {

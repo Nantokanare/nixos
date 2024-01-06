@@ -1,13 +1,13 @@
 {
   config,
   lib,
+  wmtype,
   pkgs,
   ...
 }: {
   # Import wayland config
   imports = [
-    ../wayland.nix
-    ../../pipewire.nix
+    ../${wmtype}.nix
     ../../dbus.nix
     ../../../../../../security/gnome-keyrings.nix
   ];
