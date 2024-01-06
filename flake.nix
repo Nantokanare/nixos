@@ -23,7 +23,7 @@
     email = "nix@nantokanare.nl";
     shell = "zsh";
     # dotfilesDir = "~/.dotfile"; # absolute path of the local repo
-    # theme = "xcode-dusk"; # selcted theme from my themes directory (./themes/)
+    theme = "6"; # selcted theme from my themes directory (./themes/)
     wm = "i3"; # desktop environment; must select one in both ./home/wm/ and ./system/wm/
     wmtype = "x11"; # x11 or wayland
     browser = "firefox"; # Default browser; must select one from
@@ -47,7 +47,7 @@
         extraSpecialArgs = {
           # inherit dotfilesDir;
           # inherit profile;
-          # inherit theme;
+          inherit theme;
           inherit (inputs) stylix;
           inherit browser;
           inherit editor;
@@ -75,7 +75,7 @@
         specialArgs = {
           # inherit dotfilesDir;
           # inherit profile;
-          # inherit theme;
+          inherit theme;
           inherit (inputs) stylix;
           inherit browser;
           inherit editor;

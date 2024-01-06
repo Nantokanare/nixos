@@ -3,6 +3,7 @@
   wmtype,
   config,
   lib,
+  theme,
   inputs,
   pkgs,
   ...
@@ -10,7 +11,7 @@
   stylix = {
     autoEnable = true;
     polarity = "dark";
-    image = ./../themes/walls/2.png;
+    image = ./../themes/walls/${theme}.png;
     opacity = {
       terminal = 0.7;
       applications = 0.9;
