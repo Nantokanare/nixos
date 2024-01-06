@@ -15,7 +15,8 @@
     # no need to redefine it in your config for now)
   };
   sound.mediaKeys.enable = true;
-  environment.systemPackages = [
-    pkgs.helvum
+  environment.systemPackages = with pkgs; [
+    helvum
+    jamesdsp
   ];
 }
