@@ -12,6 +12,17 @@
   xsession.windowManager.i3 = {
     enable = true;
     config = {
+      assigns = {
+        "1: web" = [{class = "^Firefox$";}];
+        "0: extra" = [
+          {
+            class = "^Firefox$";
+            window_role = "About";
+          }
+        ];
+      };
+      bars = {
+      };
       startup = [
         # {
         #   command = "systemctl --user restart polybar";
@@ -63,17 +74,6 @@
             class = "Pavucontrol";
           }
         ];
-        assigns = {
-          "1: web" = [{class = "^Firefox$";}];
-          "0: extra" = [
-            {
-              class = "^Firefox$";
-              window_role = "About";
-            }
-          ];
-        };
-        bars = {
-        };
       };
     };
   };
