@@ -21,7 +21,7 @@
     username = "nantokanare";
     name = "Nantokanare";
     email = "nix@nantokanare.nl";
-    shell = "zsh";
+    shell = "nushell";
     # dotfilesDir = "~/.dotfile"; # absolute path of the local repo
     # theme = "xcode-dusk"; # selcted theme from my themes directory (./themes/)
     wm = "i3"; # desktop environment; must select one in both ./home/wm/ and ./system/wm/
