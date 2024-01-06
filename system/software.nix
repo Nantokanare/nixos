@@ -16,6 +16,7 @@
     alsa-utils
     blueman
     brave
+    firefox
     btop
     cron
     feh
