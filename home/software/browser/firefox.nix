@@ -4,7 +4,7 @@
   ...
 }: {
   home.file.".mozilla/firefox/default/user.js".source = builtins.fetchTarball {
-    url = git@github.com:arkenfox/user.js.git;
+    url = github:arkenfox/user.js.git;
   };
 
   home.file.".mozilla/firefox/default/user.js".text = ''
