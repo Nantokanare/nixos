@@ -24,6 +24,8 @@
     feh
     firefox
     fzf
+    base16-schemes
+    basez
     git
     home-manager
     htop

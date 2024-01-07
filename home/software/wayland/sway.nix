@@ -19,12 +19,12 @@
       terminal = "kitty";
       modifier = "Mod4";
       floating.modifier = "Mod4";
-      #  keybindings = {
-      #    "XF86AudioRaiseVolume" = "exec volumectl -u up";
-      #    "XF86AudioLowerVolume" = "exec volumectl -u down";
-      #    "XF86AudioMute" = "exec volumectl toggle-mute";
-      #    "XF86AudioMicMute" = "exec volumectl -m toggle-mute";
-      #  };
+      keybindings = {
+        "XF86AudioRaiseVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%";
+        "XF86AudioLowerVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% ";
+        "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle";
+        #    "XF86AudioMicMute" = "exec volumectl -m toggle-mute";
+      };
       gaps = {
         top = 4;
         bottom = 4;

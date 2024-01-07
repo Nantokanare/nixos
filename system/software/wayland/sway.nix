@@ -14,8 +14,6 @@
     sway = {
       enable = true;
       extraPackages = with pkgs; [
-        base16-schemes
-        basez
         dmenu
         feh
         # i3-ratiosplit
@@ -28,6 +26,7 @@
         rofi
         swaybg
         swayfx
+        swaylock-fancy
         swayr
         swayrbar
         waybar
