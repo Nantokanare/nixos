@@ -5,8 +5,8 @@
 }: {
   programs.${shell} = {
     enable = true;
-    shellAliases = import ./alias.nix;
-    initExtra = ''eval $(starship init zsh)'';
+    shellAliases = import ./alias.nix {inherit pkgs;};
+    interactiveShellInit = ''eval $(starship init zsh)'';
   };
   environment.systemPackages = with pkgs; [
     zsh
