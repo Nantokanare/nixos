@@ -20,7 +20,7 @@
       modifier = "Mod4";
       floating.modifier = "Mod4";
       keycodebindings = {
-        "213" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%";
+        "213" = "exec --no-startup-id pamixer --increase 5";
       };
       #  keybindings = {
       #    "XF86AudioRaiseVolume" = v	"exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%";
