@@ -14,7 +14,7 @@
       enable = true;
       escapeTime = 0;
       keyMode = "vi";
-      mouse = true;
+      # mouse = true;
       resizeAmount = 10;
       sensibleOnTop = false;
       shell = "${pkgs.${shell}}/bin/${shell}";
