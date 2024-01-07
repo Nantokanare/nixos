@@ -1,11 +1,13 @@
 {
   pkgs,
   wm,
+  shell,
   wmtype,
   ...
 }: {
   imports = [
     ./software/cli.nix
+    ./software/shells/${shell}.nix
     ./software/${wmtype}/${wm}.nix
   ];
 
@@ -16,6 +18,7 @@
     alsa-utils
     blueman
     brave
+    browsh
     btop
     cron
     feh

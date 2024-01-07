@@ -19,6 +19,12 @@
       terminal = "kitty";
       modifier = "Mod4";
       floating.modifier = "Mod4";
+      #  keybindings = {
+      #    "XF86AudioRaiseVolume" = "exec volumectl -u up";
+      #    "XF86AudioLowerVolume" = "exec volumectl -u down";
+      #    "XF86AudioMute" = "exec volumectl toggle-mute";
+      #    "XF86AudioMicMute" = "exec volumectl -m toggle-mute";
+      #  };
       gaps = {
         top = 4;
         bottom = 4;
