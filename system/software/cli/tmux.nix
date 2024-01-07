@@ -46,6 +46,5 @@
         }
       ];
     };
-    fzf.tmux.enableShellIntegration = true;
   };
 }
