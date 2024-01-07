@@ -8,15 +8,9 @@
   ];
 
   users.defaultUserShell = pkgs.${shell};
-  #  if (shell == "bash" || "zsh" || "fish")
-  #	  then [
-  #  ];
-  #  else [
-  #  environment.systemPackages = with pkgs; [
-  #    nushellFull
-  #    nushellPlugins.gstat
-  #    nushellPlugins.formats
-  #    nushellPlugins.regex
-  #    nushellPlugins.net
-  #  ];];
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
 }

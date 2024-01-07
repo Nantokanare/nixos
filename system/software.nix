@@ -16,15 +16,16 @@
     alsa-utils
     blueman
     brave
-    firefox
     btop
     cron
     feh
+    firefox
     fzf
     git
     home-manager
     htop
     keepassxc
+    libsixel
     mpv
     neofetch
     neovim
@@ -40,13 +41,12 @@
     tldr
     tmux
     ueberzug
-    libsixel
     vifm
     vlc
     wget
     wshowkeys
-    zellij
     yazi
+    zellij
   ];
   programs.nix-ld.enable = true;
 }

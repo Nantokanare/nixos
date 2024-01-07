@@ -12,4 +12,7 @@
     thefuck.enable = true;
     nano.enable = false;
   };
+  environment.systemPackages = [
+    pkgs.musikcube
+  ];
 }

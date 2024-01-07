@@ -31,6 +31,7 @@
     browser = "librewolf"; # Default browser; must select one from
     editor = "nvim"; # Default editor;
     term = "kitty"; # Default terminal command;
+    # multiplex = "tmux";
     font = "Monofur"; # Selected font
     fontPkg = pkgs.nerdfonts; # Font package
 

@@ -34,10 +34,17 @@
 
     '';
     plugins = with pkgs.vimPlugins; [
-      vimwiki # Wiki
-      vim-obsession
-      luasnip
+      cmp-buffer
+      cmp-cmdline
+      cmp-nvim-lsp
+      cmp-path
       lualine-lsp-progress
+      luasnip
+      markdown-preview-nvim # Markdown Preview
+      plenary-nvim
+      vim-husk
+      vim-obsession
+      vimwiki # Wiki
       {
         plugin = neo-tree-nvim;
         type = "lua";
@@ -145,6 +152,13 @@
         '';
       }
       {
+        plugin = undotree;
+        type = "lua";
+        config = ''
+          vim.keymap.set("n", "<space>u", vim.cmd.UndotreeToggle)
+        '';
+      }
+      {
         plugin = telescope-nvim;
         type = "lua";
         config = ''
@@ -154,16 +168,6 @@
           vim.keymap.set('n', '<space>fb', builtin.buffers, {})
           vim.keymap.set('n', '<space>fh', builtin.help_tags, {})
           require("telescope").setup{}
-        '';
-      }
-      plenary-nvim
-      markdown-preview-nvim # Markdown Preview
-      vim-husk
-      {
-        plugin = undotree;
-        type = "lua";
-        config = ''
-          vim.keymap.set("n", "<space>u", vim.cmd.UndotreeToggle)
         '';
       }
       {
@@ -210,10 +214,6 @@
           })
         '';
       }
-      cmp-path
-      cmp-nvim-lsp
-      cmp-buffer
-      cmp-cmdline
       {
         plugin = nvim-cmp;
         type = "lua";
