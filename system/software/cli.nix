@@ -6,7 +6,6 @@
   ...
 }: {
   imports = [
-    ./cli/tmux.nix
   ];
   programs = {
     neovim.defaultEditor = true;

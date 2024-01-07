@@ -9,15 +9,15 @@
 }: {
   programs = {
     tmux = {
-      # mouse = true;
-      # resizeAmount = 10;
-      # sensibleOnTop = false;
-      # shell = "${pkgs.${shell}}/bin/${shell}";
       baseIndex = 1;
       clock24 = true;
       enable = true;
       escapeTime = 0;
       keyMode = "vi";
+      mouse = true;
+      resizeAmount = 10;
+      sensibleOnTop = false;
+      shell = "${pkgs.${shell}}/bin/${shell}";
       shortcut = "t";
       terminal = term;
 
@@ -46,5 +46,6 @@
         }
       ];
     };
+    fzf.tmux.enableShellIntegration = true;
   };
 }
