@@ -40,6 +40,7 @@
     tldr
     tmux
     ueberzug
+    libsixel
     vifm
     vlc
     wget
