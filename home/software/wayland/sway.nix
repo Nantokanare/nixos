@@ -15,6 +15,7 @@
     enable = true;
     systemd.enable = true;
     config = {
+      bars = {};
       terminal = "kitty";
       modifier = "Mod4";
       floating.modifier = "Mod4";
@@ -395,6 +396,9 @@
     enable = true;
   };
   home.packages = with pkgs; [
+    # hyprland-protocols
+    # hyprpicker
+    # xdg-desktop-portal-hyprland
     #hyprpaper
     #wofi
     alacritty
@@ -404,8 +408,6 @@
     grim
     gsettings-desktop-schemas
     gtklock
-    # hyprland-protocols
-    # hyprpicker
     keepmenu
     killall
     kitty
@@ -418,8 +420,8 @@
     qt6.qtwayland
     slurp
     swaybg
-    waybar
     swayidle
+    waybar
     wev
     wl-clipboard
     wlr-randr
@@ -427,7 +429,6 @@
     wtype
     xdg-desktop-portal
     xdg-desktop-portal-gtk
-    # xdg-desktop-portal-hyprland
     xdg-utils
   ];
 }

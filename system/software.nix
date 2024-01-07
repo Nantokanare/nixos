@@ -45,6 +45,7 @@
     vlc
     wget
     wshowkeys
+    zellij
     yazi
   ];
   programs.nix-ld.enable = true;
