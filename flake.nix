@@ -25,7 +25,7 @@
     email = "nix@nantokanare.nl";
     shell = "zsh";
     # dotfilesDir = "~/.dotfile"; # absolute path of the local repo
-    theme = "3"; # selcted theme from my themes directory (./themes/)
+    theme = "4"; # selcted theme from my themes directory (./themes/)
     wm = "sway"; # desktop environment; must select one in both ./home/wm/ and ./system/wm/
     wmtype = "wayland"; # x11 or wayland
     browser = "librewolf"; # Default browser; must select one from
