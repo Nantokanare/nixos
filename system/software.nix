@@ -7,7 +7,7 @@
 }: {
   imports = [
     ./software/cli.nix
-    ./software/shells/${shell}.nix
+    ./software/shells.nix
     ./software/${wmtype}/${wm}.nix
   ];
 
