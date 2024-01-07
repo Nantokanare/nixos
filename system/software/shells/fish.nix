@@ -5,6 +5,6 @@
 }: {
   programs.${shell} = {
     enable = true;
-    shellAliases = import ./alias.nix;
+    shellAliases = import ./alias.nix {inherit pkgs;};
   };
 }

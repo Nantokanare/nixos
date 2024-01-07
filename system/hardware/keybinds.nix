@@ -3,9 +3,9 @@
     enable = true;
     bindings = [
       {
-        keys = [122];
+        keys = [115];
         events = ["key"];
-        command = "''${pkgs.alsa-utils}/bin/amixer -q set Master toggle";
+        command = "''${pkgs.alsa-utils}/bin/pactl set-sink-volume @DEFAULT_SINK@ +10%";
       }
       #      {
       #        keys = [224];

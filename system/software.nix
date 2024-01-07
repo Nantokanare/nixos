@@ -26,6 +26,7 @@
     fzf
     base16-schemes
     basez
+    zoxide
     git
     home-manager
     htop
