@@ -17,7 +17,7 @@
     systemd.enable = true;
     package = "${pkgs.swayfx}";
     config = {
-      bars = ["\${pkgs.waybar}/bin/waybar"];
+      # bars = ["\${pkgs.waybar}/bin/waybar"];
       terminal = "kitty";
       modifier = "Mod4";
       floating.modifier = "Mod4";
