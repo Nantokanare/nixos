@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   programs.waybar = {
     enable = true;
+    systemd.enable = true;
     settings = [
       {
         layer = "top";
@@ -17,9 +18,9 @@
         "sway/window" = {
           format = "{app_id}";
         };
-        "custom/network" = {
-          exec = "${./netspeed}";
-        };
+        #   "custom/network" = {
+        #     exec = "${./netspeed}";
+        #   };
         cpu = {
           format = "󰓅 {usage}%";
         };

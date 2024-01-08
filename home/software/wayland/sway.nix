@@ -9,19 +9,29 @@
   ...
 }: {
   imports = [
-    ./sway/swaybar.nix
+    ./sway/waybar.nix
   ];
-
+  services.swayosd.enable = true;
   wayland.windowManager.sway = {
     enable = true;
     systemd.enable = true;
+    package = "${pkgs.swayfx}";
     config = {
-      bars = [];
+      bars = ["\${pkgs.waybar}/bin/waybar"];
       terminal = "kitty";
       modifier = "Mod4";
       floating.modifier = "Mod4";
       keycodebindings = {
-        "213" = "exec --no-startup-id pamixer --increase 5";
+        "213" = "exec pamixer --increase 5";
+      };
+      assigns = {
+        "1: web" = [{class = "^Firefox$";}];
+        "0: extra" = [
+          {
+            class = "^Firefox$";
+            window_role = "About";
+          }
+        ];
       };
       #  keybindings = {
       #    "XF86AudioRaiseVolume" = v	"exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%";
