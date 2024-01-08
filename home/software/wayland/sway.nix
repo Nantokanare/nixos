@@ -2,6 +2,7 @@
   config,
   lib,
   home-manager,
+  browser,
   font,
   stylix,
   timezone,
@@ -16,7 +17,16 @@
     enable = true;
     package = "${pkgs.swayfx}";
     systemd.enable = true;
-    config.modifier = "Mod4";
+    config = {
+      modifier = "Mod4";
+      startup = [
+        {
+          command = "systemctl --user restart waybar";
+          always = true;
+        }
+        {command = "${browser}";}
+      ];
+    };
   };
   home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
@@ -182,3 +192,4 @@
 #      #  };
 #    };
 #  };
+# }
