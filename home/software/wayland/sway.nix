@@ -16,6 +16,7 @@
     enable = true;
     package = "${pkgs.swayfx}";
     systemd.enable = true;
+    modifier = "Mod4";
   };
   home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
