@@ -16,6 +16,8 @@
     wlroots
     waydroid
     eww-wayland
+    mako
+    shikane
   ];
 
   # Configure xwayland

@@ -151,6 +151,7 @@
     pamixer
     pavucontrol
     pinentry-gnome
+    i3blocks
     polkit_gnome
     qt6.qtwayland
     slurp

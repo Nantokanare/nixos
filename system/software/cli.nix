@@ -30,6 +30,8 @@
     tldr
     ranger
     starship
+    taskwarrior
+    taskwarrior-tui
     tmux
     ueberzug
     vifm

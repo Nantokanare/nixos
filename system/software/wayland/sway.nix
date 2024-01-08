@@ -21,10 +21,10 @@
         # i3lock
         # i3nator
         nitrogen
-        picom
         pulseaudioFull
         rofi
         swaybg
+        swaycons
         swayfx
         swaylock-fancy
         swayr

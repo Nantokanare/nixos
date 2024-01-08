@@ -24,6 +24,7 @@
     home-manager
     keepassxc
     mpv
+    imv
     nerdfonts
     pamixer
     pavucontrol
