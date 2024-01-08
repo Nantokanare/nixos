@@ -19,6 +19,13 @@
     systemd.enable = true;
     config = {
       modifier = "Mod4";
+      terminal = "kitty";
+      floating.modifier = "Mod4";
+      window = {
+        border = 1;
+        hideEdgeBorders = "both";
+        titlebar = false;
+      };
       startup = [
         {
           command = "systemctl --user restart waybar";
@@ -89,9 +96,6 @@
 }
 #   config = {
 #     # bars = ["\${pkgs.waybar}/bin/waybar"];
-#     terminal = "kitty";
-#     modifier = "Mod4";
-#     floating.modifier = "Mod4";
 #     assigns = {
 #       "2" = [
 #         {app_id = "^firefox$";}
@@ -124,11 +128,6 @@
 #       right = 4;
 #       smartBorders = "on";
 #       smartGaps = true;
-#     };
-#     window = {
-#       border = 1;
-#       hideEdgeBorders = "both";
-#       titlebar = false;
 #     };
 #     # Colors
 #     # Keybindings
