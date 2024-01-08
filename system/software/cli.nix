@@ -12,7 +12,29 @@
     thefuck.enable = true;
     nano.enable = false;
   };
-  environment.systemPackages = [
-    pkgs.musikcube
+  environment.systemPackages = with pkgs; [
+    musikcube
+    browsh
+    btop
+    cron
+    feh
+    fzf
+    zoxide
+    git
+    htop
+    libsixel
+    neofetch
+    neovim
+    pfetch
+    wezterm
+    tldr
+    ranger
+    starship
+    tmux
+    ueberzug
+    vifm
+    wget
+    yazi
+    zellij
   ];
 }

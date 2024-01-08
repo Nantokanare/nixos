@@ -13,6 +13,7 @@
 
   environment.systemPackages = with pkgs; [
     wayland
+    wlroots
     waydroid
     eww-wayland
   ];

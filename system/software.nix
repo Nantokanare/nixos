@@ -18,41 +18,20 @@
     alsa-utils
     blueman
     brave
-    browsh
-    btop
-    cron
-    feh
     firefox
-    fzf
     base16-schemes
     basez
-    zoxide
-    git
     home-manager
-    htop
     keepassxc
-    libsixel
     mpv
-    neofetch
-    neovim
     nerdfonts
     pamixer
     pavucontrol
-    pfetch
     plymouth
     qbittorrent
-    ranger
-    starship
     syncthing
-    tldr
-    tmux
-    ueberzug
-    vifm
     vlc
-    wget
     wshowkeys
-    yazi
-    zellij
   ];
   programs.nix-ld.enable = true;
 }
