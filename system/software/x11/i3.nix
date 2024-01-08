@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./../${wmtype}.nix
+    ./../../security/gnupg.nix
   ];
 
   services.xserver.windowManager.i3 = {

@@ -9,5 +9,6 @@
   imports = [
     ./security/doas.nix
     ./security/yubico.nix
+    ./security/gnupg.nix
   ];
 }
