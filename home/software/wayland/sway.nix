@@ -21,6 +21,7 @@
       modifier = "Mod4";
       terminal = "kitty";
       floating.modifier = "Mod4";
+      bars = {};
       window = {
         border = 1;
         hideEdgeBorders = "both";
