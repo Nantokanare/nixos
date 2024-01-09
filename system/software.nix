@@ -22,6 +22,7 @@
     base16-schemes
     basez
     home-manager
+    libreoffice-qt
     keepassxc
     mpv
     imv
