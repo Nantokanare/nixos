@@ -6,7 +6,7 @@
       {
         layer = "top";
         height = 26;
-        modules-left = ["custom/os" "sway/workspaces" "custom/sway"];
+        modules-left = ["custom/os" "sway/workspaces" "wlr/taskbar" "custom/sway"];
         modules-center = ["sway/window"];
         modules-right = [
           "custom/network"
@@ -79,6 +79,13 @@
           "exec" = ''echo "" '';
           "interval" = "once";
         };
+        "idle_inhibitor" = {
+          format = "{icon}";
+          format-icons = {
+            activated = "󰅶";
+            deactivated = "󰾪";
+          };
+        };
       }
     ];
   };
@@ -96,11 +103,6 @@
 #        modules-center = ["sway/window"];
 #        modules-right = ["idle_inhibitor" "tray" "clock"];
 #
-#        "custom/os" = {
-#          "format" = " {} ";
-#          "exec" = ''echo "" '';
-#          "interval" = "once";
-#        };
 #        cpu = {
 #          "format" = "{usage}% ";
 #        };
@@ -119,13 +121,6 @@
 #          #     "on-click" = "hyprprofile-dmenu";
 #        };
 #
-#        "idle_inhibitor" = {
-#          format = "{icon}";
-#          format-icons = {
-#            activated = "󰅶";
-#            deactivated = "󰾪";
-#          };
-#        };
 #        clock = {
 #          "interval" = 1;
 #          "format" = "{:%a %Y-%m-%d %I:%M:%S %p}";
