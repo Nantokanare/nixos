@@ -1,4 +1,5 @@
 {
+  term,
   config,
   lib,
   home-manager,
@@ -33,6 +34,7 @@
           always = true;
         }
         {command = "${browser}";}
+        {command = "${term}";}
       ];
     };
   };

@@ -6,7 +6,7 @@
       {
         layer = "top";
         height = 26;
-        modules-left = ["sway/workspaces"];
+        modules-left = ["custom/os" "sway/workspaces" "custom/sway"];
         modules-center = ["sway/window"];
         modules-right = [
           "custom/network"
@@ -14,6 +14,8 @@
           "memory"
           "pulseaudio"
           "clock"
+          "idle_inhibitor"
+          "tray"
         ];
         "sway/window" = {
           format = "{app_id}";
@@ -27,12 +29,55 @@
         memory = {
           format = "󰍛 {percentage}%";
         };
+        tray = {
+          #"icon-size" = 21;
+          "spacing" = 10;
+        };
+        "sway/workspaces" = {
+          "format" = "{icon}";
+          "format-icons" = {
+            "1" = "󱚌";
+            "2" = "󰖟";
+            "3" = "";
+            "4" = "󰎄";
+            "5" = "󰋩";
+            "6" = "";
+            "7" = "󰄖";
+            "8" = "󰑴";
+            "9" = "󱎓";
+            "scratch_term" = "_";
+            "scratch_ranger" = "_󰴉";
+            "scratch_musikcube" = "_";
+            "scratch_btm" = "_";
+            "scratch_geary" = "_";
+            "scratch_pavucontrol" = "_󰍰";
+          };
+        };
         pulseaudio = {
-          format = "󰕾 {volume}%";
-          format-muted = "󰖁 {volume}%";
+          "scroll-step" = 1;
+          "format" = "{volume}% {icon}  {format_source}";
+          "format-bluetooth" = "{volume}% {icon}  {format_source}";
+          "format-bluetooth-muted" = "󰸈 {icon}  {format_source}";
+          "format-muted" = "󰸈 {format_source}";
+          "format-source" = "{volume}% ";
+          "format-source-muted" = " ";
+          "format-icons" = {
+            "headphone" = "";
+            "hands-free" = "";
+            "headset" = "";
+            "phone" = "";
+            "portable" = "";
+            "car" = "";
+            "default" = ["" "" ""];
+          };
         };
         clock = {
           format = " {:%a %m-%d %H:%M}";
+        };
+        "custom/os" = {
+          "format" = " {} ";
+          "exec" = ''echo "" '';
+          "interval" = "once";
         };
       }
     ];
@@ -67,48 +112,11 @@
 #        #"format-full" = "";
 #        "format-icons" = ["" "" "" "" ""];
 #      };
-#      pulseaudio = {
-#        "scroll-step" = 1;
-#        "format" = "{volume}% {icon}  {format_source}";
-#        "format-bluetooth" = "{volume}% {icon}  {format_source}";
-#        "format-bluetooth-muted" = "󰸈 {icon}  {format_source}";
-#        "format-muted" = "󰸈 {format_source}";
-#        "format-source" = "{volume}% ";
-#        "format-source-muted" = " ";
-#        "format-icons" = {
-#          "headphone" = "";
-#          "hands-free" = "";
-#          "headset" = "";
-#          "phone" = "";
-#          "portable" = "";
-#          "car" = "";
-#          "default" = ["" "" ""];
-#        };
 #        "custom/sway" = {
 #          "format" = "   {}";
 #          #     "exec" = ''cat ~/.hyprprofile'';
 #          "interval" = 3;
 #          #     "on-click" = "hyprprofile-dmenu";
-#        };
-#        "sway/workspaces" = {
-#          "format" = "{icon}";
-#          "format-icons" = {
-#            "1" = "󱚌";
-#            "2" = "󰖟";
-#            "3" = "";
-#            "4" = "󰎄";
-#            "5" = "󰋩";
-#            "6" = "";
-#            "7" = "󰄖";
-#            "8" = "󰑴";
-#            "9" = "󱎓";
-#            "scratch_term" = "_";
-#            "scratch_ranger" = "_󰴉";
-#            "scratch_musikcube" = "_";
-#            "scratch_btm" = "_";
-#            "scratch_geary" = "_";
-#            "scratch_pavucontrol" = "_󰍰";
-#          };
 #        };
 #
 #        "idle_inhibitor" = {
@@ -117,10 +125,6 @@
 #            activated = "󰅶";
 #            deactivated = "󰾪";
 #          };
-#        };
-#        tray = {
-#          #"icon-size" = 21;
-#          "spacing" = 10;
 #        };
 #        clock = {
 #          "interval" = 1;
@@ -134,3 +138,4 @@
 #      };
 #    };
 #  };
+#}
