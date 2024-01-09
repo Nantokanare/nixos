@@ -9,13 +9,13 @@
         modules-left = ["custom/os" "sway/workspaces" "wlr/taskbar" "custom/sway"];
         modules-center = ["sway/window"];
         modules-right = [
+          "idle_inhibitor"
+          "tray"
           "custom/network"
           "cpu"
           "memory"
           "pulseaudio"
           "clock"
-          "idle_inhibitor"
-          "tray"
         ];
         "sway/window" = {
           format = "{app_id}";
