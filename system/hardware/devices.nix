@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   # Enable EnvFS
   services = {
-    brltty.enable = true;
+    #  brltty.enable = true;
     printing.enable = true;
     envfs.enable = true;
 
