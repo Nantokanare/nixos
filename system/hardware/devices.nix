@@ -1,6 +1,7 @@
-{...}: {
+{pkgs, ...}: {
   # Enable EnvFS
   services = {
+    brltty.enable = true;
     printing.enable = true;
     envfs.enable = true;
 
@@ -24,6 +25,10 @@
 
     # Printing support
   };
+  environment.systemPackages = with pkgs; [
+    usbutils
+    screen
+  ];
   # KDEConnet
   programs = {
     usbtop.enable = true;
