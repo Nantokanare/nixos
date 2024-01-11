@@ -29,7 +29,7 @@
     screen
     proxmark3
     libnfc
-    ifdnfc
+    # ifdnfc
   ];
   # KDEConnet
   programs = {
