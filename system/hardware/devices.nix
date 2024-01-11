@@ -10,6 +10,7 @@
     gvfs.enable = true;
 
     acpid.enable = true;
+    services.neard.enable = true;
 
     xserver.libinput = {
       touchpad.disableWhileTyping = true;
@@ -28,6 +29,7 @@
     screen
     proxmark3
     libnfc
+    ifdnfc
   ];
   # KDEConnet
   programs = {
