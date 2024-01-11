@@ -22,13 +22,12 @@
     #      xdg-desktop-portal-gtk
     #    ];
     #  };
-
-    # Printing support
   };
   environment.systemPackages = with pkgs; [
     usbutils
     screen
     proxmark3
+    libnfc
   ];
   # KDEConnet
   programs = {

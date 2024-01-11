@@ -20,6 +20,7 @@
       shell = "${pkgs.${shell}}/bin/${shell}";
       shortcut = "t";
       terminal = term;
+      newSession = true;
 
       plugins = with pkgs.tmuxPlugins; [
         # power-theme
@@ -35,7 +36,7 @@
           plugin = continuum;
           extraConfig = ''
             set -g @continuum-restore 'on'
-            set -g @continuum-save-interval '30' # minutes
+            set -g @continuum-save-interval '5' # minutes
           '';
         }
         {

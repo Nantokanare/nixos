@@ -34,5 +34,8 @@ in {
       ];
     packages = with pkgs; [
     ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMNwcZsUPxhis9c3bIlbfi10PUxU/iLWUoHIk29F8dn nantokanare@R9"
+    ];
   };
 }

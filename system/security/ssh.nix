@@ -1,18 +1,6 @@
-{...}:{
-programs.ssh = {
-	startAgent = true;
-	knownHosts = {
-
-	R9 = {
-hostNames = 
-publicKey = ec;
-	};
-	};
-	};
-
-
-
-
-
-
+{...}: {
+  services.openssh.enable = true;
+  programs.ssh = {
+    startAgent = true;
+  };
 }

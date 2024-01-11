@@ -17,7 +17,10 @@
     initrd = {
       availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod"];
       kernelModules = ["amdgpu"];
-      luks.devices."luks-1e1fa6cd-5fc0-4423-992b-6ce901f7432f".device = "/dev/disk/by-uuid/1e1fa6cd-5fc0-4423-992b-6ce901f7432f";
+      luks = {
+        yubikeySupport = true;
+        devices."luks-1e1fa6cd-5fc0-4423-992b-6ce901f7432f".device = "/dev/disk/by-uuid/1e1fa6cd-5fc0-4423-992b-6ce901f7432f";
+      };
     };
 
     plymouth = {
