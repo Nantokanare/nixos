@@ -28,6 +28,7 @@
   environment.systemPackages = with pkgs; [
     usbutils
     screen
+    proxmark3
   ];
   # KDEConnet
   programs = {

@@ -17,6 +17,7 @@ in {
         "corectrl"
         "video"
         "audio"
+        "dialout"
       ]
       ++ ifTheyExist [
         "minecraft"
