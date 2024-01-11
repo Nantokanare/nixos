@@ -10,7 +10,7 @@
     gvfs.enable = true;
 
     acpid.enable = true;
-    services.neard.enable = true;
+    neard.enable = true;
 
     xserver.libinput = {
       touchpad.disableWhileTyping = true;
