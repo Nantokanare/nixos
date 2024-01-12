@@ -64,7 +64,6 @@
     enable = true;
   };
   home.packages = with pkgs; [
-    wofi
     alacritty
     feh
     fnott
@@ -72,6 +71,7 @@
     grim
     gsettings-desktop-schemas
     gtklock
+    i3blocks
     keepmenu
     killall
     kitty
@@ -80,17 +80,18 @@
     pamixer
     pavucontrol
     pinentry-gnome
-    i3blocks
     polkit_gnome
     qt6.qtwayland
     slurp
     swaybg
     swayidle
+    swayosd
     waybar
     wev
     wl-clipboard
     wlr-randr
     wlsunset
+    wofi
     wtype
     xdg-desktop-portal
     xdg-desktop-portal-gtk
