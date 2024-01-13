@@ -16,6 +16,7 @@ in {
         "wheel"
         "corectrl"
         "video"
+        "mpd"
         "audio"
         "dialout"
       ]

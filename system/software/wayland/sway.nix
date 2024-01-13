@@ -37,5 +37,6 @@
     xwayland = {
       enable = true;
     };
+    wrapperFeatures.gtk = true;
   };
 }

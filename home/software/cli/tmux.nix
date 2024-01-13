@@ -19,7 +19,7 @@
       sensibleOnTop = false;
       shell = "${pkgs.${shell}}/bin/${shell}";
       shortcut = "t";
-      terminal = term;
+      terminal = "tmux-256color";
       newSession = true;
 
       plugins = with pkgs.tmuxPlugins; [

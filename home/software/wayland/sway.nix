@@ -36,6 +36,16 @@
         {command = "${browser}";}
         {command = "${term}";}
       ];
+      assigns = {
+        "2: web" = [{class = "^${browser}$";}];
+        "6: terminal" = [{class = "^${term}$";}];
+        "0: extra" = [
+          {
+            class = "^Firefox$";
+            window_role = "About";
+          }
+        ];
+      };
     };
   };
   home.file = {
