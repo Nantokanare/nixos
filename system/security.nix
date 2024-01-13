@@ -8,6 +8,7 @@
 }: {
   imports = [
     ./security/doas.nix
+    ./security/fw.nix
     ./security/yubico.nix
     ./security/gnupg.nix
   ];

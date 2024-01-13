@@ -33,10 +33,10 @@
         waypaper
         wpaperd
       ];
+      wrapperFeatures.gtk = true;
     };
     xwayland = {
       enable = true;
     };
-    wrapperFeatures.gtk = true;
   };
 }
