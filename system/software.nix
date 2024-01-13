@@ -24,6 +24,7 @@
     base16-schemes
     basez
     home-manager
+    python311Packages.qt-material
     qt6.full
     gtkd
     libreoffice-qt
