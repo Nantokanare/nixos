@@ -7,6 +7,7 @@
 }: {
   imports = [
     ./software/cli.nix
+    ./software/virt.nix
     ./software/media.nix
     ./software/shells.nix
     ./software/${wmtype}/${wm}.nix
