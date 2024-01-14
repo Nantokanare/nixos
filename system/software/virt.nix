@@ -8,7 +8,7 @@
   };
   environment.systemPackages = with pkgs; [
     virtualboxHardened
-    virtualboxExtpack
+    #  virtualboxExtpack
     anbox
     waydroid
     qemu
