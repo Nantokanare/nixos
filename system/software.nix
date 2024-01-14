@@ -25,6 +25,7 @@
     base16-schemes
     basez
     home-manager
+    cope
     #   python311Packages.qt-material
     #   python312Packages.qt-material
     #   python3Full
