@@ -7,7 +7,7 @@
         layer = "top";
         height = 26;
         modules-left = ["custom/os" "wlr/taskbar" "custom/sway"];
-        modules-center = ["sway/window" "sway/workspaces"];
+        modules-center = ["sway/workspaces"];
         modules-right = [
           "tray"
           "idle_inhibitor"
@@ -16,9 +16,6 @@
           "pulseaudio"
           "clock"
         ];
-        "sway/window" = {
-          format = "{app_id}";
-        };
         #   "custom/network" = {
         #     exec = "${./netspeed}";
         #   };

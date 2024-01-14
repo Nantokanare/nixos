@@ -30,6 +30,7 @@
     libreoffice-qt
     keepassxc
     mpv
+    nix-ld
     imv
     nerdfonts
     pamixer
@@ -39,6 +40,10 @@
     syncthing
     vlc
     wshowkeys
+    # rpi-cast
+    omxplayer
+    libjpeg8
+    libpng12
   ];
   programs.nix-ld.enable = true;
 }
