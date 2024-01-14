@@ -23,6 +23,7 @@ in {
       ++ ifTheyExist [
         "minecraft"
         "network"
+        "waydroid"
         "adbusers"
         "wireshark"
         "i2c"
