@@ -23,6 +23,18 @@
       terminal = "kitty";
       floating.modifier = "Mod4";
       bars = [];
+      gaps = {
+        top = 4;
+        bottom = 4;
+        horizontal = 4;
+        vertical = 4;
+        inner = 4;
+        outer = 4;
+        left = 4;
+        right = 4;
+        smartBorders = "on";
+        smartGaps = true;
+      };
       window = {
         border = 1;
         hideEdgeBorders = "both";
@@ -52,7 +64,7 @@
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
-    ".config/sway/config;".source = ./../../dotfiles/sway/config;
+    #   ".config/sway/config;".source = ./../../dotfiles/sway/config;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -131,17 +143,6 @@
 #     ];
 #     # Border
 #     floating.titlebar = false;
-#     gaps = {
-#       top = 4;
-#       bottom = 4;
-#       horizontal = 4;
-#       vertical = 4;
-#       inner = 4;
-#       outer = 4;
-#       left = 4;
-#       right = 4;
-#       smartBorders = "on";
-#       smartGaps = true;
 #     };
 #     # Colors
 #     # Keybindings

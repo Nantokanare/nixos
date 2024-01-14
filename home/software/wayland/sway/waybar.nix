@@ -6,12 +6,11 @@
       {
         layer = "top";
         height = 26;
-        modules-left = ["custom/os" "sway/workspaces" "wlr/taskbar" "custom/sway"];
-        modules-center = ["sway/window"];
+        modules-left = ["custom/os" "wlr/taskbar" "custom/sway"];
+        modules-center = ["sway/window" "sway/workspaces"];
         modules-right = [
-          "idle_inhibitor"
           "tray"
-          "custom/network"
+          "idle_inhibitor"
           "cpu"
           "memory"
           "pulseaudio"
@@ -39,12 +38,12 @@
             "1" = "󱚌";
             "2" = "󰖟";
             "3" = "";
-            "4" = "󰎄";
-            "5" = "󰋩";
-            "6" = "";
-            "7" = "󰄖";
-            "8" = "󰑴";
-            "9" = "󱎓";
+            "4" = "";
+            "5" = "󰎄";
+            "6" = "";
+            "7" = "";
+            "8" = "󱎓";
+            "9" = "";
             "scratch_term" = "_";
             "scratch_ranger" = "_󰴉";
             "scratch_musikcube" = "_";
@@ -54,7 +53,7 @@
           };
         };
         pulseaudio = {
-          "scroll-step" = 1;
+          "scroll-step" = 5;
           "format" = "{volume}% {icon}  {format_source}";
           "format-bluetooth" = "{volume}% {icon}  {format_source}";
           "format-bluetooth-muted" = "󰸈 {icon}  {format_source}";
