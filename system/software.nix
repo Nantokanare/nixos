@@ -40,10 +40,6 @@
     syncthing
     vlc
     wshowkeys
-    # rpi-cast
-    omxplayer
-    libjpeg8
-    libpng12
   ];
   programs.nix-ld.enable = true;
 }
