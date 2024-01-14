@@ -33,6 +33,7 @@
     mpv
     nix-ld
     imv
+    xfce.thunar
     nerdfonts
     pamixer
     pavucontrol
@@ -42,5 +43,8 @@
     vlc
     wshowkeys
   ];
-  programs.nix-ld.enable = true;
+  programs = {
+    nix-ld.enable = true;
+    thunar.enable = true;
+  };
 }
