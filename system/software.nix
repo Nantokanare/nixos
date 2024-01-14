@@ -26,6 +26,9 @@
     basez
     home-manager
     python311Packages.qt-material
+    python312Packages.qt-material
+    python3Full
+    python-qt
     qt6.full
     gtkd
     libreoffice-qt
