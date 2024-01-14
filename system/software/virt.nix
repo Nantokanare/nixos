@@ -2,7 +2,7 @@
   virtualisation = {
     # cores = 8;
     podman.enable = true;
-    anbox.enable = true;
+    # anbox.enable = true;
     waydroid.enable = true;
     libvirtd.enable = true;
   };
