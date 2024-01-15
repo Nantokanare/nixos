@@ -6,7 +6,12 @@
   programs.${shell} = {
     enable = true;
     shellAliases = import ./alias.nix {inherit pkgs;};
-    # interactiveShellInit = ''eval $(starship init zsh)'';
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    enableBashCompletion = true;
+    autosuggestions.strategy = [
+      "completion"
+    ];
   };
   environment.systemPackages = with pkgs; [
     zsh
