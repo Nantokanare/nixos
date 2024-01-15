@@ -45,7 +45,6 @@
           pure_msg = "[pure shell](bold green)";
           format = "via [☃️ $state( ($name))](bold blue) ";
         };
-        "$schema" = "https://starship.rs/config-schema.json";
         terraform = {format = "[🏎💨 $version$workspace]($style) ";};
         username = {
           style_user = "cyan bold";
