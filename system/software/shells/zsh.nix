@@ -6,7 +6,7 @@
   programs.${shell} = {
     enable = true;
     shellAliases = import ./alias.nix {inherit pkgs;};
-    interactiveShellInit = ''eval $(starship init zsh)'';
+    # interactiveShellInit = ''eval $(starship init zsh)'';
   };
   environment.systemPackages = with pkgs; [
     zsh

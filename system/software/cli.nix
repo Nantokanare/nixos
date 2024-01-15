@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    ./cli/starship.nix
   ];
   programs = {
     neovim.defaultEditor = true;
