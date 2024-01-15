@@ -6,7 +6,6 @@
   fd = "fd -Lu";
   gt = "git add * && git commit -m \"fast commit\"";
   w3m = "w3m -no-cookie -v";
-  neofetch = "disfetch";
   fetch = "disfetch";
   gfetch = "onefetch";
   n = "nix";
