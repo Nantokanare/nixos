@@ -5,6 +5,9 @@
   lib,
   ...
 }: {
+  environment.systemPackages = [
+    pkgs.tree-sitter
+  ];
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -40,11 +43,11 @@
       cmp-path
       lualine-lsp-progress
       luasnip
-      markdown-preview-nvim # Markdown Preview
+      markdown-preview-nvim
       plenary-nvim
       vim-husk
       vim-obsession
-      vimwiki # Wiki
+      vimwiki
       {
         plugin = neo-tree-nvim;
         type = "lua";
@@ -75,7 +78,7 @@
             }
           )
         '';
-      } # Status Line
+      }
       {
         plugin = nvim-treesitter.withAllGrammars; # Syntax Highlighting
         type = "lua";
