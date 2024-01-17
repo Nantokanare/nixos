@@ -15,14 +15,6 @@
     xserver.libinput = {
       touchpad.disableWhileTyping = true;
     };
-    # XDG Desktop Portal stuff
-    #  xdg.portal = {
-    #    enable = true;
-    #    extraPortals = with pkgs; [
-    #      xdg-desktop-portal
-    #      xdg-desktop-portal-gtk
-    #    ];
-    #  };
   };
   environment.systemPackages = with pkgs; [
     usbutils

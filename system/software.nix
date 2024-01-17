@@ -51,4 +51,16 @@
     nix-ld.enable = true;
     thunar.enable = true;
   };
+
+  xdg = {
+    sounds.enable = true;
+    portal = {
+      enable = true;
+      wlr.enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-kde
+        xdg-desktop-portal-gtk
+      ];
+    };
+  };
 }
