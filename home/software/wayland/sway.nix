@@ -109,37 +109,25 @@
         "${modifier}+Shift+9" = "move container to workspace number 9";
         "${modifier}+Shift+0" = "move container to workspace number 10";
 
-        ## resize window (you can also use the mouse for that)
-        # mode "resize" {
-        #         # These bindings trigger as soon as you enter the resize mode
-        #
-        #         # Pressing left will shrink the window’s width.
-        #         # Pressing right will grow the window’s width.
-        #         # Pressing up will shrink the window’s height.
-        #         # Pressing down will grow the window’s height.
-        #         "j resize shrink width 10 px or 10 ppt
-        #         "k resize grow height 10 px or 10 ppt
-        #         "l resize shrink height 10 px or 10 ppt
-        #         "semicolon resize grow width 10 px or 10 ppt
-        #
-        #         # same bindings, but for the arrow keys
-        #         "Left resize shrink width 10 px or 10 ppt
-        #         "Down resize grow height 10 px or 10 ppt
-        #         "Up resize shrink height 10 px or 10 ppt
-        #         "Right resize grow width 10 px or 10 ppt
-        #
-        #         # back to normal: Enter or Escape or ${modifier}+r
-        #         "Return mode "default"
-        #         "Escape mode "default"
-        #         "${modifier}+r mode "default"
-        # }
-
         "${modifier}+r" = "mode resize";
 
         "${modifier}+Shift+minus" = "move scratchpad";
         "${modifier}+minus" = "scratchpad show";
 
-        #"${modifier}+g [title="^ranger ::"] scratchpad show
+        "${modifier}+g" = "[title=^ranger ::] scratchpad show";
+
+        # enter fullscreen mode for the focused container
+        "${modifier}+f" = "fullscreen toggle";
+
+        # change container layout (stacked, tabbed, toggle split)
+        "${modifier}+s" = "layout stacking";
+        "${modifier}+e" = "layout toggle split";
+
+        # toggle tiling / floating
+        "${modifier}+Shift+space" = "floating toggle";
+
+        # change focus between tiling / floating windows
+        "${modifier}+space" = "focus mode_toggle";
         # kill focused window
         #"${modifier}+Shift+q kill
         #
@@ -179,19 +167,6 @@
         #
         ## split in vertical orientation
         #"${modifier}+v split v
-        #
-        ## enter fullscreen mode for the focused container
-        #"${modifier}+f fullscreen toggle
-        #
-        ## change container layout (stacked, tabbed, toggle split)
-        #"${modifier}+s layout stacking
-        #"${modifier}+e layout toggle split
-        #
-        ## toggle tiling / floating
-        #"${modifier}+Shift+space floating toggle
-        #
-        ## change focus between tiling / floating windows
-        #"${modifier}+space focus mode_toggle
         #
         ## focus the parent container
         #"${modifier}+a focus parent
