@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   services.mpd = {
     enable = true;
-    musicDirectory = "~/media/music";
+    musicDirectory = ~/media/music;
   };
   environment.systemPackages = with pkgs; [
     mpd
