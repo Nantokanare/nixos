@@ -16,7 +16,7 @@
   services.swayosd.enable = true;
   wayland.windowManager.sway = {
     enable = true;
-    package = "${pkgs.swayfx}";
+    package = pkgs.swayfx;
     systemd.enable = true;
     config = {
       modifier = "Mod4";
