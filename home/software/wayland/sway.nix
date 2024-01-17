@@ -46,7 +46,7 @@
       };
       startup = [
         {
-          command = "exec ironbar";
+          command = "ironbar";
           always = true;
         }
         {command = "${browser}";}

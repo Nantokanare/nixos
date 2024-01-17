@@ -38,6 +38,7 @@
       cmp-cmdline
       cmp-nvim-lsp
       cmp-path
+      conform-nvim
       lualine-lsp-progress
       luasnip
       markdown-preview-nvim
