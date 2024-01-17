@@ -41,6 +41,7 @@
       onefetch
       pandoc
       pciutils
+      sonic-pi
       ranger
       ripgrep
       rsync
@@ -52,30 +53,34 @@
   };
   services.syncthing.enable = true;
 
-  xdg.enable = true;
-  xdg.userDirs = {
+  xdg = {
     enable = true;
-    createDirectories = true;
-    music = "${config.home.homeDirectory}/Media/Music";
-    videos = "${config.home.homeDirectory}/Media/Videos";
-    pictures = "${config.home.homeDirectory}/Media/Pictures";
-    templates = "${config.home.homeDirectory}/Templates";
-    download = "${config.home.homeDirectory}/Downloads";
-    documents = "${config.home.homeDirectory}/Documents";
-    desktop = null;
-    publicShare = null;
-    extraConfig = {
-      XDG_DOTFILES_DIR = "${config.home.homeDirectory}/.dotfiles";
-      XDG_ARCHIVE_DIR = "${config.home.homeDirectory}/Archive";
-      XDG_VM_DIR = "${config.home.homeDirectory}/Machines";
-      XDG_ORG_DIR = "${config.home.homeDirectory}/Org";
-      XDG_BOOK_DIR = "${config.home.homeDirectory}/Media/Books";
+    mime.enable = true;
+    mimeApps = {
+      enable = true;
+      associations.added = {
+        # "application/octet-stream" = "flstudio.desktop;";
+      };
     };
-  };
-  xdg.mime.enable = true;
-  xdg.mimeApps.enable = true;
-  xdg.mimeApps.associations.added = {
-    "application/octet-stream" = "flstudio.desktop;";
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+      music = "${config.home.homeDirectory}/media/music";
+      videos = "${config.home.homeDirectory}/media/videos";
+      pictures = "${config.home.homeDirectory}/media/pictures";
+      templates = "${config.home.homeDirectory}/templates";
+      download = "${config.home.homeDirectory}/downloads";
+      documents = "${config.home.homeDirectory}/documents";
+      desktop = null;
+      publicShare = null;
+      extraConfig = {
+        XDG_DOTFILES_DIR = "${config.home.homeDirectory}/.dotfiles";
+        XDG_ARCHIVE_DIR = "${config.home.homeDirectory}/archive";
+        XDG_VM_DIR = "${config.home.homeDirectory}/machines";
+        XDG_ORG_DIR = "${config.home.homeDirectory}/org";
+        XDG_BOOK_DIR = "${config.home.homeDirectory}/media/books";
+      };
+    };
   };
 
   home.sessionVariables = {

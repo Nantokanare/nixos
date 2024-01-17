@@ -4,6 +4,7 @@
 {
   config,
   lib,
+  system,
   pkgs,
   modulesPath,
   ...
@@ -28,7 +29,7 @@
     fsType = "btrfs";
   };
 
-  fileSystems."/home/nantokanare/Media/Games" = {
+  fileSystems."/home/nantokanare/media/games" = {
     device = "/dev/disk/by-uuid/63cb8c91-de45-442b-bfa7-36ff406a7ff1";
     fsType = "btrfs";
   };
@@ -45,6 +46,6 @@
   # networking.interfaces.enp8s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp6s0.useDHCP = lib.mkDefault true;
 
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  nixpkgs.hostPlatform = lib.mkDefault "${system}";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

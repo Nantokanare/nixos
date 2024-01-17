@@ -20,6 +20,7 @@
     cron
     feh
     fzf
+    tree-sitter
     zoxide
     git
     htop
