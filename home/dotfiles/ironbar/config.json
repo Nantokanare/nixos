@@ -21,16 +21,5 @@
 	    "type": "clock",
 	    "format": "%d/%m/%Y %H:%M"
     }
-    {
-      "type": "music",
-      "player_type": "mpd",
-      "format": "{title} / {artist}",
-      "truncate": "end",
-      "icons": {
-        "play": "",
-        "pause": ""
-      },
-      "music_dir": "/home/nantokanare/media/music"
-    }
   ]
 }
