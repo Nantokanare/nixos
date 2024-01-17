@@ -14,6 +14,7 @@
           "cpu"
           "memory"
           "pulseaudio"
+          "user"
           "clock"
         ];
         #   "custom/network" = {
@@ -67,8 +68,21 @@
             "default" = ["" "" ""];
           };
         };
+        user = {
+          "format" = "{user} (up {work_M} min ↑)";
+          "interval" = 60;
+          "height" = 30;
+          "width" = 30;
+          "icon" = true;
+        };
+
         clock = {
           format = " {:%a %m-%d %H:%M}";
+          actions = {
+            "on-click-right" = "mode";
+            "on-scroll-up" = "shift_up";
+            "on-scroll-down" = "shift_down";
+          };
         };
         "custom/os" = {
           "format" = " {} ";

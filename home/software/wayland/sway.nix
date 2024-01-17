@@ -1,5 +1,6 @@
 {
   term,
+  inputs,
   config,
   lib,
   home-manager,
@@ -129,7 +130,7 @@
         # change focus between tiling / floating windows
         "${modifier}+space" = "focus mode_toggle";
         # kill focused window
-        #"${modifier}+Shift+q kill
+        "${modifier}+Shift+q" = "kill";
         #
         ## start dmenu (a program launcher)
         ## A more modern dmenu replacement is rofi:
@@ -202,8 +203,17 @@
        background-size: auto 100%;
       }
     '';
-  programs.swaylock = {
-    enable = true;
+  programs = {
+    swaylock = {
+      enable = true;
+    };
+    ironbar = {
+      enable = true;
+      config = {};
+      style = "";
+      package = inputs.ironbar;
+      features = ["feature" "another_feature"];
+    };
   };
   home.packages = with pkgs; [
     alacritty
@@ -217,6 +227,7 @@
     keepmenu
     killall
     kitty
+    ironbar
     libsForQt5.qt5.qtwayland
     libva-utils
     pamixer
