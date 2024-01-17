@@ -50,6 +50,7 @@
       git
       gnugrep
       gnused
+      mpd
       htop
       hwinfo
       killall
