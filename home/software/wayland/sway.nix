@@ -13,7 +13,10 @@
   imports = [
     ./sway/waybar.nix
   ];
-  services.swayosd.enable = true;
+  services.swayosd = {
+    enable = true;
+    maxVolume = 100;
+  };
   wayland.windowManager.sway = {
     enable = true;
     package = pkgs.swayfx;
@@ -63,7 +66,6 @@
 
         "${modifier}+b" = "exec ${browser}";
         "${modifier}+d" = "exec --no-startup-id dmenu_run";
-        "${modifier}+Shift+r" = "restart";
 
         #            "${modifier}+Tab" = "workspace back_and_forth";
         "${modifier}+Shift+c" = "kill";
@@ -83,6 +85,61 @@
         "XF86AudioNext" = "exec playerctl next";
         "XF86AudioPrev" = "exec playerctl previous";
 
+        # switch to workspace
+        "${modifier}+1" = "workspace number 1";
+        "${modifier}+2" = "workspace number 2";
+        "${modifier}+3" = "workspace number 3";
+        "${modifier}+4" = "workspace number 4";
+        "${modifier}+5" = "workspace number 5";
+        "${modifier}+6" = "workspace number 6";
+        "${modifier}+7" = "workspace number 7";
+        "${modifier}+8" = "workspace number 8";
+        "${modifier}+9" = "workspace number 9";
+        "${modifier}+0" = "workspace number 10";
+
+        # move focused container to workspace
+        "${modifier}+Shift+1" = "move container to workspace number 1";
+        "${modifier}+Shift+2" = "move container to workspace number 2";
+        "${modifier}+Shift+3" = "move container to workspace number 3";
+        "${modifier}+Shift+4" = "move container to workspace number 4";
+        "${modifier}+Shift+5" = "move container to workspace number 5";
+        "${modifier}+Shift+6" = "move container to workspace number 6";
+        "${modifier}+Shift+7" = "move container to workspace number 7";
+        "${modifier}+Shift+8" = "move container to workspace number 8";
+        "${modifier}+Shift+9" = "move container to workspace number 9";
+        "${modifier}+Shift+0" = "move container to workspace number 10";
+
+        ## resize window (you can also use the mouse for that)
+        # mode "resize" {
+        #         # These bindings trigger as soon as you enter the resize mode
+        #
+        #         # Pressing left will shrink the window’s width.
+        #         # Pressing right will grow the window’s width.
+        #         # Pressing up will shrink the window’s height.
+        #         # Pressing down will grow the window’s height.
+        #         "j resize shrink width 10 px or 10 ppt
+        #         "k resize grow height 10 px or 10 ppt
+        #         "l resize shrink height 10 px or 10 ppt
+        #         "semicolon resize grow width 10 px or 10 ppt
+        #
+        #         # same bindings, but for the arrow keys
+        #         "Left resize shrink width 10 px or 10 ppt
+        #         "Down resize grow height 10 px or 10 ppt
+        #         "Up resize shrink height 10 px or 10 ppt
+        #         "Right resize grow width 10 px or 10 ppt
+        #
+        #         # back to normal: Enter or Escape or ${modifier}+r
+        #         "Return mode "default"
+        #         "Escape mode "default"
+        #         "${modifier}+r mode "default"
+        # }
+
+        "${modifier}+r" = "mode resize";
+
+        "${modifier}+Shift+minus" = "move scratchpad";
+        "${modifier}+minus" = "scratchpad show";
+
+        #"${modifier}+g [title="^ranger ::"] scratchpad show
         # kill focused window
         #"${modifier}+Shift+q kill
         #
@@ -143,74 +200,8 @@
         ##"${modifier}+d focus child
         #
         #
-        ## switch to workspace
-        #"${modifier}+1 workspace number $ws1
-        #"${modifier}+2 workspace number $ws2
-        #"${modifier}+3 workspace number $ws3
-        #"${modifier}+4 workspace number $ws4
-        #"${modifier}+5 workspace number $ws5
-        #"${modifier}+6 workspace number $ws6
-        #"${modifier}+7 workspace number $ws7
-        #"${modifier}+8 workspace number $ws8
-        #"${modifier}+9 workspace number $ws9
-        #"${modifier}+0 workspace number $ws10
-        #
-        ## move focused container to workspace
-        #"${modifier}+Shift+1 move container to workspace number $ws1
-        #"${modifier}+Shift+2 move container to workspace number $ws2
-        #"${modifier}+Shift+3 move container to workspace number $ws3
-        #"${modifier}+Shift+4 move container to workspace number $ws4
-        #"${modifier}+Shift+5 move container to workspace number $ws5
-        #"${modifier}+Shift+6 move container to workspace number $ws6
-        #"${modifier}+Shift+7 move container to workspace number $ws7
-        #"${modifier}+Shift+8 move container to workspace number $ws8
-        #"${modifier}+Shift+9 move container to workspace number $ws9
-        #"${modifier}+Shift+0 move container to workspace number $ws10
-        #
-        ## reload the configuration file
-        #"${modifier}+Shift+c reload
-        ## restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-        ## exit i3 (logs you out of your X session)
-        #"${modifier}+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-        #
-        ## resize window (you can also use the mouse for that)
-        #mode "resize" {
-        #        # These bindings trigger as soon as you enter the resize mode
-        #
-        #        # Pressing left will shrink the window’s width.
-        #        # Pressing right will grow the window’s width.
-        #        # Pressing up will shrink the window’s height.
-        #        # Pressing down will grow the window’s height.
-        #        "j resize shrink width 10 px or 10 ppt
-        #        "k resize grow height 10 px or 10 ppt
-        #        "l resize shrink height 10 px or 10 ppt
-        #        "semicolon resize grow width 10 px or 10 ppt
-        #
-        #        # same bindings, but for the arrow keys
-        #        "Left resize shrink width 10 px or 10 ppt
-        #        "Down resize grow height 10 px or 10 ppt
-        #        "Up resize shrink height 10 px or 10 ppt
-        #        "Right resize grow width 10 px or 10 ppt
-        #
-        #        # back to normal: Enter or Escape or ${modifier}+r
-        #        "Return mode "default"
-        #        "Escape mode "default"
-        #        "${modifier}+r mode "default"
-        #}
-        #
-        ## # Media player controls
-        ## "XF86AudioPlay+ exec playerctl play
-        ## "XF86AudioPause+ exec playerctl pause
-        ## "XF86AudioNext+ exec playerctl next
-        ## "XF86AudioPrev+ exec playerctl previous
         #
         #
-        #"${modifier}+r mode "resize"
-        #
-        #"${modifier}+Shift+minus move scratchpad
-        #"${modifier}+minus scratchpad show
-        #
-        #"${modifier}+g [title="^ranger ::"] scratchpad show
       };
     };
   };
