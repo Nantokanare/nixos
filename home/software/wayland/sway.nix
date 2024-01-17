@@ -207,12 +207,6 @@
     swaylock = {
       enable = true;
     };
-    ironbar = {
-      enable = true;
-      config = {};
-      style = "";
-      package = inputs.ironbar;
-    };
   };
   home.packages = with pkgs; [
     alacritty
@@ -223,6 +217,7 @@
     gsettings-desktop-schemas
     gtklock
     i3blocks
+    ironbar
     keepmenu
     killall
     kitty

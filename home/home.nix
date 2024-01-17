@@ -16,6 +16,24 @@
     homeDirectory = "/home/${username}";
     stateVersion = "23.11";
     file = {
+      file = {
+        # # Building this configuration will create a copy of 'dotfiles/screenrc' in
+        # # the Nix store. Activating the configuration will then make '~/.screenrc' a
+        # # symlink to the Nix store copy.
+        ".config/ironbar/config.json;".source = ./../../dotfiles/ironbar/config.json;
+
+        # # You can also set the file content immediately.
+        # ".gradle/gradle.properties".text = ''
+        #   org.gradle.console=verbose
+        #   org.gradle.daemon.idletimeout=3600000
+        # '';
+      };
+
+      sessionVariables = {
+        EDITOR = editor;
+        TERM = term;
+        BROWSER = browser;
+      };
     };
 
     packages = with pkgs; [
@@ -82,12 +100,5 @@
       };
     };
   };
-
-  home.sessionVariables = {
-    EDITOR = editor;
-    TERM = term;
-    BROWSER = browser;
-  };
-
   programs.home-manager.enable = true;
 }

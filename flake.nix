@@ -46,7 +46,6 @@
         modules = [
           ./home/home.nix
           stylix.homeManagerModules.stylix
-          inputs.ironbar.homeManagerModules.default
         ];
         extraSpecialArgs = {
           # inherit dotfilesDir;
@@ -113,10 +112,6 @@
     home-manager = {
       url = "github:nix-community/home-manager/master";
       #inputs.nixpkgs.follows = "nixpkgs";
-    };
-    ironbar = {
-      url = "github:JakeStanger/ironbar";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     nur.url = "github:nix-community/NUR";
     nix-gaming.url = "github:fufexan/nix-gaming";
