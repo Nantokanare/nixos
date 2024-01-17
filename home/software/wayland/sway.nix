@@ -212,7 +212,6 @@
       config = {};
       style = "";
       package = inputs.ironbar;
-      features = ["feature" "another_feature"];
     };
   };
   home.packages = with pkgs; [
@@ -227,7 +226,6 @@
     keepmenu
     killall
     kitty
-    ironbar
     libsForQt5.qt5.qtwayland
     libva-utils
     pamixer
