@@ -14,7 +14,7 @@
     sway = {
       enable = true;
       wrapperFeatures.gtk = true;
-      package = "${pkgs.swayfx}";
+      package = pkgs.swayfx;
       extraPackages = with pkgs; [
         dmenu
         feh
