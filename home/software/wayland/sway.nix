@@ -18,8 +18,8 @@
     enable = true;
     package = pkgs.swayfx;
     systemd.enable = true;
-    config = {
-      modifier = "Mod4";
+    config = rec {
+      modifier = "Mod1";
       terminal = "kitty";
       floating.modifier = "Mod4";
       bars = [];
@@ -57,6 +57,12 @@
             window_role = "About";
           }
         ];
+      };
+      keybindings = {
+        "XF86AudioRaiseVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%";
+        "XF86AudioLowerVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% ";
+        "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle";
+        #    "XF86AudioMicMute" = "exec volumectl -m toggle-mute";
       };
     };
   };
@@ -198,12 +204,6 @@
 #          }
 #        ];
 #      };
-#      #  keybindings = {
-#      #    "XF86AudioRaiseVolume" = v	"exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%";
-#      #    "XF86AudioLowerVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% ";
-#      #    "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle";
-#      #    #    "XF86AudioMicMute" = "exec volumectl -m toggle-mute";
-#      #  };
 #    };
 #  };
 # }

@@ -16,7 +16,7 @@
       keyMode = "vi";
       mouse = true;
       resizeAmount = 10;
-      sensibleOnTop = false;
+      sensibleOnTop = true;
       shell = "${pkgs.${shell}}/bin/${shell}";
       shortcut = "t";
       terminal = "tmux-256color";
