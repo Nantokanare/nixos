@@ -46,7 +46,7 @@
       };
       startup = [
         {
-          command = "systemctl --user restart ironbar";
+          command = "exec ironbar";
           always = true;
         }
         {command = "${browser}";}

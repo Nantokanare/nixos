@@ -2,7 +2,7 @@
   "anchor_to_edges": true,
   "end": [
     {
-      "music_dir": "/home/jake/Music",
+      "music_dir": "/home/nantokanare/media/music";
       "player_type": "mpd",
       "truncate": {
         "max_length": 100,
@@ -15,14 +15,6 @@
       "player_type": "mpd",
       "truncate": "end",
       "type": "music"
-    },
-    {
-      "cmd": "/home/jake/bin/phone-battery",
-      "show_if": {
-        "cmd": "/home/jake/bin/phone-connected",
-        "interval": 500
-      },
-      "type": "script"
     },
     {
       "format": [
@@ -127,9 +119,5 @@
       "show_names": false,
       "type": "launcher"
     },
-    {
-      "label": "random num: {{500:echo FIXME}}",
-      "type": "label"
-    }
   ]
 }

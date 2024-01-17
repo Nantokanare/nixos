@@ -19,7 +19,7 @@
       # # Building this configuration will create a copy of 'dotfiles/screenrc' in
       # # the Nix store. Activating the configuration will then make '~/.screenrc' a
       # # symlink to the Nix store copy.
-      ".config/ironbar/config.json;".source = {
+      ".config/ironbar/config.json;" = {
         source = ./dotfiles/ironbar/config.json;
         recursive = true;
         executable = true;
