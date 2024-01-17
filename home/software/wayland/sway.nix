@@ -12,7 +12,7 @@
   ...
 }: {
   imports = [
-    ./sway/waybar.nix
+    #  ./sway/waybar.nix
   ];
   services.swayosd = {
     enable = true;
@@ -46,7 +46,7 @@
       };
       startup = [
         {
-          command = "systemctl --user restart waybar";
+          command = "systemctl --user restart ironbar";
           always = true;
         }
         {command = "${browser}";}
@@ -181,18 +181,6 @@
       };
     };
   };
-  home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    #   ".config/sway/config;".source = ./../../dotfiles/sway/config;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
-  };
 
   home.file.".config/gtklock/style.css".text =
     ''
@@ -232,7 +220,6 @@
     swaybg
     swayidle
     swayosd
-    waybar
     wev
     wl-clipboard
     wlr-randr
