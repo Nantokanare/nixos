@@ -9,6 +9,7 @@
     ./software/browser.nix
     ./software/dev.nix
     ./software/game.nix
+    ./software/media.nix
     ./software/git.nix
     ./software/terminal/${term}.nix
     ./software/${wmtype}/${wm}.nix
