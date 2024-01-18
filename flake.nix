@@ -93,8 +93,6 @@
           inherit name;
           inherit shell;
           inherit systemtype;
-          inherit system;
-
           inherit term;
           inherit timezone;
           inherit username;
@@ -114,7 +112,6 @@
       #inputs.nixpkgs.follows = "nixpkgs";
     };
     nur.url = "github:nix-community/NUR";
-    nix-gaming.url = "github:fufexan/nix-gaming";
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
