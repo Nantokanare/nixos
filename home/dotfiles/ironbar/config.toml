@@ -1,9 +1,9 @@
 anchor_to_edges = true
 icon_theme = "Paper"
-position = "bottom"
+position = "top"
 
 [[end]]
-music_dir = "/home/jake/Music"
+music_dir = "/home/nantokanare/media/music"
 player_type = "mpd"
 type = "music"
 
@@ -12,18 +12,10 @@ max_length = 100
 mode = "end"
 
 [[end]]
-host = "chloe:6600"
+host = "R9:6600"
 player_type = "mpd"
 truncate = "end"
 type = "music"
-
-[[end]]
-cmd = "/home/jake/bin/phone-battery"
-type = "script"
-
-[end.show_if]
-cmd = "/home/jake/bin/phone-connected"
-interval = 500
 
 [[end]]
 format = [
@@ -109,13 +101,9 @@ Games = "icon:steam"
 [[start]]
 favorites = [
     "firefox",
-    "discord",
     "steam",
 ]
 show_icons = true
 show_names = false
 type = "launcher"
 
-[[start]]
-label = "random num: {{500:echo FIXME}}"
-type = "label"
