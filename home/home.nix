@@ -51,6 +51,7 @@
       gnugrep
       gnused
       mpd
+      homebank
       htop
       hwinfo
       killall
