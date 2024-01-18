@@ -8,8 +8,8 @@
     mpd = {
       enable = true;
       user = "${username}";
-      dataDir = /home/${username}/.config/mpd/dataDir;
-      musicDirectory = /home/${username}/media/music;
+      dataDir = "/home/${username}/.config/mpd/dataDir";
+      musicDirectory = "/home/${username}/media/music";
     };
   };
   environment.systemPackages = with pkgs; [
