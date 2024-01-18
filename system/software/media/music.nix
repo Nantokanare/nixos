@@ -7,7 +7,7 @@
     ympd.enable = true;
     mpd = {
       enable = true;
-      #      user = "${username}";
+      user = "${username}";
       dataDir = /home/${username}/.config/mpd/dataDir;
       musicDirectory = /home/${username}/media/music;
     };
