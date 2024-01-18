@@ -6,7 +6,7 @@
   services = {
     mpd = {
       enable = true;
-      dataDir = "/home/${username}/.config/mpd/dataDir";
+      #   dataDir = "/home/${username}/.config/mpd/dataDir";
       #    musicDirectory = "/home/${username}/media/music";
       #     extraConfig = ''
       #       audio_output {
