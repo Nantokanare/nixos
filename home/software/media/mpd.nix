@@ -6,14 +6,15 @@
   services = {
     mpd = {
       enable = true;
-      #   dataDir = "/home/${username}/.config/mpd/dataDir";
-      #    musicDirectory = "/home/${username}/media/music";
-      #     extraConfig = ''
-      #       audio_output {
-      #         type "pipewire"
-      #         name "pipewireOut"
-      #       }
-      #     '';
+      dataDir = "/home/${username}/.config/mpd/dataDir";
+      musicDirectory = "/home/${username}/media/music";
+      extraConfig = ''
+        auto_update "yes"
+          audio_output {
+            type "pipewire"
+            name "pipewireOut"
+          }
+      '';
     };
   };
   programs.ncmpcpp.enable = true;
