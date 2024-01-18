@@ -64,6 +64,15 @@
     };
   };
   programs.feh.enable = true;
+  home.file.".config/gtklock/style.css".text =
+    ''
+      window {
+       background-image: url("''
+    + config.stylix.image
+    + ''         ");
+       background-size: auto 100%;
+      }
+    '';
   home.file.".fehbg-stylix".text =
     ''
       #!/bin/sh
