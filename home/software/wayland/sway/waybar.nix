@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  username,
+  ...
+}: {
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -75,7 +79,7 @@
           };
         };
         user = {
-          "format" = "{user} (up {work_M} min ↑)";
+          "format" = "{${username}} (up {work_M} min ↑)";
           "interval" = 60;
           "height" = 30;
           "width" = 30;
