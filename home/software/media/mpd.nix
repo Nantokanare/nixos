@@ -4,7 +4,6 @@
   ...
 }: {
   services = {
-    ympd.enable = true;
     mpd = {
       enable = true;
       dataDir = "/home/${username}/.config/mpd/dataDir";
