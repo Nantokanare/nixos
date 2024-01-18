@@ -32,7 +32,7 @@
     editor = "nvim"; # Default editor;
     term = "kitty"; # Default terminal command;
     # multiplex = "tmux";
-    font = "Monofur"; # Selected font
+    font = "Nerdfonts Monofur"; # Selected font
     fontPkg = pkgs.nerdfonts; # Font package
 
     # -----
