@@ -55,6 +55,7 @@
       htop
       hwinfo
       killall
+      krusader
       libnotify
       lolcat
       neofetch

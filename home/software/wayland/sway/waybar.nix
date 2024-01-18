@@ -4,7 +4,7 @@
     systemd.enable = true;
     settings = [
       {
-        layer = "top";
+        layer = "bottom";
         height = 26;
         modules-left = ["custom/os" "wlr/taskbar" "custom/sway"];
         modules-center = ["sway/workspaces"];

@@ -12,7 +12,7 @@
   ...
 }: {
   imports = [
-    #  ./sway/waybar.nix
+    ./sway/waybar.nix
   ];
   services.swayosd = {
     enable = true;
@@ -46,7 +46,7 @@
       };
       startup = [
         {
-          command = "ironbar";
+          command = "systemctl --user restart waybar";
           always = true;
         }
         {command = "${browser}";}

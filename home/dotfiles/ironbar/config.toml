@@ -28,13 +28,13 @@ interval = 500
 [[end]]
 format = [
     "󰻠 {cpu_percent}%",
-    " {memory_used} / {memory_total} GB ({memory_percent}%)",
+    "  {memory_used} / {memory_total} GB ({memory_percent}%)",
     "| {swap_used} / {swap_total} GB ({swap_percent}%)",
-    "󰋊 {disk_used:/} / {disk_total:/} TB ({disk_percent:/}%)",
-    " {disk_used:/home/nantokanare} / {disk_total:/home/nantokanare} TB ({disk_percent:/home/nantokanare}%)",
-    " {disk_used:/home/nantokanare/media/games} / {disk_total:/home/nantokanare/media/games} TB ({disk_percent:/home/nantokanare/media/games}%)",
+    "󰋊 {disk_used:/} / {disk_total:/} GB ({disk_percent:/}%)",
+    "  {disk_used:/home/nantokanare} / {disk_total:/home/nantokanare} GB ({disk_percent:/home/nantokanare}%)",
+    "  {disk_used:/home/nantokanare/media/games} / {disk_total:/home/nantokanare/media/games} GB ({disk_percent:/home/nantokanare/media/games}%)",
     "󰓢 {net_down:enp8s0} / {net_up:enp8s0} Mbps",
-    "󰖡 {load_average:1} | {load_average:5} | {load_average:15}",
+    "󰖡  {load_average:1} | {load_average:5} | {load_average:15}",
     "󰥔 {uptime}",
 ]
 type = "sys_info"
