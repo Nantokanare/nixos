@@ -11,7 +11,6 @@
       "/nix/var/nix/profiles/per-user/root/channels"
     ];
 
-    # Ensure nix flakes are enabled
     package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes
