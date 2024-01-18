@@ -93,6 +93,7 @@
           inherit name;
           inherit shell;
           inherit systemtype;
+          inherit system;
           inherit term;
           inherit timezone;
           inherit username;
