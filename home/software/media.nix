@@ -1,5 +1,5 @@
 {...}: {
   imports = [
-    # ./media/music.nix
+    ./media/mpd.nix
   ];
 }
