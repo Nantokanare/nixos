@@ -1,6 +1,6 @@
 anchor_to_edges = true
-icon_theme = "Paper"
-position = "top"
+icon_theme = "Auto"
+position = "bottom"
 
 [[end]]
 music_dir = "/home/nantokanare/media/music"
@@ -23,7 +23,9 @@ format = [
     " {memory_used} / {memory_total} GB ({memory_percent}%)",
     "| {swap_used} / {swap_total} GB ({swap_percent}%)",
     "󰋊 {disk_used:/} / {disk_total:/} GB ({disk_percent:/}%)",
-    "󰓢 {net_down:enp39s0} / {net_up:enp39s0} Mbps",
+    "󰋊 {disk_used:/home/nantokanare} / {disk_total:/} GB ({disk_percent:/}%)",
+    "󰋊 {disk_used:/home/nantokanare/media/games} / {disk_total:/} GB ({disk_percent:/}%)",
+    "󰓢 {net_down:enp8s0} / {net_up:enp8s0} Mbps",
     "󰖡 {load_average:1} | {load_average:5} | {load_average:15}",
     "󰥔 {uptime}",
 ]
