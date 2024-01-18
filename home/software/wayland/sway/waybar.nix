@@ -13,6 +13,7 @@
           "idle_inhibitor"
           "cpu"
           "memory"
+          "disk"
           "pulseaudio"
           "user"
           "clock"
@@ -25,6 +26,11 @@
         };
         memory = {
           format = "󰍛 {percentage}%";
+        };
+        "disk" = {
+          "interval" = 30;
+          "format" = "Only {percentage_free}% remaining on {path}";
+          "path" = "/";
         };
         tray = {
           #"icon-size" = 21;
