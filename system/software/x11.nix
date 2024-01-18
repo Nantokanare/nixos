@@ -26,4 +26,7 @@
     vSync = true;
     inactiveOpacity = 0.6;
   };
+  environment.systemPackages = [
+    pkgs.arandr
+  ];
 }

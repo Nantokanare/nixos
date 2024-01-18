@@ -33,7 +33,7 @@
         };
         "disk" = {
           "interval" = 30;
-          "format" = "Only {percentage_free}% remaining on {path}";
+          "format" = "{percentage_free}% on {path}";
           "path" = "/";
         };
         tray = {
@@ -79,7 +79,7 @@
           };
         };
         user = {
-          "format" = "{${username}} (up {work_M} min ↑)";
+          "format" = "{user} (up {work_M} min ↑)";
           "interval" = 60;
           "height" = 30;
           "width" = 30;

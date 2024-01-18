@@ -14,6 +14,7 @@
   environment.systemPackages = with pkgs; [
     wayland
     wlroots
+    dwl
     waydroid
     libsForQt5.qt5.qtwayland
     qt6.qtwayland
