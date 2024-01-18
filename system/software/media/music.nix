@@ -10,6 +10,12 @@
       user = "${username}";
       dataDir = "/home/${username}/.config/mpd/dataDir";
       musicDirectory = "/home/${username}/media/music";
+      extraConfig = ''
+        audio_output {
+          type "pipewire"
+          name "pipewireOut"
+        }
+      '';
     };
   };
   environment.systemPackages = with pkgs; [
