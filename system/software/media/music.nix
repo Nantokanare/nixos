@@ -7,7 +7,7 @@
     ympd.enable = true;
     mpd = {
       enable = true;
-      user = username;
+      user = "${username}";
       dataDir = /home/${username}/media/music/dataDir;
       musicDirectory = /home/${username}/media/music;
     };
