@@ -34,7 +34,6 @@
     mpc-cli
     mpdas
     mpdris2
-    ncmpcpp
     mympd
     listenbrainz-mpd
   ];
