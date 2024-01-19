@@ -32,6 +32,7 @@
   home.packages = with pkgs; [
     mpd
     mpc-cli
+    ncmpc
     mpdas
     mpdris2
     mympd
