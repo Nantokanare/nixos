@@ -25,6 +25,7 @@
     mpd
     mpdas
     mpdris2
+    xdg-dbus-proxy
     ncmpcpp
     mympd
     listenbrainz-mpd
