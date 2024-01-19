@@ -51,6 +51,9 @@
         }
         {command = "${browser}";}
         {command = "${term}";}
+        {command = "kdeconnect-cli";}
+        {command = "openrgb";}
+        {command = "opensnitch-ui";}
       ];
       assigns = {
         "2: web" = [{class = "^${browser}$";}];
@@ -185,6 +188,10 @@
   programs = {
     swaylock = {
       enable = true;
+    };
+    eww = {
+      enable = true;
+      package = pkgs.eww-wayland;
     };
   };
   home.packages = with pkgs; [
