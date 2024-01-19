@@ -21,7 +21,10 @@
   wayland.windowManager.sway = {
     enable = true;
     package = pkgs.swayfx;
-    systemd.enable = true;
+    systemd = {
+      enable = true;
+      xdgAutostart = true;
+    };
     config = rec {
       modifier = "Mod4";
       terminal = "kitty";
