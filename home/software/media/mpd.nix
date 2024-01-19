@@ -7,7 +7,7 @@
     mpd = {
       enable = true;
       #  dataDir = "/home/${username}/.config/mpd/dataDir";
-      musicDirectory = "~/media/music";
+      musicDirectory = "/home/${username}/media/music";
       network.startWhenNeeded = true;
       extraConfig = ''
               auto_update "yes"
