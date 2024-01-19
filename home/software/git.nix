@@ -18,10 +18,10 @@
           "*.swp"
         ];
       };
-      gh = {
-        enable = true;
-        settings.git_protocol = "ssh";
-      };
+    };
+    gh = {
+      enable = true;
+      settings.git_protocol = "ssh";
     };
   };
 }
