@@ -15,6 +15,7 @@
     };
     kernelModules = ["i2c-dev" "kvm-amd" "ic2-piix4"];
     initrd = {
+      systemd.dbus.enable = true;
       availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod"];
       kernelModules = ["amdgpu"];
       luks = {

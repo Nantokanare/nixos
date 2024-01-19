@@ -14,6 +14,7 @@
     sway = {
       enable = true;
       wrapperFeatures.gtk = true;
+      wrapperFeatures.base = true;
       package = pkgs.swayfx;
       extraPackages = with pkgs; [
         dmenu

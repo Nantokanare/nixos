@@ -27,6 +27,7 @@
   # Configure xwayland
   services.xserver = {
     enable = true;
+    updateDbusEnvironment = true;
     layout = "us";
     xkbVariant = "";
     xkbOptions = "caps:escape";

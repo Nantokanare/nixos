@@ -3,9 +3,14 @@
   pkgs,
   ...
 }: {
-  services.dbus = {
-    enable = true;
-    packages = [pkgs.dconf];
+  services = {
+    upower.enable = true;
+    dbus = {
+      implementation = "broker";
+      enable = true;
+      apparmor = "enabled";
+      packages = [pkgs.dconf];
+    };
   };
 
   programs.dconf = {
