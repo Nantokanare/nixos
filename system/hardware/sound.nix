@@ -5,7 +5,7 @@
   security.rtkit.enable = true;
   services = {
     jack = {
-      jackd.enable = true;
+      # jackd.enable = true;
       loopback.enable = true;
     };
     pipewire = {

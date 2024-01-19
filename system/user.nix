@@ -17,6 +17,7 @@ in {
         "corectrl"
         "video"
         "mpd"
+        "jackaudio"
         "audio"
         "dialout"
       ]
