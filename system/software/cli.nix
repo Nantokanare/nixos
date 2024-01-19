@@ -22,7 +22,7 @@
     fzf
     tree-sitter
     zoxide
-    git
+
     htop
     libsixel
     neofetch

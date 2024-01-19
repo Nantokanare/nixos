@@ -1,18 +1,27 @@
 {
-  config,
-  lib,
   pkgs,
   name,
   email,
   ...
 }: {
-  home.packages = [pkgs.git];
-  programs.git = {
-    enable = true;
-    userName = name;
-    userEmail = email;
-    extraConfig = {
-      init.defaultBranch = "main";
+  programs = {
+    git = {
+      enable = true;
+      delta.enable = true;
+      package = pkgs.gitAndTools.gitFull;
+      userName = name;
+      userEmail = email;
+      extraConfig = {
+        init.defaultBranch = "Master";
+        ignores = [
+          "*~"
+          "*.swp"
+        ];
+      };
+      gh = {
+        enable = true;
+        settings.git_protocol = "ssh";
+      };
     };
   };
 }

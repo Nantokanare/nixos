@@ -9,7 +9,6 @@
     ./cli/nvim.nix
     ./cli/sh.nix
     ./cli/starship.nix
-    ./cli/git.nix
     ./cli/tldr.nix
     ./cli/tmux.nix
   ];
