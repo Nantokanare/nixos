@@ -10,14 +10,13 @@
       delta.enable = true;
       package = pkgs.gitAndTools.gitFull;
       userName = name;
+      ignores = [
+        "*~"
+        "*.swp"
+      ];
       userEmail = email;
-      extraConfig = {
-        init.defaultBranch = "Master";
-        ignores = [
-          "*~"
-          "*.swp"
-        ];
-      };
+      extraConfig = {};
+      init.defaultBranch = "Master";
     };
     gh = {
       enable = true;
