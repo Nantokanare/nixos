@@ -56,6 +56,7 @@
         {command = "${term}";}
         {command = "kdeconnect-cli";}
         {command = "openrgb";}
+        {command = "keepassxc";}
         {command = "opensnitch-ui";}
       ];
       assigns = {
@@ -73,16 +74,10 @@
 
         "${modifier}+b" = "exec ${browser}";
         "${modifier}+d" = "exec --no-startup-id dmenu_run";
+        "${modifier}+m" = "exec --no-startup-id rofi -show run";
 
-        #            "${modifier}+Tab" = "workspace back_and_forth";
         "${modifier}+Shift+c" = "kill";
         "${modifier}+Shift+r" = "reload";
-        #            "${modifier}+d" = null;
-        #            "${modifier}+p" = exec swayConfig.menu;
-        #
-        #            "${modifier}+Ctrl+Left" = "workspace prev";
-        #            "${modifier}+Ctrl+Right" = "workspace next";
-        #
 
         "XF86AudioRaiseVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%";
         "XF86AudioLowerVolume" = "exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% ";
@@ -121,8 +116,6 @@
         "${modifier}+Shift+minus" = "move scratchpad";
         "${modifier}+minus" = "scratchpad show";
 
-        "${modifier}+g" = "[title=^ranger ::] scratchpad show";
-
         # enter fullscreen mode for the focused container
         "${modifier}+f" = "fullscreen toggle";
 
@@ -136,7 +129,7 @@
         # change focus between tiling / floating windows
         "${modifier}+space" = "focus mode_toggle";
         # kill focused window
-        "${modifier}+Shift+q" = "kill";
+        "${modifier}+q" = "kill";
         #
         ## start dmenu (a program launcher)
         ## A more modern dmenu replacement is rofi:
@@ -157,23 +150,23 @@
         #"${modifier}+Up focus up
         #"${modifier}+Right focus right
         #
-        ## move focused window
-        #"${modifier}+Shift+j move left
-        #"${modifier}+Shift+k move down
-        #"${modifier}+Shift+l move up
-        #"${modifier}+Shift+semicolon move right
-        #
-        ## alternatively, you can use the cursor keys:
-        #"${modifier}+Shift+Left move left
-        #"${modifier}+Shift+Down move down
-        #"${modifier}+Shift+Up move up
-        #"${modifier}+Shift+Right move right
-        #
+        # move focused window
+        "${modifier}+Shift+h" = "move left";
+        "${modifier}+Shift+j" = "move down";
+        "${modifier}+Shift+k" = "move up";
+        "${modifier}+Shift+l" = "move right";
+
+        # alternatively, you can use the cursor keys:
+        "${modifier}+Shift+Left" = "move left";
+        "${modifier}+Shift+Down" = "move down";
+        "${modifier}+Shift+Up" = "move up";
+        "${modifier}+Shift+Right" = "move right";
+
         ## split in horizontal orientation
-        #"${modifier}+h split h
+        "${modifier}+h" = "split h";
         #
         ## split in vertical orientation
-        #"${modifier}+v split v
+        "${modifier}+v" = "split v";
         #
         ## focus the parent container
         #"${modifier}+a focus parent

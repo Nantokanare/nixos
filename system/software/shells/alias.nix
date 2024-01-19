@@ -13,4 +13,5 @@
   nrs = "sudo nixos-rebuild --flake . switch";
   hms = "home-manager --flake . switch";
   mpc = "mpc --host=''/run/user/1000/mpd/socket''";
+  mhz = "wlr-randr --output DP-2 --mode 3440x1440@99.898003Hz";
 }
