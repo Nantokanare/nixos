@@ -17,7 +17,7 @@
       wrapperFeatures.base = true;
       package = pkgs.swayfx;
       extraPackages = with pkgs; [
-        dmenu
+        dmenu-rs
         feh
         # i3-ratiosplit
         # i3-resurrect

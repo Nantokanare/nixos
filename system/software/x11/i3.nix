@@ -13,7 +13,7 @@
     extraPackages = with pkgs; [
       basez
       base16-schemes
-      dmenu
+      dmenu-rs
       i3status-rust
       i3lock
       i3-resurrect

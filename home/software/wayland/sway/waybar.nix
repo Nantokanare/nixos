@@ -50,8 +50,9 @@
             "5" = "󰎄";
             "6" = "";
             "7" = "";
-            "8" = "󱎓";
+            "8" = "";
             "9" = "";
+            "10" = "󱃸";
             "scratch_term" = "_";
             "scratch_ranger" = "_󰴉";
             "scratch_musikcube" = "_";
@@ -110,47 +111,3 @@
     ];
   };
 }
-#  programs.waybar = {
-#    enable = true;
-#    settings = {
-#      mainBar = {
-#        layer = "top";
-#        position = "top";
-#        height = 25;
-#        margin = "7 7 3 7";
-#        spacing = 2;
-#        modules-left = ["custom/os" "custom/sway" "pulseaudio" "cpu" "memory"];
-#        modules-center = ["sway/window"];
-#        modules-right = ["idle_inhibitor" "tray" "clock"];
-#
-#        cpu = {
-#          "format" = "{usage}% ";
-#        };
-#        memory = {"format" = "{}% ";};
-#        "format" = "{capacity}% {icon}";
-#        "format-charging" = "{capacity}% ";
-#        "format-plugged" = "{capacity}% ";
-#        #"format-good" = ""; # An empty format will hide the module
-#        #"format-full" = "";
-#        "format-icons" = ["" "" "" "" ""];
-#      };
-#        "custom/sway" = {
-#          "format" = "   {}";
-#          #     "exec" = ''cat ~/.hyprprofile'';
-#          "interval" = 3;
-#          #     "on-click" = "hyprprofile-dmenu";
-#        };
-#
-#        clock = {
-#          "interval" = 1;
-#          "format" = "{:%a %Y-%m-%d %I:%M:%S %p}";
-#          "timezone" = "${timezone}";
-#          "tooltip-format" = ''
-#            <big>{:%Y %B}</big>
-#            <tt><small>{calendar}</small></tt>'';
-#        };
-#        # "on-click" = "pypr toggle pavucontrol && hyprctl dispatch bringactivetotop";
-#      };
-#    };
-#  };
-#}
