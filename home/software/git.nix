@@ -15,8 +15,9 @@
         "*.swp"
       ];
       userEmail = email;
-      extraConfig = {};
-      init.defaultBranch = "Master";
+      extraConfig = {
+        init.defaultBranch = "Master";
+      };
     };
     gh = {
       enable = true;

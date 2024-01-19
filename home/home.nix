@@ -48,7 +48,7 @@
       fd
       fzf
       youtube-tui
-      git
+
       gnugrep
       gnused
       mpd
