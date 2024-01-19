@@ -6,8 +6,8 @@
   services = {
     mpd = {
       enable = true;
-      dataDir = "/home/${username}/.config/mpd/dataDir";
-      musicDirectory = "/home/${username}/media/music";
+      #  dataDir = "/home/${username}/.config/mpd/dataDir";
+      musicDirectory = "~/media/music";
       network.startWhenNeeded = true;
       extraConfig = ''
               auto_update "yes"
@@ -25,7 +25,10 @@
       '';
     };
   };
-  programs.ncmpcpp.enable = true;
+  programs.ncmpcpp = {
+    enable = true;
+    package = pkgs.ncmpcpp.override {visualizerSupport = true;};
+  };
   home.packages = with pkgs; [
     mpd
     mpc-cli
