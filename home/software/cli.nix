@@ -12,6 +12,7 @@
     ./cli/tldr.nix
     ./cli/tmux.nix
   ];
+  programs.zoxide.enable = true;
 
   # Collection of useful CLI apps
   #  home.packages = with pkgs; [
