@@ -22,9 +22,6 @@
       terminal = "tmux-256color";
       newSession = true;
       extraConfig = ''
-        resurrect_dir="$HOME/.tmux/resurrect"
-        set -g @resurrect-dir $resurrect_dir
-        set -g @resurrect-hook-post-save-all 'target=$(readlink -f $resurrect_dir/last); sed "s| --cmd .*-vim-pack-dir||g; s|/etc/profiles/per-user/$USER/bin/||g; s|/home/$USER/.nix-profile/bin/||g" $target | sponge $target'
       '';
 
       plugins = with pkgs.tmuxPlugins; [
@@ -46,6 +43,12 @@
         }
         {
           plugin = resurrect;
+          extraConfig = ''
+
+            resurrect_dir="$HOME/.tmux/resurrect"
+            set -g @resurrect-dir $resurrect_dir
+            set -g @resurrect-hook-post-save-all 'target=$(readlink -f $resurrect_dir/last); sed "s| --cmd .*-vim-pack-dir||g; s|/etc/profiles/per-user/$USER/bin/||g; s|/home/$USER/.nix-profile/bin/||g" $target | sponge $target'
+          '';
         }
       ];
     };

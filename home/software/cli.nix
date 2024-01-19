@@ -9,11 +9,19 @@
     ./cli/nvim.nix
     ./cli/sh.nix
     ./cli/starship.nix
+    ./cli/git.nix
     ./cli/tldr.nix
     ./cli/tmux.nix
   ];
-  programs.zoxide.enable = true;
-
+  programs = {
+    zoxide.enable = true;
+    zathura.enable = true;
+    eza = {
+      enable = true;
+      git = true;
+      icons = true;
+    };
+  };
   # Collection of useful CLI apps
   #  home.packages = with pkgs; [
   #    # Command Line
