@@ -58,6 +58,7 @@
         {command = "openrgb";}
         {command = "keepassxc";}
         {command = "opensnitch-ui";}
+        {command = "wlr-randr --output DP-2 --mode 3440x1440@99.898003Hz";}
       ];
       assigns = {
         "2: web" = [{class = "^${browser}$";}];
