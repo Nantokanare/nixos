@@ -28,7 +28,7 @@
   programs.ncmpcpp.enable = true;
   home.packages = with pkgs; [
     mpd
-    mpc
+    mpc-cli
     mpdas
     mpdris2
     ncmpcpp
