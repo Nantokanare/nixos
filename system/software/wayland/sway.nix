@@ -26,6 +26,20 @@
         nitrogen
         pulseaudioFull
         rofi-wayland-unwrapped
+        rofimoji
+        rofi-top
+        rofi-mpd
+        rofi-pass-wayland
+        rofi-file-browser
+        pinentry-rofi
+        keepmenu
+        rofi-calc
+        rofi-pulse-select
+        rofi-systemd
+        rofi-bluetooth
+        rofi-screenshot
+        rofi-power-menu
+        rofi-rbw-wayland
         swaybg
         swaycons
         swayfx
