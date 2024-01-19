@@ -192,7 +192,7 @@
     eww = {
       enable = true;
       package = pkgs.eww-wayland;
-      configDir = "./config/eww";
+      configDir = ./../../dotfiles/eww;
     };
   };
   home.packages = with pkgs; [
