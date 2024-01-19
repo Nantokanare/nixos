@@ -7,7 +7,7 @@
   w3m = "w3m -no-cookie -v";
   fetch = "disfetch";
   gfetch = "onefetch";
-  ns = "nix-shell -p";
+  ns = "nix-shell";
   nrs = "sudo nixos-rebuild --flake . switch";
   hms = "home-manager --flake . switch";
   mpc = "mpc --host=''/run/user/1000/mpd/socket''";
