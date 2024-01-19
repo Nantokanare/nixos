@@ -25,7 +25,7 @@
         # i3nator
         nitrogen
         pulseaudioFull
-        rofi
+        rofi-wayland-unwrapped
         swaybg
         swaycons
         swayfx

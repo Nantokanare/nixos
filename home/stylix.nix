@@ -53,10 +53,7 @@
       #    #      logo =
       #    #      logoAnimated =
       #  };
-      rofi.enable =
-        if (wmtype == "x11")
-        then true
-        else false;
+      rofi.enable = true;
       feh.enable =
         if (wmtype == "x11")
         then true
